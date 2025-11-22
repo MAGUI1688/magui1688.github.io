@@ -343,7 +343,7 @@
       <p class="section-sub">填写需求信息或直接添加微信，发送图纸/尺寸/数量，即可为您评估报价与交期。</p>
       <div class="contact-layout">
         <div class="contact-form">
-          <h3>在线提交需求</h3>
+<h3>在线提交需求</h3>
           
 <form id="quoteForm">
   <div class="form-row">
@@ -386,7 +386,7 @@
 document.getElementById('quoteForm').addEventListener('submit', async (e) => {
   e.preventDefault();
   const params = new URLSearchParams(new FormData(e.target)).toString();
-  await fetch('https://script.google.com/macros/s/AKfycbzfL8br3ikfm6MuP9c4JzyVaHf2g7mz0CLAUBhKNRykQfF6Z80XSo0ZLIHJKpZPGHikGg/exec', {
+  await fetch('https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbxbPXqamoHTPw8ebGEpnIfrJAS5-TddkJrHTOIsmNrjGX6rIpfMNBZVRbz-FbB2tqGFJA/exec', {
     method: 'POST',
     body: params,
     headers: {'Content-Type': 'application/x-www-form-urlencoded'}
@@ -396,7 +396,7 @@ document.getElementById('quoteForm').addEventListener('submit', async (e) => {
 });
 </script>
           
-</form>
+        </form>
           <div class="form-note">* 提交成功后、我们将在12小时内回复您。</div>
         </div>
         <div class="contact-side">
