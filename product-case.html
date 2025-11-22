@@ -267,20 +267,56 @@
     </div>
   </section>
 
-<!-- 工艺视频入口 -->
+<!-- 30秒看金属标牌设备铭牌工艺（无视频源版） -->
 <div class="video-entrance">
   <div class="container">
-    <h2 class="section-title">30 秒看拉丝镜面诞生</h2>
-    <p class="section-sub">镭射雕刻 + 背胶一体成型，真实产线拍摄</p>
-    <a href="#video" class="video-btn" onclick="document.querySelector('#video').scrollIntoView({behavior:'smooth'})">▶ 播放视频</a>
+    <h2 class="section-title">30秒看金属标牌设备铭牌工艺</h2>
+    <p class="section-sub">高清彩印+异形切割全过程，真实拍摄无加速</p>
+    <a href="#video" class="video-btn" onclick="showVideo(); return !1">▶ 播放视频</a>
+
+    <!-- 视频容器 -->
     <div id="video" style="margin-top:20px;display:none">
-      <video controls style="width:100%;max-width:600px;border-radius:12px;box-shadow:var(--shadow)" preload="metadata">
-        <source src="case-panel.mp4" type="video/mp4">
+      <!-- ① 备用提示 -->
+      <div id="videoTips" style="padding:60px 20px;text-align:center;border:2px dashed #cbd5f5;border-radius:12px">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="#cbd5f5">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        <p style="margin-top:12px;color:var(--text-sub)">
+          视频素材准备中，您可以
+          <a href="#contact" style="color:var(--primary)" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">联系客服</a>
+          索取样片，或自行上传视频文件。
+        </p>
+      </div>
+
+      <!-- ② 真实视频（默认隐藏） -->
+      <video id="realVideo" controls style="width:100%;max-width:600px;border-radius:12px;box-shadow:var(--shadow);display:none" preload="metadata">
+        <!-- 后续只需把 src 换成真实路径 -->
+        <!-- <source src="metal-plate-process.mp4" type="video/mp4"> -->
         您的浏览器不支持视频播放。
       </video>
     </div>
   </div>
 </div>
+
+<script>
+  function showVideo() {
+    const box = document.querySelector('#video');
+    const tips = document.querySelector('#videoTips');
+    const video = document.querySelector('#realVideo');
+
+    box.style.display = 'block';
+
+    // 如果已有视频源，就隐藏提示并自动播放；否则保持提示
+    if (video.querySelector('source') && video.querySelector('source').src) {
+      tips.style.display = 'none';
+      video.style.display = 'block';
+      video.play();
+    } else {
+      tips.style.display = 'block';
+      video.style.display = 'none';
+    }
+  }
+</script>
 
 <!-- 客户见证 -->
   <section class="testimonials">
