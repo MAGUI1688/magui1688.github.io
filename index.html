@@ -337,89 +337,182 @@
  </div>
 </section>
 
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">获取报价/联系方式</h2>
-      <p class="section-sub">填写需求信息或直接添加微信，发送图纸/尺寸/数量，即可为您评估报价与交期。</p>
-      <div class="contact-layout">
-        <div class="contact-form">
-<h3>在线提交需求</h3>
-          
-<form id="quoteForm">
-  <div class="form-row">
-    <div class="form-group">
-      <label>您的称呼</label>
-      <input type="text" name="name" placeholder="例如：张工 / 李先生" required>
-    </div>
-    <div class="form-group">
-      <label>联系方式</label>
-      <input type="text" name="contact" placeholder="手机 / 微信 / QQ" required>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group">
-      <label>材质</label>
-      <input type="text" name="material" placeholder="铝 / 不锈钢 / PET / 其他" required>
-    </div>
-    <div class="form-group">
-      <label>预计数量</label>
-      <input type="text" name="qty" placeholder="如：50套 / 1000片" required>
-    </div>
-  </div>
-  <div class="form-group">
-    <label>您的联系邮箱</label>
-    <input type="email" name="email" placeholder="方便我们回复报价" required>
-  </div>
-  <div class="form-group">
-    <label>上传图纸或参考图像（可选）</label>
-    <input type="file" name="file" accept=".jpg,.jpeg,.png,.pdf,.dwg,.dxf" multiple>
-    <small>可上传多张图片/文件/PDF/CAD/3D图档</small>
-  </div>
-  <div class="form-group">
-    <label>简单说明</label>
-    <textarea name="note" placeholder="可描述使用场景、尺寸范围、是否有图纸等信息" rows="4"></textarea>
-  </div>
-  <button type="submit" class="btn-submit">提交信息</button>
-</form>
+ <!-- 表单+FAQ -->
+  <!-- ==================== -->
+  <!-- ==================== -->
+  <!-- 获取金属标牌|设备铭牌|机械标识牌报价 -->
+<section id="contact" style="background:#f9fafb;padding:10px 0">
+  <div class="container">
+    <!-- 标题与副标题居中 -->
+    <h2 class="section-title" style="text-align:center">获取铝标牌 · 镐光铭牌报价</h2>
+    <p class="section-sub" style="text-align:center">填写需求信息或直接添加微信，发送图纸/尺寸/数量，即可为您评估金属标牌价格与交期。</p>
 
-<script>
-document.getElementById('quoteForm').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const params = new URLSearchParams(new FormData(e.target)).toString();
-  await fetch('https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbxbPXqamoHTPw8ebGEpnIfrJAS5-TddkJrHTOIsmNrjGX6rIpfMNBZVRbz-FbB2tqGFJA/exec', {
-    method: 'POST',
-    body: params,
-    headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-  });
-  alert('已提交成功！我们会尽快邮件回复您。');
-  e.target.reset();
-});
-</script>
-          
+    <!-- 双栏容器：左窄表单 | 右宽联系方式 -->
+    <div style="display:grid;grid-template-columns:1fr 460px;gap:32px;margin-top:24px">
+      <!-- 左侧：表单（宽度缩小） -->
+      <div class="contact-form">
+        <h3>在线提交需求</h3>
+        <form id="quoteForm">
+          <input type="hidden" name="产品" value="金属标牌|设备铭牌|机械标识牌">
+          <div class="form-row">
+            <div class="form-group">
+              <label>您的称呼</label>
+              <input type="text" name="name" placeholder="张工" required>
+            </div>
+            <div class="form-group">
+              <label>手机/微信</label>
+              <input type="text" name="contact" placeholder="手机或微信" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>您的联系邮箱</label>
+            <input type="email" name="email" placeholder="方便我们回复报价" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>尺寸（mm）</label>
+              <input type="text" name="size" placeholder="如：400×600" required>
+            </div>
+            <div class="form-group">
+              <label>数量</label>
+              <input type="text" name="qty" placeholder="如：200张" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>材质</label>
+            <select name="material" required>
+              <option value="">请选择</option>
+              <option value="金属标牌">金属标牌 </option>
+              <option value="设备铭牌">设备铭牌 </option>
+              <option value="CD纹标牌">CD纹标牌 </option>
+              <option value="镍标牌">镍标 </option>
+              <option value="其他标牌">其他标牌 </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>上传图纸或参考图像（可选）</label>
+            <input type="file" name="file" accept=".jpg,.jpeg,.png,.pdf,.ai,.cdr" multiple>
+          </div>
+          <div class="form-group">
+            <label>备注</label>
+            <textarea name="note" rows="4" placeholder="背胶/打孔/异形/防水等级等要求，如需加急请注明金属标牌价格"></textarea>
+          </div>
+
+          <!-- 提交按钮 + 失败提示 -->
+          <button type="submit" class="btn-submit">提交询价</button>
+          <!-- 新增：提交失败提示 -->
+          <div id="errorTip" style="display:none;background:#fee;border:1px solid #fcc;color:#c33;border-radius:6px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.5">
+            提交失败，请重试或直接扫码右侧微信，30 分钟内快速报价！
+          </div>
+          <p id="sendOk" style="color:#16a34a;margin-top:8px;font-size:13px;display:none;">✅ 已提交成功！我们将尽快邮件回复您。</p>
+          <p class="form-note">* 提交成功后、我们将在12小时内回复您。</p>
         </form>
-          <div class="form-note">* 提交成功后、我们将在12小时内回复您。</div>
+      </div>
+
+      <!-- 右侧：加宽联系方式（加id） -->
+      <aside id="contactSide" style="background:#ffffff;border-radius:12px;padding:32px;box-shadow:0 8px 24px rgba(15,23,42,.08);">
+        <h4 style="margin-bottom:20px;font-size:18px;color:var(--text-main);text-align:center">直接联系·极速响应</h4>
+
+        <!-- 上下两个电话 -->
+        <div style="margin-bottom:20px;text-align:center">
+          <div style="font-size:13px;color:var(--text-sub)">业务热线</div>
+          <a href="tel:132-6679-4685" style="font-size:22px;font-weight:700;color:var(--accent);line-height:1.2">132-6679-4685</a>
+          <div style="height:9px"></div>
+          <a href="tel:137-1499-2726" style="font-size:22px;font-weight:700;color:var(--accent);line-height:1.2">137-1499-2726</a>
+          <div style="font-size:13px;color:var(--text-sub);margin-top:6px">加微信备注“标牌询价”</div>
         </div>
-        <div class="contact-side">
-          <div class="contact-extra">
-            <h4>也可以直接联系我们</h4>
-            <p class="extra-label">电话 / 微信</p>
-            <p class="extra-value">132-6679-4685</p>
-            <p class="extra-label">电话 / 微信</p>
-            <p class="extra-value">137-1499-2726</p>
-            <p class="extra-label">电子邮箱</p>
-            <p class="extra-value">szlijuan@126.com</p>
+
+        <!-- 邮箱 -->
+        <div style="margin-bottom:27px;text-align:center">
+          <div style="font-size:13px;color:var(--text-sub)">电子邮件询价</div>
+          <a href="mailto:szlijuan@126.com" style="font-size:15px;color:var(--primary)">szlijuan@126.com</a>
+        </div>
+
+        <!-- 并排两张二维码 -->
+        <div style="display:flex;justify-content:center;gap:70px">
+          <div style="text-align:center">
+            <img src="images/1p9.jpg" width="160" height="160" alt="微信二维码1" style="border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1)">
+            <div style="font-size:12px;color:var(--text-sub);margin-top:6px">4685</div>
           </div>
-          <p>微信扫一扫，立即沟通：</p>
-          <div class="qrcode-box">
-            <img src="images/1p9.jpg" alt="微信二维码1" loading="lazy">
-            <img src="images/2p9.jpg" alt="微信二维码2" loading="lazy">
+          <div style="text-align:center">
+            <img src="images/2p9.jpg" width="160" height="160" alt="微信二维码2" style="border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1)">
+            <div style="font-size:12px;color:var(--text-sub);margin-top:6px">2726</div>
           </div>
-          <h3>工厂地址</h3>
-          <p>广东省深圳市宝安区福安智造产业园一期12栋三楼</p>
+        </div>
+
+        <!-- 额外承诺 -->
+        <ul style="margin-top:24px;padding-left:16px;font-size:13px;color:var(--text-sub);line-height:1.8">
+          <li>30 分钟内响应报价</li>
+          <li>免费设计排版</li>
+          <li>支持 13% 增值税专票</li>
+          <li>全国包邮</li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- FAQ 保持原样 -->
+    <div class="faq-full" style="margin-top:40px">
+      <h3 style="font-size:18px;margin-bottom:12px;color:var(--text-main)">金属标牌设备铭牌常见问题</h3>
+      <div class="faq-list">
+        <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6"><strong>打样需要多久？</strong>
+          <p style="margin:4px 0 0;color:var(--text-sub)">当日17:00前确认文件，1天发出。</p>
+        </div>
+        <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6"><strong>能开发票吗？</strong>
+          <p style="margin:4px 0 0;color:var(--text-sub)">可开13%增值税专票。</p>
+        </div>
+        <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6"><strong>物流怎么发？</strong>
+          <p style="margin:4px 0 0;color:var(--text-sub)">顺丰/德邦包邮，全国2-3天到。</p>
+        </div>
+        <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6"><strong>达不到100张能订吗？</strong>
+          <p style="margin:4px 0 0;color:var(--text-sub)">小批量可谈，单价略高。</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- 提交失败脚本（时间自己改数字） -->
+<script>
+document.getElementById('quoteForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const sendOk   = document.getElementById('sendOk');
+  const errorTip = document.getElementById('errorTip');
+  const side     = document.getElementById('contactSide');
+
+  /* 重置状态 */
+  sendOk.style.display   = 'none';
+  errorTip.style.display = 'none';
+  side.style.boxShadow   = '0 8px 24px rgba(15,23,42,.08)';
+
+  const params = new URLSearchParams(new FormData(e.target)).toString();
+
+  try {
+    const res = await fetch('https://1312059476-52lt9ny7df.in.ap-hongkong.scf.tencentcs.com', {
+      method: 'POST',
+      body: params,
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+    });
+    if (!res.ok) throw new Error('network error');
+
+    sendOk.style.display = 'block';
+    e.target.reset();
+  } catch {
+    /* 失败：显示提示 + 右侧高亮 + 滚动 */
+    errorTip.style.display = 'block';
+    side.style.boxShadow = '0 0 0 3px #f97316,0 12px 32px rgba(249,115,22,.35)';
+    side.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    /* ★★★ 这里改时间（毫秒）★★★ */
+    setTimeout(() => {
+      errorTip.style.display = 'none';
+      side.style.boxShadow = '0 8px 24px rgba(15,23,42,.08)';
+    }, 500000);          // 举例 5 秒，想改就改这个数字
+  }
+});
+</script>
+<!-- ==================== -->
+<!-- ==================== -->
 
   <section class="factory-section">
   <div class="container">
