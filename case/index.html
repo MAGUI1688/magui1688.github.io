@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深圳市利娟标牌有限公司 - 专业标牌定制厂家</title>
+    <meta name="description" content="深圳利娟标牌厂家直供：铝标牌、不锈钢铭牌、PET/KT板、按钮键，50套起免费打样，48h出报价，全国包邮。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .logo span {
+            color: #4CAF50;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            margin-left: 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #4CAF50;
+        }
+        
+        .hero {
+            background: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #388E3C;
+        }
+        
+        .section {
+            padding: 3rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #2a5298;
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-img {
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+        }
+        
+        .product-content {
+            padding: 1.5rem;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .error-container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .error-code {
+            font-size: 72px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        
+        .error-message {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .back-home {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .back-home:hover {
+            background-color: #2980b9;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                justify-content: center;
+            }
+            
+            nav li {
+                margin: 0 0.75rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 导航栏 -->
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">深圳<span>利娟</span>标牌</div>
+                    <nav>
+                        <ul>
+                            <li><a href="/" data-route>首页</a></li>
+                            <li><a href="/products" data-route>产品中心</a></li>
+                            <li><a href="/about" data-route>关于我们</a></li>
+                            <li><a href="/contact" data-route>联系我们</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主内容区域 -->
+        <main id="content">
+            <!-- 默认显示首页内容 -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>专业标牌定制厂家</h1>
+                        <p>铝标牌、不锈钢铭牌、PET/KT板、按钮键，50套起免费打样，48h出报价，全国包邮</p>
+                        <a href="/contact" class="btn" data-route>立即咨询报价</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">我们的产品</h2>
+                    <div class="products">
+                        <div class="product-card">
+                            <div class="product-img">铝标牌图片</div>
+                            <div class="product-content">
+                                <h3 class="product-title">铝标牌</h3>
+                                <p>拉丝铝、氧化铝、喷砂等工艺，可丝印、腐蚀、激光打标</p>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-img">不锈钢铭牌图片</div>
+                            <div class="product-content">
+                                <h3 class="product-title">不锈钢铭牌</h3>
+                                <p>304/316不锈钢，深蚀刻+填漆，高温耐腐蚀，适合户外使用</p>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-img">按钮键图片</div>
+                            <div class="product-content">
+                                <h3 class="product-title">按钮键/CD纹片</h3>
+                                <p>适用于工控按钮、面板、家电按键等，可背胶粘贴</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>深圳市利娟标牌有限公司 &copy; 2025</p>
+                <p>电话：132-6679-4685 / 137-1499-2726</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 路由处理脚本 -->
+    <script>
+        // 定义路由内容
+        const routes = {
+            '/': `
+                <section class="hero">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1>专业标牌定制厂家</h1>
+                            <p>铝标牌、不锈钢铭牌、PET/KT板、按钮键，50套起免费打样，48h出报价，全国包邮</p>
+                            <a href="/contact" class="btn" data-route>立即咨询报价</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="section">
+                    <div class="container">
+                        <h2 class="section-title">我们的产品</h2>
+                        <div class="products">
+                            <div class="product-card">
+                                <div class="product-img">铝标牌图片</div>
+                                <div class="product-content">
+                                    <h3 class="product-title">铝标牌</h3>
+                                    <p>拉丝铝、氧化铝、喷砂等工艺，可丝印、腐蚀、激光打标</p>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-img">不锈钢铭牌图片</div>
+                                <div class="product-content">
+                                    <h3 class="product-title">不锈钢铭牌</h3>
+                                    <p>304/316不锈钢，深蚀刻+填漆，高温耐腐蚀，适合户外使用</p>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-img">按钮键图片</div>
+                                <div class="product-content">
+                                    <h3 class="product-title">按钮键/CD纹片</h3>
+                                    <p>适用于工控按钮、面板、家电按键等，可背胶粘贴</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            `,
+            '/products': `
+                <section class="section">
+                    <div class="container">
+                        <h2 class="section-title">产品中心</h2>
+                        <div class="products">
+                            <div class="product-card">
+                                <div class="product-img">铝标牌图片</div>
+                                <div class="product-content">
+                                    <h3 class="product-title">铝标牌·铭牌批花</h3>
+                                    <p>拉丝铝、氧化铝、喷砂等工艺，可丝印、腐蚀、激光打标，适用于机械、电气设备铭牌。</p>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-img">不锈钢铭牌图片</div>
+                                <div class="product-content">
+                                    <h3 class="product-title">不锈钢铭牌</h3>
+                                    <p>304 / 316 不锈钢，深蚀刻 + 填漆或印刷，高温耐腐蚀，适合户外及恶劣环境长期使用。</p>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-img">设备铭牌图片</div>
+                                <div class="product-content">
+                                    <h3 class="product-title">设备铭牌/标识牌</h3>
+                                    <p>适合车间现场管理、安全标识、展示架、流程看板等，画面清晰，安装方式灵活便捷。</p>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-img">按钮键图片</div>
+                                <div class="product-content">
+                                    <h3 class="product-title">电源按钮键 / CD纹片</h3>
+                                    <p>适用于工控按钮、面板、家电按键等，可背胶粘贴，支持精细开孔、激光、丝印文字与图标。</p>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-img">机箱铭牌图片</div>
+                                <div class="product-content">
+                                    <h3 class="product-title">电脑机箱铭牌</h3>
+                                    <p>LOGO 铭牌、型号牌、侧板装饰牌等，支持金属拉丝、镜面、电镀及多种装饰工艺效果。</p>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-img">其他标牌图片</div>
+                                <div class="product-content">
+                                    <h3 class="product-title">定制其他标牌</h3>
+                                    <p>资产标签、条形码牌、二维码牌、设备编号牌等，支持小批量快速交付与大批量稳定供货。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            `,
+            '/about': `
+                <section class="section">
+                    <div class="container">
+                        <h2 class="section-title">关于我们</h2>
+                        <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                            <h3 style="margin-bottom: 1rem; color: #2a5298;">深圳市利娟标牌有限公司</h3>
+                            <p style="margin-bottom: 1rem;">专业生产铭牌 · 标牌的工厂，专注机械、电气、设备、电脑机箱、按钮键CD纹件等行业铭牌定制。</p>
+                            <p style="margin-bottom: 1rem;">支持打样、小批量及大批量出货，全国发货。服务客户包含机械设备厂、自动化设备、电气成套、户外设备、机箱机柜、工控按钮等。</p>
+                            <h4 style="margin: 1.5rem 0 0.5rem; color: #2a5298;">我们的优势</h4>
+                            <ul style="padding-left: 1.5rem;">
+                                <li>免费打样服务</li>
+                                <li>可开发票</li>
+                                <li>支持图纸来样定制</li>
+                                <li>急单加急出货</li>
+                                <li>全国包邮</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            `,
+            '/contact': `
+                <section class="section">
+                    <div class="container">
+                        <h2 class="section-title">联系我们</h2>
+                        <div class="contact-form">
+                            <h3 style="text-align: center; margin-bottom: 1.5rem; color: #2a5298;">获取报价</h3>
+                            <form id="quoteForm">
+                                <div class="form-group">
+                                    <label for="name">您的称呼</label>
+                                    <input type="text" id="name" name="name" placeholder="张工" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact">手机/微信</label>
+                                    <input type="text" id="contact" name="contact" placeholder="手机或微信" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">您的联系邮箱</label>
+                                    <input type="email" id="email" name="email" placeholder="方便我们回复报价" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">需求描述</label>
+                                    <textarea id="message" name="message" placeholder="请描述您的标牌需求，包括尺寸、材质、数量等信息"></textarea>
+                                </div>
+                                <button type="submit" class="btn" style="width: 100%;">提交询价</button>
+                            </form>
+                            <div style="margin-top: 2rem; text-align: center;">
+                                <h4 style="margin-bottom: 1rem; color: #2a5298;">直接联系</h4>
+                                <p>电话/微信：132-6679-4685 / 137-1499-2726</p>
+                                <p>电子邮件：szlijuan@126.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            `
+        };
+
+        // 处理404错误
+        function handleNotFound() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <div class="error-container">
+                    <div class="error-code">404</div>
+                    <div class="error-message">页面未找到</div>
+                    <p>您访问的页面不存在，请检查URL或返回首页。</p>
+                    <a href="/" class="back-home" data-route>返回首页</a>
+                </div>
+            `;
+            
+            // 更新浏览器历史记录，但不重新加载页面
+            history.replaceState(null, null, '/404');
+        }
+
+        // 路由处理函数
+        function handleRouting() {
+            const path = window.location.pathname;
+            const content = document.getElementById('content');
+            
+            if (routes[path]) {
+                content.innerHTML = routes[path];
+                // 重新绑定路由链接事件
+                setTimeout(() => {
+                    bindRouteLinks();
+                }, 0);
+            } else {
+                handleNotFound();
+            }
+            
+            // 更新导航激活状态
+            updateNavActiveState(path);
+        }
+
+        // 更新导航激活状态
+        function updateNavActiveState(path) {
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === path) {
+                    link.style.color = '#4CAF50';
+                    link.style.fontWeight = 'bold';
+                } else {
+                    link.style.color = 'white';
+                    link.style.fontWeight = 'normal';
+                }
+            });
+        }
+
+        // 绑定路由链接事件
+        function bindRouteLinks() {
+            const routeLinks = document.querySelectorAll('a[data-route]');
+            routeLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const href = this.getAttribute('href');
+                    history.pushState(null, null, href);
+                    handleRouting();
+                });
+            });
+        }
+
+        // 初始化
+        window.addEventListener('popstate', handleRouting);
+        window.addEventListener('load', function() {
+            bindRouteLinks();
+            handleRouting();
+        });
+
+        // 表单提交处理
+        document.addEventListener('submit', function(e) {
+            if (e.target.id === 'quoteForm') {
+                e.preventDefault();
+                alert('询价信息已提交！我们会尽快与您联系。');
+                e.target.reset();
+            }
+        });
+
+        // 捕获未处理的错误
+        window.addEventListener('error', function(e) {
+            e.preventDefault();
+            console.error('页面错误:', e.error);
+            return true;
+        });
+    </script>
+</body>
+</html>
