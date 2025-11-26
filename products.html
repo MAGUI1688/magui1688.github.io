@@ -4,25 +4,139 @@
   <meta charset="UTF-8">
   <title>产品中心 - 铝、不锈钢、镍标定制及工艺流程 - 利娟标牌</title>
   <meta name="description" content="全面了解利娟标牌的所有产品系列，包括铝标牌、不锈钢铭牌、镍标、金属按键及各种标牌制作工艺，满足您的不同需求。">
-  <!-- 把首页 <style> 里 #products 相关样式全部拷进来，保持原样 -->
-  <style>/* 这里放你首页 #products 的 CSS，保持原样 */</style>
+
+  <!-- 首页 #products 相关样式（复制你原来的，这里给最小可用版） -->
+  <style>
+    :root{--primary:#0ea5e9;--accent:#f97316;--text-main:#0f172a;--text-sub:#64748b;--max-w:1160px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--text-main);background:#f3f4f6}
+    .container{width:90%;max-width:var(--max-w);margin:0 auto;padding:50px 0}
+    h2.section-title{font-size:26px;font-weight:700;text-align:center;margin-bottom:10px;color:#111827}
+    p.section-sub{font-size:14px;text-align:center;color:var(--text-sub);margin-bottom:26px}
+    .products-top-image{display:flex;justify-content:center;margin:10px 0 26px}
+    .products-top-image img{width:100%;max-width:1200px;height:auto;border-radius:18px;box-shadow:0 10px 30px rgba(15,23,42,.12);object-fit:cover}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    @media (max-width:960px){.grid-3{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){.grid-3{grid-template-columns:1fr}}
+    .card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(15,23,42,.12);border:1px solid #e5e7eb}
+    .card img{aspect-ratio:1/1;object-fit:cover;border-radius:18px}
+    .card h3{font-size:18px;font-weight:700;margin:18px 20px 8px;text-align:center}
+    .card p{font-size:14px;color:var(--text-sub);line-height:1.6;margin:0 20px 14px}
+    .pill-row{display:flex;flex-wrap:wrap;gap:6px;margin:0 20px 20px;justify-content:center}
+    .pill{padding:5px 12px;border-radius:999px;background:rgba(59,130,246,.08);color:#2563eb;font-size:12px;font-weight:500}
+    a{color:#0369a1;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .back-home{display:inline-block;margin:40px auto;padding:10px 20px;background:#0369a1;color:#fff;border-radius:999px;font-size:14px}
+  </style>
 </head>
+
 <body>
-  <!-- 只拷 #products 整块 -->
+  <!-- 整块复制首页 #products -->
   <section id="products">
     <div class="container">
       <h2 class="section-title">产品与工艺</h2>
       <p class="section-sub">覆盖铝材、不锈钢、镍片、PET、KT板及按钮键等多种材质的产品，可根据图纸或样品定制。</p>
-      <div class="products-top-image"><img src="https://lijuan.ltd/images/dex7.jpg" alt="深圳铝标牌厂家拉丝氧化批花工艺"></div>
+      <div class="products-top-image">
+        <img src="https://lijuan.ltd/images/dex7.jpg" alt="深圳铝标牌厂家拉丝氧化批花工艺" loading="lazy">
+      </div>
+
       <div class="grid-3">
-        <!-- 6 个 card 整块照抄，图片/链接不变 -->
-        <div class="card product-with-image">……</div>
-        <!-- 其余 5 个 card 同样拷 -->
+        <!-- ① 铝标牌 -->
+        <div class="card product-with-image">
+          <a href="product-aluminum.html" class="card-link">
+            
+<img src="https://lijuan.ltd/images/dex1.jpg" alt="铝标牌铭牌批花" style="width:100%;height:350px;object-fit:cover;border-radius:18px;" loading="lazy">
+            <h3>铝标牌 · 铭牌批花</h3>
+            <p>拉丝铝、氧化铝、喷砂等工艺，可丝印、腐蚀、激光打标，适用于机械、电气设备铭牌。</p>
+            <div class="pill-row">
+              <span class="pill">拉丝工艺</span>
+              <span class="pill">丝印/腐蚀</span>
+              <span class="pill">耐磨耐腐蚀</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- ② 不锈钢铭牌 -->
+        <div class="card product-with-image">
+          <a href="product-stainless.html" class="card-link">
+            
+<img src="https://lijuan.ltd/images/dex2.jpg" alt="不锈钢铭牌深蚀刻填漆户外耐候" style="width:100%;height:350px;object-fit:cover;border-radius:18px;" loading="lazy">
+            <h3>不锈钢铭牌</h3>
+            <p>304 / 316 不锈钢，深蚀刻 + 填漆或印刷，高温耐腐蚀，适合户外及恶劣环境长期使用。</p>
+            <div class="pill-row">
+              <span class="pill">304/316不锈钢</span>
+              <span class="pill">深蚀刻</span>
+              <span class="pill">户外耐候</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- ③ 设备铭牌/标识牌 -->
+        <div class="card product-with-image">
+          <a href="product-metal-landing.html" class="card-link">
+            
+<img src="https://lijuan.ltd/images/dex3.jpg" alt="标识高清彩印异形切割" style="width:100%;height:350px;object-fit:cover;border-radius:18px;" loading="lazy">
+            <h3>设备铭牌/标识牌</h3>
+            <p>适合车间现场管理、安全标识、展示架、流程看板等，画面清晰，安装方式灵活便捷。</p>
+            <div class="pill-row">
+              <span class="pill">车间管理牌</span>
+              <span class="pill">安全警示</span>
+              <span class="pill">轻质安装</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- ④ 电源按钮键 / CD纹片 -->
+        <div class="card product-with-image">
+          <a href="product-button.html" class="card-link">
+            
+<img src="https://lijuan.ltd/images/dex4.jpg" alt="电源按钮键CD纹片镭射拉丝背胶" style="width:100%;height:350px;object-fit:cover;border-radius:18px;" loading="lazy">
+            <h3>电源按钮键 / CD纹片</h3>
+            <p>适用于工控按钮、面板、家电按键等，可背胶粘贴，支持精细开孔、激光、丝印文字与图标。</p>
+            <div class="pill-row">
+              <span class="pill">精细开孔</span>
+              <span class="pill">背胶粘贴</span>
+              <span class="pill">图文清晰</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- ⑤ 电脑机箱铭牌 -->
+        <div class="card product-with-image">
+          <a href="product-case.html" class="card-link">
+            
+<img src="https://lijuan.ltd/images/dex5.jpg" alt="电脑机箱铭牌装饰件拉丝镜面电镀" style="width:100%;height:350px;object-fit:cover;border-radius:18px;" loading="lazy">
+            <h3>电脑机箱铭牌</h3>
+            <p>LOGO 铭牌、型号牌、侧板装饰牌等，支持金属拉丝、镜面、电镀及多种装饰工艺效果。</p>
+            <div class="pill-row">
+              <span class="pill">品牌LOGO</span>
+              <span class="pill">装饰效果</span>
+              <span class="pill">个性定制</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- ⑥ 定制其他标牌 -->
+        <div class="card product-with-image">
+          <a href="product-other.html" class="card-link">
+            
+<img src="https://lijuan.ltd/images/dex6.jpg" alt="定制其他标牌条码二维码资产管理" style="width:100%;height:350px;object-fit:cover;border-radius:18px;" loading="lazy">
+            <h3>定制其他标牌</h3>
+            <p>资产标签、条形码牌、二维码牌、设备编号牌等，支持小批量快速交付与大批量稳定供货。</p>
+            <div class="pill-row">
+              <span class="pill">条码二维码</span>
+              <span class="pill">资产管理</span>
+              <span class="pill">大小批量定制</span>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- 返回首页 -->
   <div style="text-align:center;margin:40px 0">
-    <a href="/" style="padding:10px 20px;background:#0369a1;color:#fff;border-radius:999px;">返回首页</a>
+    <a href="/" class="back-home">返回首页</a>
   </div>
 </body>
 </html>
