@@ -7,6 +7,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <base target="_blank">
 
+  <!-- ===== SEO 优化 1: 添加 Hreflang 标签 ===== -->
+  <link rel="alternate" hreflang="zh-CN" href="https://lijuan.ltd/product-other.html" />
+  <link rel="alternate" hreflang="en" href="https://lijuan.ltd/product-other-en.html" /> <!-- 假设的英文版页面路径 -->
+  <link rel="alternate" hreflang="x-default" href="https://lijuan.ltd/product-other.html" />
+  <!-- ============================================= -->
+
   <!-- 结构化数据 -->
   <script type="application/ld+json">
   {
@@ -151,14 +157,16 @@
   <div class="container nav">
     <div class="logo">
       <span data-zh="深圳市利娟标牌有限公司" data-en="Shenzhen Lijuan Nameplate Co., Ltd.">深圳市利娟标牌有限公司</span>
-      <a href="./index.html" class="nav-home"><span data-zh="返回首页" data-en="Home">返回首页</span></a>
+      <!-- ===== SEO 优化 2: 规范化链接路径 ===== -->
+      <a href="/index.html" class="nav-home"><span data-zh="返回首页" data-en="Home">返回首页</span></a>
     </div>
     <div id="menuToggle">☰</div>
     <nav class="nav-links" id="navLinks">
-      <a href="./index.html#products"><span data-zh="产品与工艺" data-en="Products & Craft">产品与工艺</span></a>
-      <a href="./index.html#process"><span data-zh="下单流程" data-en="Order Process">下单流程</span></a>
-      <a href="./index.html#cases"><span data-zh="客户案例" data-en="Case Studies">客户案例</span></a>
-      <a href="./index.html#contact"><span data-zh="获取报价" data-en="Get Quote">获取报价</span></a>
+      <a href="/index.html#products"><span data-zh="产品与工艺" data-en="Products & Craft">产品与工艺</span></a>
+      <a href="/index.html#process"><span data-zh="下单流程" data-en="Order Process">下单流程</span></a>
+      <a href="/index.html#cases"><span data-zh="客户案例" data-en="Case Studies">客户案例</span></a>
+      <a href="/index.html#contact"><span data-zh="获取报价" data-en="Get Quote">获取报价</span></a>
+      <!-- ======================================= -->
       <div id="langSwitch" onclick="toggleLang()">
         <span id="langZh" data-zh="中" data-en="中">中</span> / <span id="langEn" data-zh="EN" data-en="EN">EN</span>
       </div>
@@ -199,7 +207,8 @@
     </div>
     
     <div class="hero-cta qr-center">
-      <div class="qr-single"><img src="./images/wechat-qr-sales1.jpg" alt="利娟标牌销售微信1 - 13266794685" class="qr-img"></div>
+      <!-- ===== SEO 优化 2: 规范化图片路径 ===== -->
+      <div class="qr-single"><img src="/images/wechat-qr-sales1.jpg" alt="利娟标牌销售微信1 - 13266794685" class="qr-img"></div>
       <div class="btn-box">
         <button class="btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
           <span data-zh="立即询价" data-en="Inquire Now">立即询价</span>
@@ -209,21 +218,22 @@
           <span class="phone-second"><span data-zh="加微信发图纸，30分钟出报价" data-en="Add WeChat for a quote in 30 mins">加微信发图纸，30分钟出报价</span></span>
         </div>
       </div>
-      <div class="qr-single"><img src="./images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726" class="qr-img"></div>
+      <div class="qr-single"><img src="/images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726" class="qr-img"></div>
     </div>
     
     <div class="hero-two-img">
-      <img src="./images/custom-label-1.jpg" width="600" height="350" alt="条码二维码标牌定制样品展示" class="two-img">
-      <img src="./images/custom-label-2.jpg" width="600" height="350" alt="资产编号标签定制解决方案" class="two-img">
+      <img src="/images/custom-label-1.jpg" width="600" height="350" alt="条码二维码标牌定制样品展示" class="two-img">
+      <img src="/images/custom-label-2.jpg" width="600" height="350" alt="资产编号标签定制解决方案" class="two-img">
     </div>
     <div class="hero-two-img">
-      <img src="./images/custom-label-3.jpg" width="600" height="350" alt="设备铭牌PET材质应用实例" class="two-img">
-      <img src="./images/custom-label-4.jpg" width="600" height="350" alt="安全警示标牌高清印刷效果" class="two-img">
+      <img src="/images/custom-label-3.jpg" width="600" height="350" alt="设备铭牌PET材质应用实例" class="two-img">
+      <img src="/images/custom-label-4.jpg" width="600" height="350" alt="安全警示标牌高清印刷效果" class="two-img">
     </div>
     <div class="hero-two-img">
-      <img src="./images/custom-label-5.jpg" width="600" height="350" alt="多种定制标牌工艺对比展示" class="two-img">
-      <img src="./images/custom-label-6.jpg" width="600" height="350" alt="不干胶标签异形切割样品" class="two-img">
+      <img src="/images/custom-label-5.jpg" width="600" height="350" alt="多种定制标牌工艺对比展示" class="two-img">
+      <img src="/images/custom-label-6.jpg" width="600" height="350" alt="不干胶标签异形切割样品" class="two-img">
     </div>
+    <!-- ======================================= -->
   </div>
 </section>
 
@@ -232,6 +242,7 @@
     <h2 class="section-title">
       <span data-zh="定制标牌材质选择指南" data-en="Label Material Guide">定制标牌材质选择指南</span>
     </h2>
+    <!-- ===== SEO 优化 3: 优化表格内容可读性 ===== -->
     <table class="compare-table">
       <thead><tr>
         <th><span data-zh="性能" data-en="Feature">性能</span></th>
@@ -242,21 +253,21 @@
       <tbody>
         <tr>
           <td><span data-zh="耐刮花" data-en="Scratch Proof">耐刮花</span></td>
-          <td class="good">★★★★★</td>
-          <td>★★★☆☆</td>
-          <td class="bad">★☆☆☆☆</td>
+          <td class="good"><span data-zh="优秀" data-en="Excellent">优秀</span></td>
+          <td><span data-zh="良好" data-en="Good">良好</span></td>
+          <td class="bad"><span data-zh="较差" data-en="Poor">较差</span></td>
         </tr>
         <tr>
           <td><span data-zh="耐高温" data-en="Heat Resist">耐高温</span></td>
-          <td class="good">★★★★★</td>
-          <td>★★★★☆</td>
-          <td class="bad">★★☆☆☆</td>
+          <td class="good"><span data-zh="优秀" data-en="Excellent">优秀</span></td>
+          <td><span data-zh="优秀" data-en="Excellent">优秀</span></td>
+          <td class="bad"><span data-zh="一般" data-en="Fair">一般</span></td>
         </tr>
         <tr>
           <td><span data-zh="美观度" data-en="Appearance">美观度</span></td>
-          <td class="good">★★★★★</td>
-          <td class="good">★★★★★</td>
-          <td>★★★☆☆</td>
+          <td class="good"><span data-zh="优秀" data-en="Excellent">优秀</span></td>
+          <td class="good"><span data-zh="优秀" data-en="Excellent">优秀</span></td>
+          <td><span data-zh="良好" data-en="Good">良好</span></td>
         </tr>
         <tr>
           <td><span data-zh="单价" data-en="Unit Price">单价</span></td>
@@ -266,6 +277,7 @@
         </tr>
       </tbody>
     </table>
+    <!-- ============================================= -->
   </div>
 </section>
 

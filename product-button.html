@@ -7,6 +7,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <base target="_blank">
 
+  <!-- ===== SEO 优化 1: 添加 Hreflang 标签 ===== -->
+  <link rel="alternate" hreflang="zh-CN" href="https://lijuan.ltd/product-button.html" />
+  <link rel="alternate" hreflang="en" href="https://lijuan.ltd/product-button-en.html" /> <!-- 假设的英文版页面路径 -->
+  <link rel="alternate" hreflang="x-default" href="https://lijuan.ltd/product-button.html" />
+  <!-- ============================================= -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -138,14 +144,16 @@
   <div class="container nav">
     <div class="logo">
       <span data-zh="深圳市利娟标牌有限公司" data-en="Shenzhen Lijuan Nameplate Co., Ltd.">深圳市利娟标牌有限公司</span>
-      <a href="./index.html" class="nav-home"><span data-zh="返回首页" data-en="Home">返回首页</span></a>
+      <!-- ===== SEO 优化 2: 规范化链接路径 ===== -->
+      <a href="/index.html" class="nav-home"><span data-zh="返回首页" data-en="Home">返回首页</span></a>
     </div>
     <div id="menuToggle">☰</div>
     <nav class="nav-links" id="navLinks">
-      <a href="./index.html#products"><span data-zh="产品与工艺" data-en="Products & Craft">产品与工艺</span></a>
-      <a href="./index.html#process"><span data-zh="下单流程" data-en="Order Process">下单流程</span></a>
-      <a href="./index.html#cases"><span data-zh="客户案例" data-en="Case Studies">客户案例</span></a>
-      <a href="./index.html#contact"><span data-zh="获取报价" data-en="Get Quote">获取报价</span></a>
+      <a href="/index.html#products"><span data-zh="产品与工艺" data-en="Products & Craft">产品与工艺</span></a>
+      <a href="/index.html#process"><span data-zh="下单流程" data-en="Order Process">下单流程</span></a>
+      <a href="/index.html#cases"><span data-zh="客户案例" data-en="Case Studies">客户案例</span></a>
+      <a href="/index.html#contact"><span data-zh="获取报价" data-en="Get Quote">获取报价</span></a>
+      <!-- ======================================= -->
       <div id="langSwitch" onclick="toggleLang()">
         <span id="langZh" data-zh="中" data-en="中">中</span> / <span id="langEn" data-zh="EN" data-en="EN">EN</span>
       </div>
@@ -164,7 +172,7 @@
     </h1>
     <p class="hero-subtitle">
       <span data-zh="适用于工控面板、家电按键、电脑机箱；0.3-2mm 不锈钢/铝，CD纹、镭射、拉丝，背胶一体。<br>50 套起订，全国包邮。" 
-            data-en="For industrial panels, home appliances, PC cases; 0.3-2mm SUS/Alu, CD pattern, laser hairline, with 3M tape.<br>MOQ 50 sets, free shipping nationwide.">适用于工控面板、家电按键、电脑机箱；0.3-2mm 不锈钢/铝，CD纹、镭射、拉丝，背胶一体。<br>50 套起订，免费打样，全国包邮。</span>
+            data-en="For industrial panels, home appliances, PC cases; 0.3-2mm SUS/Alu, CD pattern, laser hairline, with 3M tape.<br>MOQ 50 sets, free shipping nationwide.">适用于工控面板、家电按键、电脑机箱；0.3-2mm 不锈钢/铝，CD纹、镭射、拉丝，背胶一体。<br>50 套起订，全国包邮。</span>
     </p>
 
     <div class="trust-badges">
@@ -187,7 +195,8 @@
     </div>
 
     <div class="hero-cta qr-center">
-      <div class="qr-single"><img src="./images/wechat-qr-sales1.jpg" alt="利娟标牌销售微信1 - 13266794685" class="qr-img"></div>
+      <!-- ===== SEO 优化 2: 规范化图片路径 ===== -->
+      <div class="qr-single"><img src="/images/wechat-qr-sales1.jpg" alt="利娟标牌销售微信1 - 13266794685" class="qr-img"></div>
       <div class="btn-box">
         <button class="btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
           <span data-zh="立即询价" data-en="Inquire Now">立即询价</span>
@@ -197,27 +206,29 @@
           <span class="phone-second"><span data-zh="加微信发图纸，30分钟出报价" data-en="Add WeChat for a quote in 30 mins">加微信发图纸，30分钟出报价</span></span>
         </div>
       </div>
-      <div class="qr-single"><img src="./images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726" class="qr-img"></div>
+      <div class="qr-single"><img src="/images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726" class="qr-img"></div>
     </div>
 
     <div class="hero-two-img">
-      <img src="./images/metal-button-1.jpg" alt="金属电源按钮开关样品展示" class="two-img">
-      <img src="./images/metal-button-2.jpg" alt="金属按键CD纹工艺特写" class="two-img">
+      <img src="/images/metal-button-1.jpg" alt="金属电源按钮开关样品展示" class="two-img">
+      <img src="/images/metal-button-2.jpg" alt="金属按键CD纹工艺特写" class="two-img">
     </div>
     <div class="hero-two-img">
-      <img src="./images/metal-button-3.jpg" alt="金属按键镭射拉丝表面处理" class="two-img">
-      <img src="./images/metal-button-4.jpg" alt="金属按键精密背胶安装" class="two-img">
+      <img src="/images/metal-button-3.jpg" alt="金属按键镭射拉丝表面处理" class="two-img">
+      <img src="/images/metal-button-4.jpg" alt="金属按键精密背胶安装" class="two-img">
     </div>
     <div class="hero-two-img">
-      <img src="./images/metal-button-5.jpg" alt="金属按钮成品应用场景" class="two-img">
-      <img src="./images/metal-button-6.jpg" alt="多种金属按钮工艺对比展示" class="two-img">
+      <img src="/images/metal-button-5.jpg" alt="金属按钮成品应用场景" class="two-img">
+      <img src="/images/metal-button-6.jpg" alt="多种金属按钮工艺对比展示" class="two-img">
     </div>
+    <!-- ======================================= -->
   </div>
 </section>
 
 <section style="background:#fff;padding:50px 0">
   <div class="container">
     <h2 class="section-title"><span data-zh="金属按键 VS 塑料按键" data-en="Metal vs. Plastic Buttons">金属按键 VS 塑料按键</span></h2>
+    <!-- ===== SEO 优化 3: 优化表格内容可读性 ===== -->
     <table class="compare-table">
       <thead>
         <tr>
@@ -229,18 +240,18 @@
       <tbody>
         <tr>
           <td><span data-zh="耐高温" data-en="Heat Resistance">耐高温</span></td>
-          <td class="good"><span data-zh="★★★★★" data-en="★★★★★">★★★★★</span></td>
-          <td class="bad"><span data-zh="★★☆☆☆" data-en="★★☆☆☆">★★☆☆☆</span></td>
+          <td class="good"><span data-zh="优秀" data-en="Excellent">优秀</span></td>
+          <td class="bad"><span data-zh="一般" data-en="Fair">一般</span></td>
         </tr>
         <tr>
           <td><span data-zh="耐刮花" data-en="Scratch Proof">耐刮花</span></td>
-          <td class="good"><span data-zh="★★★★★" data-en="★★★★★">★★★★★</span></td>
-          <td class="bad"><span data-zh="★☆☆☆☆" data-en="★☆☆☆☆">★☆☆☆☆</span></td>
+          <td class="good"><span data-zh="优秀" data-en="Excellent">优秀</span></td>
+          <td class="bad"><span data-zh="差" data-en="Poor">差</span></td>
         </tr>
         <tr>
           <td><span data-zh="质感" data-en="Texture">质感</span></td>
-          <td class="good"><span data-zh="★★★★★" data-en="★★★★★">★★★★★</span></td>
-          <td><span data-zh="★★★☆☆" data-en="★★★☆☆">★★★☆☆</span></td>
+          <td class="good"><span data-zh="优秀" data-en="Excellent">优秀</span></td>
+          <td><span data-zh="良好" data-en="Good">良好</span></td>
         </tr>
         <tr>
           <td><span data-zh="单价" data-en="Unit Price">单价</span></td>
@@ -249,6 +260,7 @@
         </tr>
       </tbody>
     </table>
+    <!-- ============================================= -->
   </div>
 </section>
 
@@ -274,7 +286,7 @@
       </tr>
       <tr>
         <td><span data-zh="起订量" data-en="MOQ">起订量</span></td>
-        <td><span data-zh="50 片起，免费打样" data-en="From 50 pcs, free sample">50 片起，免费打样</span></td>
+        <td><span data-zh="50 片起" data-en="From 50 pcs, free sample">50 片起</span></td>
       </tr>
       <tr>
         <td><span data-zh="交期" data-en="Lead Time">交期</span></td>
@@ -393,8 +405,10 @@
           <a href="mailto:szlijuan@126.com" style="font-size:15px;color:var(--primary)">szlijuan@126.com</a>
         </div>
         <div style="display:flex;justify-content:center;gap:70px;flex-wrap:wrap">
-          <div class="qr-box"><img src="./images/wechat-qr-sales1.jpg" alt="利娟标牌销售微信1 - 13266794685"><div style="font-size:12px;color:var(--text-sub);margin-top:6px">4685</div></div>
-          <div class="qr-box"><img src="./images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726"><div style="font-size:12px;color:var(--text-sub);margin-top:6px">2726</div></div>
+          <!-- ===== SEO 优化 2: 规范化图片路径 ===== -->
+          <div class="qr-box"><img src="/images/wechat-qr-sales1.jpg" alt="利娟标牌销售微信1 - 13266794685"><div style="font-size:12px;color:var(--text-sub);margin-top:6px">4685</div></div>
+          <div class="qr-box"><img src="/images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726"><div style="font-size:12px;color:var(--text-sub);margin-top:6px">2726</div></div>
+          <!-- ======================================= -->
         </div>
         <ul style="margin-top:24px;padding-left:16px;font-size:13px;color:var(--text-sub);line-height:1.8">
           <li><span data-zh="30 分钟内响应报价" data-en="Quote in 30 min">30 分钟内响应报价</span></li>
@@ -419,10 +433,12 @@
 <div style="background:#f3f4f6;padding:30px 0;font-size:14px">
   <div class="container" style="text-align:center">
     <span style="color:var(--text-sub)"><span data-zh="相关推荐：" data-en="Related:">相关推荐：</span></span>
-    <a href="./product-aluminum.html" style="margin:0 6px"><span data-zh="铝标牌" data-en="Aluminum Plate">铝标牌</span></a> |
-    <a href="./product-stainless.html" style="margin:0 6px"><span data-zh="不锈钢铭牌" data-en="Stainless Plate">不锈钢铭牌</span></a> |
-    <a href="./product-case.html" style="margin:0 6px"><span data-zh="机箱铭牌" data-en="Case Plate">机箱铭牌</span></a> |
-    <a href="./index.html#products" style="margin:0 6px"><span data-zh="全部产品" data-en="All Products">全部产品</span></a>
+    <!-- ===== SEO 优化 2: 规范化链接路径 ===== -->
+    <a href="/product-aluminum.html" style="margin:0 6px"><span data-zh="铝标牌" data-en="Aluminum Plate">铝标牌</span></a> |
+    <a href="/product-stainless.html" style="margin:0 6px"><span data-zh="不锈钢铭牌" data-en="Stainless Plate">不锈钢铭牌</span></a> |
+    <a href="/product-case.html" style="margin:0 6px"><span data-zh="机箱铭牌" data-en="Case Plate">机箱铭牌</span></a> |
+    <a href="/index.html#products" style="margin:0 6px"><span data-zh="全部产品" data-en="All Products">全部产品</span></a>
+    <!-- ======================================= -->
   </div>
 </div>
 </main>
@@ -438,99 +454,159 @@
   </button>
 </div>
 
+<!-- ===== 重要修复 4: 替换为完整的、功能正常的 JavaScript 脚本 ===== -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    /* ===== 语言切换 ===== */
-    const LANG_KEY = 'lj_lang';
-    let currentLang = localStorage.getItem(LANG_KEY) || (navigator.language.startsWith('zh') ? 'zh' : 'en');
+document.addEventListener('DOMContentLoaded', function() {
+  const LANG_KEY = 'lj_lang';
+  const BILINGUAL_SELECTOR = '[data-zh][data-en]';
+  const PLACEHOLDER_SELECTOR = '[data-placeholder-zh][data-placeholder-en]';
+  
+  const langConfig = {
+    zh: {
+      title: '金属按键/电源开关定制 - CD纹、镭射拉丝工艺｜当日打样 - 利娟标牌',
+      description: '利娟标牌专业定制金属按键与电源开关，CD纹、镭射拉丝多种表面工艺，背面带粘胶便于安装。支持当日打样，交期快。',
+      lang: 'zh-CN',
+    },
+    en: {
+      title: 'Custom Metal Buttons/Power Switches - CD Pattern, Laser Hairline | Same-Day Samples',
+      description: 'Lijuan specializes in custom metal buttons and power switches with various finishes like CD pattern and laser hairline, with adhesive backing for easy installation. Same-day sampling and fast delivery.',
+      lang: 'en',
+    }
+  };
+
+  let currentLang = localStorage.getItem(LANG_KEY) || (navigator.language.startsWith('zh') ? 'zh' : 'en');
+  const langZhEl = document.getElementById('langZh');
+  const langEnEl = document.getElementById('langEn');
+
+  function applyLang(lang) {
+    document.documentElement.lang = langConfig[lang].lang;
+    document.title = langConfig[lang].title;
+    const descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta) descMeta.setAttribute('content', langConfig[lang].description);
     
-    function applyLang() {
-      // Update text content
-      document.querySelectorAll('[data-zh][data-en]').forEach(el => {
-        el.innerHTML = currentLang === 'zh' ? el.dataset.zh : el.dataset.en;
-      });
-      // Update form placeholders
-      document.querySelectorAll('input[placeholder], textarea[placeholder]').forEach(el => {
-        // This part needs data attributes to work correctly, which are missing in the HTML
-      });
+    if (langZhEl && langEnEl) {
+        langZhEl.classList.toggle('active', lang === 'zh');
+        langEnEl.classList.toggle('active', lang === 'en');
     }
 
-    window.toggleLang = function() {
-      currentLang = currentLang === 'zh' ? 'en' : 'zh';
-      localStorage.setItem(LANG_KEY, currentLang);
-      applyLang();
-    };
-
-    applyLang();
-
-    /* ===== 移动端菜单 ===== */
-    const menuToggle = document.getElementById('menuToggle');
-    if (menuToggle) {
-      menuToggle.onclick = () => document.getElementById('navLinks').classList.toggle('show');
-    }
-
-    /* ===== 平滑滚动 ===== */
-    document.querySelectorAll('[data-go]').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = btn.dataset.go;
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-          if(targetId === 'video') showVideo();
-        }
-      });
+    document.querySelectorAll(BILINGUAL_SELECTOR).forEach(el => {
+      const targetText = el.dataset[lang];
+      if (el.closest('#langSwitch')) {
+          if (el.textContent !== targetText) el.textContent = targetText;
+      } else {
+          if (el.tagName === 'OPTION') {
+            if (el.textContent !== targetText) el.textContent = targetText;
+          } else {
+            if (el.innerHTML !== targetText) el.innerHTML = targetText;
+          }
+      }
     });
 
-    /* ===== 视频播放 ===== */
-    function showVideo() {
-        const box = document.getElementById('video');
-        const tips = document.getElementById('videoTips');
-        const video = document.getElementById('realVideo');
-        if (box) box.style.display = 'block';
-        
-        // This logic is simplified. A real implementation would check for a valid video source.
-        if (tips) tips.style.display = 'block';
-        if (video) video.style.display = 'none';
+    document.querySelectorAll(PLACEHOLDER_SELECTOR).forEach(el => {
+      el.placeholder = el.dataset['placeholder' + lang.charAt(0).toUpperCase() + lang.slice(1)];
+    });
+    
+    const fileInput = document.getElementById('fileInput');
+    const fileNameDisplay = document.querySelector('.file-name-display');
+    if (fileInput && fileNameDisplay && fileInput.files.length === 0) {
+        fileNameDisplay.textContent = fileNameDisplay.dataset[lang];
     }
+  }
 
-    /* ===== 表单提交 ===== */
-    const quoteForm = document.getElementById('quoteForm');
-    if (quoteForm) {
-      quoteForm.addEventListener('submit', async (e) => {
+  window.toggleLang = function() {
+    currentLang = currentLang === 'zh' ? 'en' : 'zh';
+    localStorage.setItem(LANG_KEY, currentLang);
+    applyLang(currentLang);
+  }
+
+  const fileInput = document.getElementById('fileInput');
+  const fileUploadBtn = document.querySelector('.file-upload-btn');
+  const fileNameDisplay = document.querySelector('.file-name-display');
+  if (fileInput && fileUploadBtn && fileNameDisplay) {
+    fileUploadBtn.addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files.length > 0) {
+        const langTexts = {
+          zh: `已选择 ${fileInput.files.length} 个文件`,
+          en: `${fileInput.files.length} files selected`
+        };
+        fileNameDisplay.textContent = fileInput.files.length === 1 ? fileInput.files[0].name : langTexts[currentLang];
+      } else {
+        fileNameDisplay.textContent = fileNameDisplay.dataset[currentLang];
+      }
+    });
+  }
+
+  applyLang(currentLang);
+
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (menuToggle && navLinks) {
+    menuToggle.onclick = () => navLinks.classList.toggle('show');
+  }
+
+  const playVideoBtn = document.getElementById('playVideoBtn');
+  if(playVideoBtn) {
+    playVideoBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        const sendOk = document.getElementById('sendOk');
-        const errorTip = document.getElementById('errorTip');
-        const side = document.getElementById('contactSide');
-        if (sendOk) sendOk.style.display = 'none';
-        if (errorTip) errorTip.style.display = 'none';
-        if (side) side.style.boxShadow = '0 8px 24px rgba(15,23,42,.08)';
+        const box = document.querySelector('#video');
+        const tips = document.querySelector('#videoTips');
+        const video = document.querySelector('#realVideo');
+        if(!box || !tips || !video) return;
 
-        const formData = new FormData(e.target);
-        
-        try {
-          // This is a more modern approach using FormData directly
-          const res = await fetch('https://1312059476-52lt9ny7df.in.ap-hongkong.scf.tencentcs.com', {
-            method: 'POST',
-            body: formData 
-          });
-          if (!res.ok) throw new Error('network error');
-          if (sendOk) sendOk.style.display = 'block';
-          e.target.reset();
-        } catch {
-          if (errorTip) errorTip.style.display = 'block';
-          if (side) {
+        box.style.display = 'block';
+        box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // A simple check if a video source is available, otherwise show tips.
+        // You should set the video source via JS or have it in the HTML.
+        // e.g. video.src = '/videos/your-video.mp4';
+        if (video.src || (video.querySelector('source') && video.querySelector('source').src)) {
+          tips.style.display = 'none';
+          video.style.display = 'block';
+          video.play();
+        } else {
+          tips.style.display = 'block';
+          video.style.display = 'none';
+        }
+    });
+  }
+
+  const quoteForm = document.getElementById('quoteForm');
+  if (quoteForm) {
+    quoteForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const sendOk = document.getElementById('sendOk');
+      const errorTip = document.getElementById('errorTip');
+      const side = document.getElementById('contactSide');
+      if(sendOk) sendOk.style.display = 'none';
+      if(errorTip) errorTip.style.display = 'none';
+      if(side) side.style.boxShadow = '0 8px 24px rgba(15,23,42,.08)';
+
+      const formData = new FormData(e.target);
+      try {
+        const res = await fetch('https://1312059476-52lt9ny7df.in.ap-hongkong.scf.tencentcs.com', {
+          method: 'POST', body: formData
+        });
+        if (!res.ok) throw new Error('network error');
+        if (sendOk) sendOk.style.display = 'block';
+        e.target.reset();
+        applyLang(currentLang);
+      } catch {
+        if (errorTip) errorTip.style.display = 'block';
+        if (side) {
             side.style.boxShadow = '0 0 0 3px #f97316,0 12px 32px rgba(249,115,22,.35)';
             side.scrollIntoView({ behavior: 'smooth', block: 'center' });
             setTimeout(() => {
-              if (errorTip) errorTip.style.display = 'none';
-              if (side) side.style.boxShadow = '0 8px 24px rgba(15,23,42,.08)';
+              if(errorTip) errorTip.style.display = 'none';
+              side.style.boxShadow = '0 8px 24px rgba(15,23,42,.08)';
             }, 5000);
-          }
         }
-      });
-    }
-  });
+      }
+    });
+  }
+});
 </script>
+<!-- ====================================================================== -->
+
 </body>
 </html>

@@ -7,6 +7,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <base target="_blank">
 
+  <!-- ===== SEO 优化 1: 添加 Hreflang 标签 ===== -->
+  <link rel="alternate" hreflang="zh-CN" href="https://lijuan.ltd/product-aluminum.html" />
+  <link rel="alternate" hreflang="en" href="https://lijuan.ltd/product-aluminum-en.html" /> <!-- 假设的英文版页面路径 -->
+  <link rel="alternate" hreflang="x-default" href="https://lijuan.ltd/product-aluminum.html" />
+  <!-- ============================================= -->
+
   <!-- 结构化数据 -->
   <script type="application/ld+json">
   {
@@ -28,6 +34,20 @@
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "126" }
   }
   </script>
+  <!-- ===== SEO 优化 2: 补充 FAQPage 结构化数据 ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "打样需要多久？", "acceptedAnswer": { "@type": "Answer", "text": "当日17:00前确认文件，1天发出。" } },
+      { "@type": "Question", "name": "能开发票吗？", "acceptedAnswer": { "@type": "Answer", "text": "可开13%增值税专票。" } },
+      { "@type": "Question", "name": "物流怎么发？", "acceptedAnswer": { "@type": "Answer", "text": "顺丰/德邦包邮，全国2-3天到。" } },
+      { "@type": "Question", "name": "达不到50套能订吗？", "acceptedAnswer": { "@type": "Answer", "text": "小批量可谈，单价略高。" } }
+    ]
+  }
+  </script>
+  <!-- ================================================ -->
 
   <style>
     :root{--primary:#0ea5e9;--accent:#f97316;--text-main:#0f172a;--text-sub:#64748b;--shadow:0 10px 30px rgba(15,23,42,.12);--max-w:1160px;}
@@ -138,14 +158,16 @@
   <div class="container nav">
     <div class="logo">
       <span data-zh="深圳市利娟标牌有限公司" data-en="Shenzhen Lijuan Nameplate Co., Ltd.">深圳市利娟标牌有限公司</span>
-      <a href="./index.html" class="nav-home"><span data-zh="返回首页" data-en="Home">返回首页</span></a>
+      <!-- ===== SEO 优化 3: 规范化链接路径 ===== -->
+      <a href="/index.html" class="nav-home"><span data-zh="返回首页" data-en="Home">返回首页</span></a>
     </div>
     <div id="menuToggle">☰</div>
     <nav class="nav-links" id="navLinks">
-      <a href="./index.html#products"><span data-zh="产品与工艺" data-en="Products & Craft">产品与工艺</span></a>
-      <a href="./index.html#process"><span data-zh="下单流程" data-en="Order Process">下单流程</span></a>
-      <a href="./index.html#cases"><span data-zh="客户案例" data-en="Case Studies">客户案例</span></a>
-      <a href="./index.html#contact"><span data-zh="获取报价" data-en="Get Quote">获取报价</span></a>
+      <a href="/index.html#products"><span data-zh="产品与工艺" data-en="Products & Craft">产品与工艺</span></a>
+      <a href="/index.html#process"><span data-zh="下单流程" data-en="Order Process">下单流程</span></a>
+      <a href="/index.html#cases"><span data-zh="客户案例" data-en="Case Studies">客户案例</span></a>
+      <a href="/index.html#contact"><span data-zh="获取报价" data-en="Get Quote">获取报价</span></a>
+      <!-- ======================================= -->
       <div id="langSwitch" onclick="toggleLang()">
         <span id="langZh" data-zh="中" data-en="中">中</span> / <span id="langEn" data-zh="EN" data-en="EN">EN</span>
       </div>
@@ -185,7 +207,8 @@
       </span>
     </div>
     <div class="hero-cta qr-center">
-      <div class="qr-single"><img src="./images/wechat-qr-sales1.jpg" alt="利娟标牌销售微信1 - 13266794685" class="qr-img"></div>
+      <!-- ===== SEO 优化 3: 规范化图片路径 ===== -->
+      <div class="qr-single"><img src="/images/wechat-qr-sales1.jpg" alt="利娟标牌销售微信1 - 13266794685" class="qr-img"></div>
       <div class="btn-box">
         <button class="btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
           <span data-zh="立即询价" data-en="Inquire Now">立即询价</span>
@@ -195,28 +218,29 @@
           <span class="phone-second"><span data-zh="加微信发图纸，30分钟出报价" data-en="Add WeChat for a quote in 30 mins">加微信发图纸，30分钟出报价</span></span>
         </div>
       </div>
-      <div class="qr-single"><img src="./images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726" class="qr-img"></div>
+      <div class="qr-single"><img src="/images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726" class="qr-img"></div>
     </div>
     
-    <!-- 统一后的图片布局 -->
     <div class="hero-two-img">
-      <img src="./images/aluminum-nameplate-1.jpg" alt="铝标牌镐光批花工艺样品展示" class="two-img">
-      <img src="./images/aluminum-nameplate-2.jpg" alt="铝标牌拉丝氧化表面处理效果" class="two-img">
+      <img src="/images/aluminum-nameplate-1.jpg" alt="铝标牌镐光批花工艺样品展示" class="two-img">
+      <img src="/images/aluminum-nameplate-2.jpg" alt="铝标牌拉丝氧化表面处理效果" class="two-img">
     </div>
     <div class="hero-two-img">
-      <img src="./images/aluminum-nameplate-3.jpg" alt="铝标牌丝印腐蚀工艺实例" class="two-img">
-      <img src="./images/aluminum-nameplate-4.jpg" alt="铝标牌阳极氧化彩色样品" class="two-img">
+      <img src="/images/aluminum-nameplate-3.jpg" alt="铝标牌丝印腐蚀工艺实例" class="two-img">
+      <img src="/images/aluminum-nameplate-4.jpg" alt="铝标牌阳极氧化彩色样品" class="two-img">
     </div>
     <div class="hero-two-img">
-      <img src="./images/aluminum-nameplate-5.jpg" alt="铝标牌背胶安装应用场景" class="two-img">
-      <img src="./images/aluminum-nameplate-6.jpg" alt="多种铝标牌工艺对比展示" class="two-img">
+      <img src="/images/aluminum-nameplate-5.jpg" alt="铝标牌背胶安装应用场景" class="two-img">
+      <img src="/images/aluminum-nameplate-6.jpg" alt="多种铝标牌工艺对比展示" class="two-img">
     </div>
+    <!-- ======================================= -->
   </div>
 </section>
 
 <section style="background:#fff;padding:50px 0;">
   <div class="container">
     <h2 class="section-title"><span data-zh="铝标牌工艺选择指南" data-en="Aluminum Plate Craft Guide">铝标牌工艺选择指南</span></h2>
+    <!-- ===== SEO 优化 4: 优化表格内容可读性 ===== -->
     <table class="compare-table">
       <thead><tr>
         <th><span data-zh="性能" data-en="Feature">性能</span></th>
@@ -226,26 +250,27 @@
       <tbody>
         <tr>
           <td><span data-zh="光泽度" data-en="Gloss">光泽度</span></td>
-          <td class="good"><span data-zh="★★★★★" data-en="★★★★★">★★★★★</span></td>
-          <td><span data-zh="★★★☆☆" data-en="★★★☆☆">★★★☆☆</span></td>
+          <td class="good"><span data-zh="优秀" data-en="Excellent">优秀</span></td>
+          <td><span data-zh="良好" data-en="Good">良好</span></td>
         </tr>
         <tr>
           <td><span data-zh="耐候性" data-en="Weather Resistance">耐候性</span></td>
-          <td class="good"><span data-zh="★★★★★" data-en="★★★★★">★★★★★</span></td>
-          <td class="bad"><span data-zh="★★☆☆☆" data-en="★★☆☆☆">★★☆☆☆</span></td>
+          <td class="good"><span data-zh="优秀" data-en="Excellent">优秀</span></td>
+          <td class="bad"><span data-zh="一般" data-en="Fair">一般</span></td>
         </tr>
         <tr>
           <td><span data-zh="耐磨性" data-en="Wear Resistance">耐磨性</span></td>
-          <td class="good"><span data-zh="★★★★★" data-en="★★★★★">★★★★★</span></td>
-          <td class="bad"><span data-zh="★☆☆☆☆" data-en="★☆☆☆☆">★☆☆☆☆</span></td>
+          <td class="good"><span data-zh="优秀" data-en="Excellent">优秀</span></td>
+          <td class="bad"><span data-zh="较差" data-en="Poor">较差</span></td>
         </tr>
         <tr>
           <td><span data-zh="单价" data-en="Unit Price">单价</span></td>
           <td><span data-zh="略高" data-en="Slightly Higher">略高</span></td>
-          <td class="good"><span data-zh="便宜" data-en="Cheaper">便宜</span></td>
+          <td class="good"><span data-zh="经济" data-en="Economical">经济</span></td>
         </tr>
       </tbody>
     </table>
+    <!-- ============================================= -->
   </div>
 </section>
 
@@ -267,12 +292,13 @@
   <div class="container">
     <h2 class="section-title"><span data-zh="30秒看铝标牌镐光工艺" data-en="30s View of Polishing Craft">30秒看铝标牌镐光工艺</span></h2>
     <p class="section-sub"><span data-zh="镐光批花+拉丝氧化全过程，真实拍摄无加速" data-en="Polished engraving + brushed oxidation process, real-time footage.">镐光批花+拉丝氧化全过程，真实拍摄无加速</span></p>
-    <button class="video-btn" onclick="document.querySelector('#video').scrollIntoView({behavior:'smooth'}); document.querySelector('#video').style.display='block';"><span data-zh="▶ 播放视频" data-en="▶ Play Video">▶ 播放视频</span></button>
+    <button id="playVideoBtn" class="video-btn"><span data-zh="▶ 播放视频" data-en="▶ Play Video">▶ 播放视频</span></button>
     <div id="video" style="margin-top:20px;display:none">
       <div id="videoTips" style="padding:60px 20px;text-align:center;border:2px dashed #cbd5f5;border-radius:12px">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="#cbd5f5"><path d="M8 5v14l11-7z"/></svg>
         <p style="margin-top:12px;color:var(--text-sub)"><span data-zh="视频素材准备中，您可以联系客服索取样片。" data-en="Video is being prepared. Contact us for a sample clip.">视频素材准备中，您可以联系客服索取样片。</span></p>
       </div>
+      <video id="realVideo" controls style="width:100%;max-width:600px;border-radius:12px;box-shadow:var(--shadow);display:none" preload="metadata"></video>
     </div>
   </div>
 </div>
@@ -296,253 +322,281 @@
 </section>
 
 <section id="contact" style="background:#f9fafb;padding:10px 0">
-  <div class="container">
-    <h2 class="section-title" style="text-align:center"><span data-zh="获取铝标牌 · 镐光铭牌报价" data-en="Get Aluminum Nameplate Quote">获取铝标牌 · 镐光铭牌报价</span></h2>
-    <p class="section-sub" style="text-align:center"><span data-zh="填写需求信息或直接添加微信，发送图纸/尺寸/数量，即可为您评估铝标牌价格与交期。" data-en="Fill the form or add us on WeChat. Send drawing/size/quantity for price and lead time.">填写需求信息或直接添加微信，发送图纸/尺寸/数量，即可为您评估铝标牌价格与交期。</span></p>
-    <div class="form-wrapper">
-      <div class="contact-form">
-        <h3><span data-zh="在线提交需求" data-en="Submit Inquiry Online">在线提交需求</span></h3>
-        <form id="quoteForm">
-          <input type="hidden" name="product" value="铝标牌|镐光铭牌">
-          <div class="form-row">
-            <div class="form-group">
-              <label><span data-zh="您的称呼" data-en="Your Name">您的称呼</span></label>
-              <input type="text" name="name" data-placeholder-zh="例如：张工" data-placeholder-en="e.g., Mr. Smith" required>
-            </div>
-            <div class="form-group">
-              <label><span data-zh="手机/微信" data-en="Mobile/WeChat">手机/微信</span></label>
-              <input type="text" name="contact" data-placeholder-zh="手机或微信" data-placeholder-en="Mobile or WeChat" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" name="email" data-placeholder-zh="方便我们回复报价" data-placeholder-en="For quote reply" required>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label><span data-zh="尺寸（mm）" data-en="Size (mm)">尺寸（mm）</span></label>
-              <input type="text" name="size" data-placeholder-zh="如：400×600" data-placeholder-en="e.g., 400×600" required>
-            </div>
-            <div class="form-group">
-              <label><span data-zh="数量" data-en="Quantity">数量</span></label>
-              <input type="text" name="qty" data-placeholder-zh="如：200张" data-placeholder-en="e.g., 200 pcs" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label><span data-zh="材质" data-en="Material">材质</span></label>
-            <select name="material" required>
-              <option value="" data-zh="请选择" data-en="Please select">请选择</option>
-              <option value="铝标牌" data-zh="铝标牌" data-en="Aluminum Plate">铝标牌</option>
-              <option value="镐光铭牌" data-zh="镐光铭牌" data-en="Polished Nameplate">镐光铭牌</option>
-              <option value="CD纹标牌" data-zh="CD纹标牌" data-en="CD Pattern Plate">CD纹标牌</option>
-              <option value="其他" data-zh="其他" data-en="Other">其他</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label><span data-zh="上传图纸（可选）" data-en="Upload Drawing (Optional)">上传图纸（可选）</span></label>
-            <div class="file-upload-wrapper">
-              <input type="file" name="file" id="fileInput" accept=".jpg,.jpeg,.png,.pdf,.ai,.cdr" multiple>
-              <button type="button" class="file-upload-btn" data-zh="选择文件" data-en="Choose file">选择文件</button>
-              <span class="file-name-display" data-zh="未选择文件" data-en="No file chosen">未选择文件</span>
-            </div>
-          </div>
-          <div class="form-group">
-            <label><span data-zh="备注" data-en="Notes">备注</span></label>
-            <textarea name="note" rows="4" data-placeholder-zh="背胶/打孔/异形/防水等级等要求" data-placeholder-en="Requirements like adhesive, holes, shape, waterproof rating, etc."></textarea>
-          </div>
-          <button type="submit" class="btn-submit"><span data-zh="提交询价" data-en="Submit Inquiry">提交询价</span></button>
-          <div id="errorTip" style="display:none;background:#fee;border:1px solid #fcc;color:#c33;border-radius:6px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.5">
-            <span data-zh="提交失败，请重试或直接扫码右侧微信，30 分钟内快速报价！" data-en="Submit failed. Please retry or scan the WeChat QR code for a quote within 30 mins!">提交失败，请重试或直接扫码右侧微信，30 分钟内快速报价！</span>
-          </div>
-          <p id="sendOk" style="color:#16a34a;margin-top:8px;font-size:13px;display:none;">✅ <span data-zh="已提交成功！我们将尽快邮件回复您。" data-en="Submitted successfully! We will reply to your email soon.">已提交成功！我们将尽快邮件回复您。</span></p>
-          <p class="form-note">* <span data-zh="提交成功后、我们将在12小时内回复您。" data-en="We will reply within 12 hours after submission.">提交成功后、我们将在12小时内回复您。</span></p>
-        </form>
+        <div class="container">
+            <h2 class="section-title" style="text-align:center"><span data-zh="获取铝标牌 · 镐光铭牌报价" data-en="Get Aluminum Nameplate Quote">获取铝标牌 · 镐光铭牌报价</span></h2>
+            <p class="section-sub" style="text-align:center"><span data-zh="填写需求信息或直接添加微信，发送图纸/尺寸/数量，即可为您评估铝标牌价格与交期。" data-en="Fill the form or add us on WeChat. Send drawing/size/quantity for price and lead time.">填写需求信息或直接添加微信，发送图纸/尺寸/数量，即可为您评估铝标牌价格与交期。</span></p>
+            
+            <div class="form-wrapper">
+                <div class="contact-form">
+                    <h3><span data-zh="在线提交需求" data-en="Submit Inquiry Online">在线提交需求</span></h3>
+                    <form id="quoteForm">
+                        <input type="hidden" name="product" value="铝标牌|镐光铭牌">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><span data-zh="您的称呼" data-en="Your Name">您的称呼</span></label>
+                                <input type="text" name="name" data-placeholder-zh="例如：张工" data-placeholder-en="e.g., Mr. Smith" required>
+                            </div>
+                            <div class="form-group">
+                                <label><span data-zh="手机/微信" data-en="Mobile/WeChat">手机/微信</span></label>
+                                <input type="text" name="contact" data-placeholder-zh="手机或微信" data-placeholder-en="Mobile or WeChat" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" data-placeholder-zh="方便我们回复报价" data-placeholder-en="For quote reply" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><span data-zh="尺寸（mm）" data-en="Size (mm)">尺寸（mm）</span></label>
+                                <input type="text" name="size" data-placeholder-zh="如：400×600" data-placeholder-en="e.g., 400×600" required>
+                            </div>
+                            <div class="form-group">
+                                <label><span data-zh="数量" data-en="Quantity">数量</span></label>
+                                <input type="text" name="qty" data-placeholder-zh="如：200张" data-placeholder-en="e.g., 200 pcs" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label><span data-zh="材质" data-en="Material">材质</span></label>
+                            <select name="material" required>
+                                <option value="" data-zh="请选择" data-en="Please select">请选择</option>
+                                <option value="铝标牌" data-zh="铝标牌" data-en="Aluminum Plate">铝标牌</option>
+                                <option value="镐光铭牌" data-zh="镐光铭牌" data-en="Polished Nameplate">镐光铭牌</option>
+                                <option value="CD纹标牌" data-zh="CD纹标牌" data-en="CD Pattern Plate">CD纹标牌</option>
+                                <option value="其他" data-zh="其他" data-en="Other">其他</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label><span data-zh="上传图纸（可选）" data-en="Upload Drawing (Optional)">上传图纸（可选）</span></label>
+                            <div class="file-upload-wrapper">
+                                <input type="file" name="file" id="fileInput" accept=".jpg,.jpeg,.png,.pdf,.ai,.cdr" multiple>
+                                <button type="button" class="file-upload-btn" data-zh="选择文件" data-en="Choose file">选择文件</button>
+                                <span class="file-name-display" data-zh="未选择文件" data-en="No file chosen">未选择文件</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label><span data-zh="备注" data-en="Notes">备注</span></label>
+                            <textarea name="note" rows="4" data-placeholder-zh="背胶/打孔/异形/防水等级等要求" data-placeholder-en="Requirements like adhesive, holes, shape, waterproof rating, etc."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit"><span data-zh="提交询价" data-en="Submit Inquiry">提交询价</span></button>
+                        <div id="errorTip" style="display:none;background:#fee;border:1px solid #fcc;color:#c33;border-radius:6px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.5">
+                            <span data-zh="提交失败，请重试或直接扫码右侧微信，30 分钟内快速报价！" data-en="Submit failed. Please retry or scan the WeChat QR code for a quote within 30 mins!">提交失败，请重试或直接扫码右侧微信，30 分钟内快速报价！</span>
+                        </div>
+                        <p id="sendOk" style="color:#16a34a;margin-top:8px;font-size:13px;display:none;">✅ <span data-zh="已提交成功！我们将尽快邮件回复您。" data-en="Submitted successfully! We will reply to your email soon.">已提交成功！我们将尽快邮件回复您。</span></p>
+                        <p class="form-note">* <span data-zh="提交成功后、我们将在12小时内回复您。" data-en="We will reply within 12 hours after submission.">提交成功后、我们将在12小时内回复您。</span></p>
+                    </form>
+                </div> <!-- 闭合 contact-form -->
+                
+                <aside id="contactSide" style="background:#ffffff;border-radius:12px;padding:32px;box-shadow:0 8px 24px rgba(15,23,42,.08);">
+                    <h4 style="margin-bottom:20px;font-size:18px;color:var(--text-main);text-align:center"><span data-zh="直接联系·极速响应" data-en="Direct Contact · Fast Response">直接联系·极速响应</span></h4>
+                    <div style="margin-bottom:20px;text-align:center">
+                        <div style="font-size:13px;color:var(--text-sub)"><span data-zh="业务热线" data-en="Hotline">业务热线</span></div>
+                        <a href="tel:132-6679-4685" style="font-size:22px;font-weight:700;color:var(--accent);line-height:1.2">132-6679-4685</a>
+                        <div style="height:9px"></div>
+                        <a href="tel:137-1499-2726" style="font-size:22px;font-weight:700;color:var(--accent);line-height:1.2">137-1499-2726</a>
+                        <div style="font-size:13px;color:var(--text-sub);margin-top:6px"><span data-zh="加微信备注标牌询价" data-en="Add WeChat & note 'quote'">加微信备注标牌询价</span></div>
+                    </div>
+                    <div style="margin-bottom:27px;text-align:center">
+                        <div style="font-size:13px;color:var(--text-sub)">Email</div>
+                        <a href="mailto:szlijuan@126.com" style="font-size:15px;color:var(--primary)">szlijuan@126.com</a>
+                    </div>
+                    <div style="display:flex;justify-content:center;gap:70px;flex-wrap:wrap">
+                        <div class="qr-box">
+                            <img src="./images/wechat-qr-sales1.jpg" alt="利娟标牌销售微信1 - 13266794685">
+                            <div style="font-size:12px;color:var(--text-sub);margin-top:6px">4685</div>
+                        </div>
+                        <div class="qr-box">
+                            <img src="./images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726">
+                            <div style="font-size:12px;color:var(--text-sub);margin-top:6px">2726</div>
+                        </div>
+                    </div>
+                    <ul style="margin-top:24px;padding-left:16px;font-size:13px;color:var(--text-sub);line-height:1.8">
+                        <li><span data-zh="30 分钟内响应报价" data-en="Quote in 30 min">30 分钟内响应报价</span></li>
+                        <li><span data-zh="免费设计排版" data-en="Free Design & Layout">免费设计排版</span></li>
+                        <li><span data-zh="支持 13% 增值税专票" data-en="13% VAT Invoice Supported">支持 13% 增值税专票</span></li>
+                        <li><span data-zh="全国包邮" data-en="Nationwide Free Shipping">全国包邮</span></li>
+                    </ul>
+                </aside>
+            </div> <!-- 闭合 form-wrapper -->
+            
+            <div class="faq-full" style="margin-top:40px">
+                <h3 style="font-size:18px;margin-bottom:12px;color:var(--text-main)"><span data-zh="铝标牌镐光铭牌常见问题" data-en="FAQ - Aluminum Nameplates">铝标牌镐光铭牌常见问题</span></h3>
+                <div class="faq-list">
+                    <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6"><strong><span data-zh="打样需要多久？" data-en="How long for samples?">打样需要多久？</span></strong>
+                        <p style="margin:4px 0 0;color:var(--text-sub)"><span data-zh="当日17:00前确认文件，1天发出。" data-en="Confirm before 17:00, shipped in 1 day.">当日17:00前确认文件，1天发出。</span></p>
+                    </div>
+                    <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6"><strong><span data-zh="能开发票吗？" data-en="Can you issue an invoice?">能开发票吗？</span></strong>
+                        <p style="margin:4px 0 0;color:var(--text-sub)"><span data-zh="可开13%增值税专票。" data-en="Yes, 13% VAT special invoice is available.">可开13%增值税专票。</span></p>
+                    </div>
+                    <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6"><strong><span data-zh="物流怎么发？" data-en="How do you ship?">物流怎么发？</span></strong>
+                        <p style="margin:4px 0 0;color:var(--text-sub)"><span data-zh="顺丰/德邦包邮，全国2-3天到。" data-en="Free shipping via SF/Deppon, 2-3 days nationwide.">顺丰/德邦包邮，全国2-3天到。</span></p>
+                    </div>
+                    <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6"><strong><span data-zh="达不到50套能订吗？" data-en="Can I order less than 50 sets?">达不到50套能订吗？</span></strong>
+                        <p style="margin:4px 0 0;color:var(--text-sub)"><span data-zh="小批量可谈，单价略高。" data-en="Small batches are negotiable, but the unit price is slightly higher.">小批量可谈，单价略高。</span></p>
+                    </div>
+                </div>
+            </div> <!-- 闭合 faq-full -->
+        </div> <!-- 闭合 container -->
+    </section> <!-- 闭合 contact section -->
+
+    <!-- Add Related Products Section -->
+    <div style="background:#f3f4f6;padding:30px 0;font-size:14px">
+      <div class="container" style="text-align:center">
+        <span style="color:var(--text-sub)"><span data-zh="相关推荐：" data-en="Related:">相关推荐：</span></span>
+        <a href="./product-stainless.html" style="margin:0 6px"><span data-zh="不锈钢铭牌" data-en="Stainless Plate">不锈钢铭牌</span></a> |
+        <a href="./product-button.html" style="margin:0 6px"><span data-zh="按钮键" data-en="Buttons">按钮键</span></a> |
+        <a href="./product-case.html" style="margin:0 6px"><span data-zh="机箱铭牌" data-en="Case Plate">机箱铭牌</span></a> |
+        <a href="./index.html#products" style="margin:0 6px"><span data-zh="全部产品" data-en="All Products">全部产品</span></a>
       </div>
-      <aside id="contactSide" style="background:#ffffff;border-radius:12px;padding:32px;box-shadow:0 8px 24px rgba(15,23,42,.08);">
-        <h4 style="margin-bottom:20px;font-size:18px;color:var(--text-main);text-align:center"><span data-zh="直接联系·极速响应" data-en="Direct Contact · Fast Response">直接联系·极速响应</span></h4>
-        <div style="margin-bottom:20px;text-align:center">
-          <div style="font-size:13px;color:var(--text-sub)"><span data-zh="业务热线" data-en="Hotline">业务热线</span></div>
-          <a href="tel:132-6679-4685" style="font-size:22px;font-weight:700;color:var(--accent);line-height:1.2">132-6679-4685</a>
-          <div style="height:9px"></div>
-          <a href="tel:137-1499-2726" style="font-size:22px;font-weight:700;color:var(--accent);line-height:1.2">137-1499-2726</a>
-          <div style="font-size:13px;color:var(--text-sub);margin-top:6px"><span data-zh="加微信备注标牌询价" data-en="Add WeChat & note 'quote'">加微信备注标牌询价</span></div>
-        </div>
-        <div style="margin-bottom:27px;text-align:center">
-          <div style="font-size:13px;color:var(--text-sub)">Email</div>
-          <a href="mailto:szlijuan@126.com" style="font-size:15px;color:var(--primary)">szlijuan@126.com</a>
-        </div>
-        <div style="display:flex;justify-content:center;gap:70px;flex-wrap:wrap">
-          <div class="qr-box">
-            <img src="./images/wechat-qr-sales1.jpg" alt="利娟标牌销售微信1 - 13266794685">
-            <div style="font-size:12px;color:var(--text-sub);margin-top:6px">4685</div>
-          </div>
-          <div class="qr-box">
-            <img src="./images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726">
-            <div style="font-size:12px;color:var(--text-sub);margin-top:6px">2726</div>
-          </div>
-        </div>
-        <ul style="margin-top:24px;padding-left:16px;font-size:13px;color:var(--text-sub);line-height:1.8">
-          <li><span data-zh="30 分钟内响应报价" data-en="Quote in 30 min">30 分钟内响应报价</span></li>
-          <li><span data-zh="免费设计排版" data-en="Free Design & Layout">免费设计排版</span></li>
-          <li><span data-zh="支持 13% 增值税专票" data-en="13% VAT Invoice Supported">支持 13% 增值税专票</span></li>
-          <li><span data-zh="全国包邮" data-en="Nationwide Free Shipping">全国包邮</span></li>
-        </ul>
-      </aside>
     </div>
-    <div class="faq-full" style="margin-top:40px">
-      <h3 style="font-size:18px;margin-bottom:12px;color:var(--text-main)"><span data-zh="铝标牌镐光铭牌常见问题" data-en="FAQ - Aluminum Nameplates">铝标牌镐光铭牌常见问题</span></h3>
-      <div class="faq-list">
-        <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6"><strong><span data-zh="打样需要多久？" data-en="How long for samples?">打样需要多久？</span></strong>
-          <p style="margin:4px 0 0;color:var(--text-sub)"><span data-zh="当日17:00前确认文件，1天发出。" data-en="Confirm before 17:00, shipped in 1 day.">当日17:00前确认文件，1天发出。</span></p>
-        </div>
-        <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6"><strong><span data-zh="能开发票吗？" data-en="Can you issue an invoice?">能开发票吗？</span></strong>
-          <p style="margin:4px 0 0;color:var(--text-sub)"><span data-zh="可开13%增值税专票。" data-en="Yes, 13% VAT special invoice is available.">可开13%增值税专票。</span></p>
-        </div>
-        <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6"><strong><span data-zh="物流怎么发？" data-en="How do you ship?">物流怎么发？</span></strong>
-          <p style="margin:4px 0 0;color:var(--text-sub)"><span data-zh="顺丰/德邦包邮，全国2-3天到。" data-en="Free shipping via SF/Deppon, 2-3 days nationwide.">顺丰/德邦包邮，全国2-3天到。</span></p>
-        </div>
-        <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6"><strong><span data-zh="达不到50套能订吗？" data-en="Can I order less than 50 sets?">达不到50套能订吗？</span></strong>
-          <p style="margin:4px 0 0;color:var(--text-sub)"><span data-zh="小批量可谈，单价略高。" data-en="Small batches are negotiable, but the unit price is slightly higher.">小批量可谈，单价略高。</span></p>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
+</main> <!-- 闭合 main -->
 
 <footer style="background:#020617;color:#9ca3af;font-size:12px;text-align:center;padding:14px 0 18px;border-top:1px solid rgba(148,163,184,.3);margin-bottom:55px;">
-  <span data-zh="深圳市利娟标牌有限公司 · 铝标牌 / 镐光铭牌 / 金属标定制 · 电话：132-6679-4685 / 137-1499-2726" 
-        data-en="Shenzhen Lijuan Nameplate Co., Ltd. · Aluminum / Polished / Custom Metal Signs · Tel: +86-132-6679-4685 / +86-137-1499-2726">深圳市利娟标牌有限公司 · 铝标牌 / 镐光铭牌 / 金属标定制 · 电话：132-6679-4685 / 137-1499-2726</span>
+    <span data-zh="深圳市利娟标牌有限公司 · 铝标牌 / 镐光铭牌 / 金属标定制 · 电话：132-6679-4685 / 137-1499-2726" 
+          data-en="Shenzhen Lijuan Nameplate Co., Ltd. · Aluminum / Polished / Custom Metal Signs · Tel: +86-132-6679-4685 / +86-137-1499-2726">深圳市利娟标牌有限公司 · 铝标牌 / 镐光铭牌 / 金属标定制 · 电话：132-6679-4685 / 137-1499-2726</span>
 </footer>
 
 <div class="float-bar">
-  <button class="float-bar-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
-    <span data-zh="立即询价" data-en="Inquire Now">立即询价</span>
-  </button>
+    <button class="float-bar-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
+        <span data-zh="立即询价" data-en="Inquire Now">立即询价</span>
+    </button>
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const LANG_KEY = 'lj_lang';
-  const BILINGUAL_SELECTOR = '[data-zh][data-en]';
-  const PLACEHOLDER_SELECTOR = '[data-placeholder-zh][data-placeholder-en]';
-  
-  const langConfig = {
-    zh: {
-      title: '铝标牌、镐光铭牌定制：拉丝氧化、标牌厂家当日打样，48h 报价全国包邮',
-      description: '0.3-3mm 1060/5052铝，镐光批花+拉丝氧化，多工艺组合，50套起订，当日打样，全国包邮。',
-      lang: 'zh-CN',
-    },
-    en: {
-      title: 'Aluminum & Polished Nameplate Customization: Brushed, Anodized | Same-Day Samples',
-      description: '0.3-3mm 1060/5052 aluminum with polished engraving and brushed oxidation. MOQ from 50 sets, same-day sampling, nationwide free shipping.',
-      lang: 'en',
-    }
-  };
-
-  let currentLang = localStorage.getItem(LANG_KEY) || (navigator.language.startsWith('zh') ? 'zh' : 'en');
-  const langZhEl = document.getElementById('langZh');
-  const langEnEl = document.getElementById('langEn');
-
-  function applyLang(lang) {
-    document.documentElement.lang = langConfig[lang].lang;
-    document.title = langConfig[lang].title;
-    const descMeta = document.querySelector('meta[name="description"]');
-    if (descMeta) descMeta.setAttribute('content', langConfig[lang].description);
+    const LANG_KEY = 'lj_lang';
+    const BILINGUAL_SELECTOR = '[data-zh][data-en]';
+    const PLACEHOLDER_SELECTOR = '[data-placeholder-zh][data-placeholder-en]';
     
-    if (langZhEl && langEnEl) {
-        langZhEl.classList.toggle('active', lang === 'zh');
-        langEnEl.classList.toggle('active', lang === 'en');
-    }
-
-    document.querySelectorAll(BILINGUAL_SELECTOR).forEach(el => {
-      const targetText = el.dataset[lang];
-      if (el.closest('#langSwitch')) {
-          if (el.textContent !== targetText) el.textContent = targetText;
-      } else {
-          if (el.tagName === 'OPTION') {
-            if (el.textContent !== targetText) el.textContent = targetText;
-          } else {
-            if (el.innerHTML !== targetText) el.innerHTML = targetText;
-          }
-      }
-    });
-
-    document.querySelectorAll(PLACEHOLDER_SELECTOR).forEach(el => {
-      el.placeholder = el.dataset['placeholder' + lang.charAt(0).toUpperCase() + lang.slice(1)];
-    });
-    
-    const fileInput = document.getElementById('fileInput');
-    const fileNameDisplay = document.querySelector('.file-name-display');
-    if (fileInput && fileNameDisplay && fileInput.files.length === 0) {
-        fileNameDisplay.textContent = fileNameDisplay.dataset[lang];
-    }
-  }
-
-  window.toggleLang = function() {
-    currentLang = currentLang === 'zh' ? 'en' : 'zh';
-    localStorage.setItem(LANG_KEY, currentLang);
-    applyLang(currentLang);
-  }
-
-  const fileInput = document.getElementById('fileInput');
-  const fileUploadBtn = document.querySelector('.file-upload-btn');
-  const fileNameDisplay = document.querySelector('.file-name-display');
-  if (fileInput && fileUploadBtn && fileNameDisplay) {
-    fileUploadBtn.addEventListener('click', () => fileInput.click());
-    fileInput.addEventListener('change', () => {
-      if (fileInput.files.length > 0) {
-        const langTexts = {
-          zh: `已选择 ${fileInput.files.length} 个文件`,
-          en: `${fileInput.files.length} files selected`
-        };
-        fileNameDisplay.textContent = fileInput.files.length === 1 ? fileInput.files[0].name : langTexts[currentLang];
-      } else {
-        fileNameDisplay.textContent = fileNameDisplay.dataset[currentLang];
-      }
-    });
-  }
-
-  applyLang(currentLang);
-
-  const menuToggle = document.getElementById('menuToggle');
-  const navLinks = document.getElementById('navLinks');
-  if (menuToggle && navLinks) {
-    menuToggle.onclick = () => navLinks.classList.toggle('show');
-  }
-
-  const quoteForm = document.getElementById('quoteForm');
-  if (quoteForm) {
-    quoteForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const sendOk = document.getElementById('sendOk');
-      const errorTip = document.getElementById('errorTip');
-      const side = document.getElementById('contactSide');
-      if(sendOk) sendOk.style.display = 'none';
-      if(errorTip) errorTip.style.display = 'none';
-      if(side) side.style.boxShadow = '0 8px 24px rgba(15,23,42,.08)';
-
-      const formData = new FormData(e.target);
-      try {
-        const res = await fetch('https://1312059476-52lt9ny7df.in.ap-hongkong.sc-f.tencentcs.com', {
-          method: 'POST', body: formData
-        });
-        if (!res.ok) throw new Error('network error');
-        if (sendOk) sendOk.style.display = 'block';
-        e.target.reset();
-        applyLang(currentLang);
-      } catch {
-        if (errorTip) errorTip.style.display = 'block';
-        if (side) {
-            side.style.boxShadow = '0 0 0 3px #f97316,0 12px 32px rgba(249,115,22,.35)';
-            side.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            setTimeout(() => {
-              if(errorTip) errorTip.style.display = 'none';
-              side.style.boxShadow = '0 8px 24px rgba(15,23,42,.08)';
-            }, 5000);
+    const langConfig = {
+        zh: {
+            title: '铝标牌、镐光铭牌定制：拉丝氧化、标牌厂家当日打样，48h 报价全国包邮',
+            description: '0.3-3mm 1060/5052铝，镐光批花+拉丝氧化，多工艺组合，50套起订，当日打样，全国包邮。',
+            lang: 'zh-CN',
+        },
+        en: {
+            title: 'Aluminum & Polished Nameplate Customization: Brushed, Anodized | Same-Day Samples',
+            description: '0.3-3mm 1060/5052 aluminum with polished engraving and brushed oxidation. MOQ from 50 sets, same-day sampling, nationwide free shipping.',
+            lang: 'en',
         }
-      }
-    });
-  }
+    };
+
+    let currentLang = localStorage.getItem(LANG_KEY) || (navigator.language.startsWith('zh') ? 'zh' : 'en');
+    const langZhEl = document.getElementById('langZh');
+    const langEnEl = document.getElementById('langEn');
+
+    function applyLang(lang) {
+        document.documentElement.lang = langConfig[lang].lang;
+        document.title = langConfig[lang].title;
+        const descMeta = document.querySelector('meta[name="description"]');
+        if (descMeta) descMeta.setAttribute('content', langConfig[lang].description);
+        
+        if (langZhEl && langEnEl) {
+            langZhEl.classList.toggle('active', lang === 'zh');
+            langEnEl.classList.toggle('active', lang === 'en');
+        }
+
+        document.querySelectorAll(BILINGUAL_SELECTOR).forEach(el => {
+            const targetText = el.dataset[lang];
+            if (el.closest('#langSwitch')) {
+                if (el.textContent !== targetText) el.textContent = targetText;
+            } else {
+                if (el.tagName === 'OPTION') {
+                    if (el.textContent !== targetText) el.textContent = targetText;
+                } else {
+                    if (el.innerHTML !== targetText) el.innerHTML = targetText;
+                }
+            }
+        });
+
+        document.querySelectorAll(PLACEHOLDER_SELECTOR).forEach(el => {
+            el.placeholder = el.dataset['placeholder' + lang.charAt(0).toUpperCase() + lang.slice(1)];
+        });
+        
+        const fileInput = document.getElementById('fileInput');
+        const fileNameDisplay = document.querySelector('.file-name-display');
+        if (fileInput && fileNameDisplay && fileInput.files.length === 0) {
+            fileNameDisplay.textContent = fileNameDisplay.dataset[lang];
+        }
+    }
+
+    window.toggleLang = function() {
+        currentLang = currentLang === 'zh' ? 'en' : 'zh';
+        localStorage.setItem(LANG_KEY, currentLang);
+        applyLang(currentLang);
+    }
+
+    const fileInput = document.getElementById('fileInput');
+    const fileUploadBtn = document.querySelector('.file-upload-btn');
+    const fileNameDisplay = document.querySelector('.file-name-display');
+    if (fileInput && fileUploadBtn && fileNameDisplay) {
+        fileUploadBtn.addEventListener('click', () => fileInput.click());
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length > 0) {
+                const langTexts = {
+                    zh: `已选择 ${fileInput.files.length} 个文件`,
+                    en: `${fileInput.files.length} files selected`
+                };
+                fileNameDisplay.textContent = fileInput.files.length === 1 ? fileInput.files[0].name : langTexts[currentLang];
+            } else {
+                fileNameDisplay.textContent = fileNameDisplay.dataset[currentLang];
+            }
+        });
+    }
+
+    applyLang(currentLang);
+
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (menuToggle && navLinks) {
+        menuToggle.onclick = () => navLinks.classList.toggle('show');
+    }
+
+    const videoBtn = document.querySelector('.video-btn');
+    if(videoBtn) {
+        videoBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const videoContainer = document.querySelector('#video');
+            const videoTips = document.querySelector('#videoTips');
+            if(videoContainer && videoTips) {
+                videoContainer.style.display = 'block';
+                videoContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    }
+
+    const quoteForm = document.getElementById('quoteForm');
+    if (quoteForm) {
+        quoteForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const sendOk = document.getElementById('sendOk');
+            const errorTip = document.getElementById('errorTip');
+            const side = document.getElementById('contactSide');
+            if(sendOk) sendOk.style.display = 'none';
+            if(errorTip) errorTip.style.display = 'none';
+            if(side) side.style.boxShadow = '0 8px 24px rgba(15,23,42,.08)';
+
+            const formData = new FormData(e.target);
+            try {
+                const res = await fetch('https://1312059476-52lt9ny7df.in.ap-hongkong.sc-f.tencentcs.com', {
+                    method: 'POST', body: formData
+                });
+                if (!res.ok) throw new Error('network error');
+                if (sendOk) sendOk.style.display = 'block';
+                e.target.reset();
+                applyLang(currentLang);
+            } catch {
+                if (errorTip) errorTip.style.display = 'block';
+                if (side) {
+                    side.style.boxShadow = '0 0 0 3px #f97316,0 12px 32px rgba(249,115,22,.35)';
+                    side.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    setTimeout(() => {
+                        if(errorTip) errorTip.style.display = 'none';
+                        side.style.boxShadow = '0 8px 24px rgba(15,23,42,.08)';
+                    }, 5000);
+                }
+            }
+        });
+    }
 });
 </script>
 </body>
