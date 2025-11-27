@@ -59,8 +59,38 @@
     .logo span{color:var(--primary)}
     .nav-links{display:flex;gap:20px;font-size:14px;color:#cbd5f5}
     .nav-links a:hover{color:#f9fafb;border-bottom:2px solid var(--primary)}
-    #langSwitch{display:flex;align-items:center;gap:6px;margin-left:12px;font-size:13px;color:#38bdf4;border:1px solid rgba(56,189,248,.4);padding:4px 8px;border-radius:4px;cursor:pointer;white-space:nowrap}
-    #langSwitch:hover{background:rgba(56,189,248,.1)}
+    
+    /* === 语言切换按钮新样式 (蓝色高亮) === */
+    #langSwitch {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #94a3b8; /* 分隔符颜色 */
+      border: 1px solid rgba(148, 163, 184, .25);
+      background: rgba(15, 23, 42, .5);
+      padding: 4px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      white-space: nowrap;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, .1), 0 1px 3px rgba(2, 6, 23, .5);
+      transition: all 0.2s ease-in-out;
+    }
+    #langSwitch:hover {
+      background: rgba(30, 41, 59, .7);
+      transform: translateY(-1px);
+    }
+    #langSwitch span {
+      color: #64748b; /* 未选中状态颜色 */
+      transition: all 0.2s ease-in-out;
+    }
+    #langSwitch span.active {
+      color: #38bdf8; /* 选中状态颜色 - 改为蓝色 */
+      text-shadow: 0 0 6px rgba(56, 189, 248, .7); /* 发光效果 - 改为蓝色光晕 */
+    }
+    
     #menuToggle{display:none;font-size:20px;color:#cbd5f5;cursor:pointer}
     @media(max-width:900px){
       #menuToggle{display:block}
@@ -82,8 +112,6 @@
     .hero-contact strong{color:#fed7aa;font-size:16px}
     .phone-second{padding-left:35px;font-size:13px;color:#9ca3af}
     .hero-note{font-size:13px;color:#9ca3af;margin-top:8px}
-    
-    /* 移动端卡片布局优化 */
     .hero-card{background:radial-gradient(circle at top,#0b1120 0,#020617 62%);border-radius:32px;padding:40px 38px 30px;box-shadow:0 18px 45px rgba(15,23,42,.25);border:1.5px solid #fbbf24}
     .hero-card-title{font-size:20px;font-weight:500;color:#f9fafb;text-align:center;margin:0 auto 24px}
     .hero-card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
@@ -91,8 +119,6 @@
     @media (min-width:769px){.hero-card-grid{grid-template-columns:repeat(2,1fr)}}
     .hero-chip{border-radius:22px;padding:20px 22px;background:rgba(15,23,42,.9);box-shadow:0 14px 34px rgba(15,23,42,.6);font-size:13px;color:#e5e7eb;border:1px solid rgba(148,163,184,.4)}
     .hero-chip strong{display:inline-block;font-size:14px;margin-bottom:6px}
-    
-    /* 移动端布局优化 */
     @media (max-width:768px){
       .hero-inner{grid-template-columns:1fr;gap:30px}
       .hero-card{padding:30px 24px 24px}
@@ -100,63 +126,64 @@
       .hero-chip{padding:16px 18px;font-size:12px}
       .hero-chip strong{font-size:13px}
     }
-    
+    .section{padding: 48px 0;}
     .section-title{font-size:26px;font-weight:700;text-align:center;margin-bottom:10px;color:#111827}
     .section-sub{font-size:14px;text-align:center;color:var(--text-sub);margin:0 auto 26px;max-width:720px}
     #products{background:#f3f4f6}
     .products-top-image{display:flex;justify-content:center;margin:10px 0 26px}
-    .products-top-image img{width:100%;max-width:1200px;height:auto;border-radius:18px;box-shadow:0 10px 30px rgba(15,23,42,.12);object-fit:cover}
+    .products-top-image img{width:100%;max-width:1200px;height:auto;border-radius:18px;box-shadow:var(--shadow);object-fit:cover}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
     @media (max-width:960px){.grid-3{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:640px){.grid-3{grid-template-columns:1fr}}
-    .card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(15,23,42,.12);border:1px solid #e5e7eb}
+    .card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid #e5e7eb; display: flex; flex-direction: column;}
+    .card a.card-link { display: flex; flex-direction: column; height: 100%; }
     .card img{aspect-ratio:1/1;object-fit:cover;border-radius:18px}
     .card h3{font-size:18px;font-weight:700;margin:18px 20px 8px;text-align:center}
-    .card p{font-size:14px;color:var(--text-sub);line-height:1.6;margin:0 20px 14px}
+    .card p{font-size:14px;color:var(--text-sub);line-height:1.6;margin:0 20px 14px; flex-grow: 1;}
     .pill-row{display:flex;flex-wrap:wrap;gap:6px;margin:0 20px 20px;justify-content:center}
     .pill{padding:5px 12px;border-radius:999px;background:rgba(59,130,246,.08);color:#2563eb;font-size:12px;font-weight:500}
     #process{background:#fff}
     .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:10px}
     @media (max-width:960px){.steps{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:640px){.steps{grid-template-columns:1fr}}
-    .step{background:#f9fafb;border-radius:20px;padding:20px 18px;box-shadow:0 10px 30px rgba(15,23,42,.12);border:1px solid #e5e7eb;text-align:center}
+    .step{background:#f9fafb;border-radius:20px;padding:20px 18px;box-shadow:var(--shadow);border:1px solid #e5e7eb;text-align:center}
     .step-index{width:32px;height:32px;border-radius:50%;background:#dbeafe;color:#0369a1;display:flex;align-items:center;justify-content:center;font-weight:600;margin:0 auto 10px}
     .step h3{font-size:16px;margin-bottom:8px}
     .step p{font-size:14px;color:var(--text-sub)}
     #cases{background:#f3f4f6}
-    .cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:10px}
-    @media (max-width:960px){.cases-grid{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:640px){.cases-grid{grid-template-columns:1fr}}
-    .case{background:#fff;border-radius:20px;padding:18px;box-shadow:0 10px 30px rgba(15,23,42,.12);border:1px solid #e5e7eb;text-align:center}
+    .case{background:#fff;border-radius:20px;padding:18px;box-shadow:var(--shadow);border:1px solid #e5e7eb;text-align:center}
     .case img{width:100%;height:160px;object-fit:cover;border-radius:14px;margin-bottom:12px}
     .case h3{font-size:15px;margin-bottom:6px}
     .case p{font-size:13px;color:var(--text-sub)}
     #contact{background:#fff;padding:56px 0 24px}
-    
-    /* 移动端联系表单布局优化 */
     .contact-layout{display:grid;grid-template-columns:1fr 460px;gap:32px;margin-top:24px}
     @media (max-width:900px){.contact-layout{grid-template-columns:1fr;gap:24px}}
-    .contact-form{background:#f9fafb;border-radius:20px;padding:20px 22px;box-shadow:0 10px 30px rgba(15,23,42,.12);border:1px solid #e5e7eb}
+    .contact-form{background:#f9fafb;border-radius:20px;padding:20px 22px;box-shadow:var(--shadow);border:1px solid #e5e7eb}
     .contact-form h3{font-size:18px;margin-bottom:8px}
     .contact-form p{font-size:13px;color:var(--text-sub);margin-bottom:16px}
     .form-row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
     @media (max-width:640px){.form-row{grid-template-columns:1fr}}
     .form-group{margin-bottom:12px}
-    label{font-size:13px;margin-bottom:4px}
-    input,textarea,select{width:100%;border:1px solid #d1d5db;border-radius:10px;padding:8px 10px;font-size:13px;outline:none}
+    label{font-size:13px;margin-bottom:4px;display: block;}
+    input,textarea,select{width:100%;border:1px solid #d1d5db;border-radius:10px;padding:8px 10px;font-size:13px;outline:none; background-color: #fff;}
     textarea{min-height:120px;resize:vertical}
     input:focus,textarea:focus,select:focus{border-color:var(--primary);box-shadow:0 0 0 1px rgba(56,189,248,0.4)}
+    /* Custom file input styles */
+    .file-upload-wrapper { position: relative; display: flex; align-items: center; border: 1px solid #d1d5db; border-radius: 10px; background-color: #fff; padding: 4px; }
+    .file-upload-wrapper input[type="file"] { position: absolute; left: 0; top: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer; }
+    .file-upload-btn { border: none; padding: 4px 10px; border-radius: 6px; background-color: #e5e7eb; color: #374151; font-size: 13px; cursor: pointer; white-space: nowrap; }
+    .file-upload-btn:hover { background-color: #d1d5db; }
+    .file-name-display { margin-left: 10px; font-size: 13px; color: #6b7280; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .contact-form input[type="file"] { display: none; } /* Hide original but keep it for JS */
+
     .btn-submit{margin-top:10px;border:none;padding:10px 22px;border-radius:999px;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;font-size:14px;font-weight:600;cursor:pointer;display:block;margin-left:auto;margin-right:auto;box-shadow:0 10px 24px rgba(22,163,74,0.45)}
     .btn-submit:hover{transform:translateY(-1px)}
     .form-note{margin-top:6px;font-size:11px;color:#9ca3af}
-    .contact-side{background:#f9fafb;border-radius:20px;padding:20px 18px;box-shadow:0 10px 30px rgba(15,23,42,.12);border:1px solid #e5e7eb;text-align:center}
+    .contact-side{background:#f9fafb;border-radius:20px;padding:20px 18px;box-shadow:var(--shadow);border:1px solid #e5e7eb;text-align:center}
     .qrcode-box{display:flex;justify-content:center;gap:100px;margin-top:12px;flex-wrap:wrap}
     @media (max-width:640px){.qrcode-box{gap:40px}}
     .qrcode-box img{width:160px;height:160px;object-fit:cover;border-radius:12px;padding:8px;background:#fff;box-shadow:0 6px 16px rgba(0,0,0,.15)}
     @media (max-width:640px){.qrcode-box img{width:140px;height:140px}}
-    .contact-extra h4{font-size:16px;margin-bottom:8px;color:#111827}
-    .contact-extra .extra-label{font-size:13px;color:#6b7280;margin-top:4px}
-    .contact-extra .extra-value{font-size:15px;color:#fbbf24;font-weight:700;margin-bottom:4px}
     .factory-section{background:#020617;color:#e5e7eb;padding:44px 0 64px}
     .factory-slider{position:relative;width:100%;height:60vh;overflow:hidden;border-radius:0}
     .factory-slide{position:absolute;inset:0;opacity:0;transition:opacity .8s ease}
@@ -169,7 +196,6 @@
     .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;transition:all .3s}
     .dot.active{background:#fff;transform:scale(1.3)}
     .float-bar{position:fixed;bottom:0;left:0;right:0;background:#020617;display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 16px;box-shadow:0 -2px 8px rgba(0,0,0,.3);z-index:100}
-    .float-bar-text{color:#9ca3af;font-size:10px;white-space:nowrap}
     .float-bar-btn{background:var(--accent);color:#fff;border:none;padding:8px 18px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;margin:0 auto}
     footer{text-align:center;font-size:13px;color:#9ca3af;padding:20px 0}
     .logo{letter-spacing:6px}
@@ -180,7 +206,6 @@
 
 <body itemscope itemtype="https://schema.org/Organization">
   <meta itemprop="name" content="深圳市利娟标牌有限公司">
-  <meta itemprop="alternateName" content="Shenzhen Lijuan Nameplate Co., Ltd.">
   <meta itemprop="url" content="https://lijuan.ltd/">
   <meta itemprop="telephone" content="+86-132-6679-4685">
   <meta itemprop="email" content="szlijuan@126.com">
@@ -206,357 +231,357 @@
         <a href="#cases"><span data-zh="客户案例" data-en="Case Studies">客户案例</span></a>
         <a href="#contact"><span data-zh="获取报价" data-en="Get Quote">获取报价</span></a>
         <div id="langSwitch" onclick="toggleLang()">
-          <span id="langText">中</span> / <span id="langTextEn">EN</span>
+          <span id="langZh" data-zh="中" data-en="中">中</span> / <span id="langEn" data-zh="EN" data-en="EN">EN</span>
         </div>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-inner">
-      <div>
-        <h1 class="hero-title" data-zh="深圳/利娟标牌/铭牌/定制厂家" data-en="Shenzhen Lijuan Nameplate Factory">深圳/利娟标牌/铭牌/定制厂家</h1>
-        <span class="hero-title-main" data-zh="铝标牌·铭牌 / 不锈钢激光·腐蚀牌 / 金属薄标·镍标 / 机械铭牌标识 / PET / KT板" data-en="Aluminum Labels · Stainless Steel · Metal Thin Labels · Mechanical Nameplates · PET · KT Board">铝标牌·铭牌 / 不锈钢激光·腐蚀牌 / 金属薄标·镍标 / 机械铭牌标识 / PET / KT板</span><br>
-        <span class="hero-title-second" data-zh="专业生产铭牌 · 标牌的工厂" data-en="Professional Nameplate & Label Manufacturer">专业生产铭牌 · 标牌的工厂</span>
-        <p class="hero-subtitle" data-zh="专注机械、电气、设备、电脑机箱、按钮键CD纹件等行业铭牌定制。支持打样、小批量及大批量出货，全国发货。" data-en="Specialized in mechanical, electrical, equipment, PC case, button CD pattern nameplate customization. Support samples, small & large batch orders, nationwide shipping.">专注机械、电气、设备、电脑机箱、按钮键CD纹件等行业铭牌定制。支持打样、小批量及大批量出货，全国发货。</p>
-        <div class="hero-tags">
-          <span class="hero-tag" data-zh="免费打样" data-en="Free Samples">免费打样</span>
-          <span class="hero-tag" data-zh="可开发票" data-en="Invoice Available">可开发票</span>
-          <span class="hero-tag" data-zh="支持图纸来样" data-en="Drawing & Sample">支持图纸来样</span>
-          <span class="hero-tag" data-zh="急单加急出货" data-en="Urgent Orders">急单加急出货</span>
-        </div>
-        <div class="hero-cta">
-          <button class="btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
-            <span data-zh="立即咨询报价" data-en="Get Quote Now">立即咨询报价</span>
-          </button>
-          <div class="hero-contact">
-            <span data-zh="电话/微信：" data-en="Tel / WeChat:">电话/微信：</span><br>
-            <strong>132-6679-4685 / 137-1499-2726</strong><br>
-            <span class="phone-second" data-zh="（添加微信，发送图纸/尺寸即可报价）" data-en="(Add WeChat, send drawing/size for quote)">（添加微信，发送图纸/尺寸即可报价）</span>
+  <main>
+    <!-- ... (此处省略中间的大量 HTML，与上一版相同) ... -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h1 class="hero-title" data-zh="深圳/利娟标牌/铭牌/定制厂家" data-en="Shenzhen Lijuan Nameplate Factory">深圳/利娟标牌/铭牌/定制厂家</h1>
+          <span class="hero-title-main" data-zh="铝标牌·铭牌 / 不锈钢激光·腐蚀牌 / 金属薄标·镍标 / 机械铭牌标识 / PET / KT板" data-en="Aluminum Labels · Stainless Steel · Metal Thin Labels · Mechanical Nameplates · PET · KT Board">铝标牌·铭牌 / 不锈钢激光·腐蚀牌 / 金属薄标·镍标 / 机械铭牌标识 / PET / KT板</span><br>
+          <span class="hero-title-second" data-zh="专业生产铭牌 · 标牌的工厂" data-en="Professional Nameplate & Label Manufacturer">专业生产铭牌 · 标牌的工厂</span>
+          <p class="hero-subtitle" data-zh="专注机械、电气、设备、电脑机箱、按钮键CD纹件等行业铭牌定制。支持打样、小批量及大批量出货，全国发货。" data-en="Specialized in mechanical, electrical, equipment, PC case, button CD pattern nameplate customization. Support samples, small & large batch orders, nationwide shipping.">专注机械、电气、设备、电脑机箱、按钮键CD纹件等行业铭牌定制。支持打样、小批量及大批量出货，全国发货。</p>
+          <div class="hero-tags">
+            <span class="hero-tag" data-zh="免费打样" data-en="Free Samples">免费打样</span>
+            <span class="hero-tag" data-zh="可开发票" data-en="Invoice Available">可开发票</span>
+            <span class="hero-tag" data-zh="支持图纸来样" data-en="Drawing & Sample">支持图纸来样</span>
+            <span class="hero-tag" data-zh="急单加急出货" data-en="Urgent Orders">急单加急出货</span>
           </div>
-        </div>
-        <div class="hero-note" data-zh="服务客户包含：机械设备厂 · 自动化设备 · 电气成套 · 户外设备 · 机箱机柜 · 工控按钮等" data-en="Serving: Machinery · Automation · Electrical · Outdoor Equipment · Case Cabinet · Industrial Buttons">服务客户包含：机械设备厂 · 自动化设备 · 电气成套 · 户外设备 · 机箱机柜 · 工控按钮等</div>
-      </div>
-      <aside class="hero-card">
-        <div class="hero-card-title" data-zh="常见铭牌 / 标牌应用场景" data-en="Common Nameplate Applications">常见铭牌 / 标牌应用场景</div>
-        <div class="hero-card-grid">
-          <div class="hero-chip">
-            <strong data-zh="机械设备" data-en="Machinery">机械设备</strong>
-            <span data-zh="设备参数铭牌 / 型号牌 / 安全警示牌" data-en="Parameter Labels / Model Plates / Safety Signs">设备参数铭牌 / 型号牌 / 安全警示牌</span>
+          <div class="hero-cta">
+            <button class="btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
+              <span data-zh="立即咨询报价" data-en="Get Quote Now">立即咨询报价</span>
+            </button>
+            <div class="hero-contact">
+              <span data-zh="电话/微信：" data-en="Tel / WeChat:">电话/微信：</span><br>
+              <strong>132-6679-4685 / 137-1499-2726</strong><br>
+              <span class="phone-second" data-zh="（添加微信，发送图纸/尺寸即可报价）" data-en="(Add WeChat, send drawing/size for quote)">（添加微信，发送图纸/尺寸即可报价）</span>
+            </div>
           </div>
-          <div class="hero-chip">
-            <strong data-zh="电气控制" data-en="Electrical Control">电气控制</strong>
-            <span data-zh="电控箱标识 / 开关面板 / 接线端子标牌" data-en="Control Box Labels / Switch Panels / Terminal Marks">电控箱标识 / 开关面板 / 接线端子标牌</span>
+          <div class="hero-note" data-zh="服务客户包含：机械设备厂 · 自动化设备 · 电气成套 · 户外设备 · 机箱机柜 · 工控按钮等" data-en="Serving: Machinery · Automation · Electrical · Outdoor Equipment · Case Cabinet · Industrial Buttons">服务客户包含：机械设备厂 · 自动化设备 · 电气成套 · 户外设备 · 机箱机柜 · 工控按钮等</div>
+        </div>
+        <aside class="hero-card">
+          <div class="hero-card-title" data-zh="常见铭牌 / 标牌应用场景" data-en="Common Nameplate Applications">常见铭牌 / 标牌应用场景</div>
+          <div class="hero-card-grid">
+            <div class="hero-chip">
+              <strong data-zh="机械设备" data-en="Machinery">机械设备</strong>
+              <span data-zh="设备参数铭牌 / 型号牌 / 安全警示牌" data-en="Parameter Labels / Model Plates / Safety Signs">设备参数铭牌 / 型号牌 / 安全警示牌</span>
+            </div>
+            <div class="hero-chip">
+              <strong data-zh="电气控制" data-en="Electrical Control">电气控制</strong>
+              <span data-zh="电控箱标识 / 开关面板 / 接线端子标牌" data-en="Control Box Labels / Switch Panels / Terminal Marks">电控箱标识 / 开关面板 / 接线端子标牌</span>
+            </div>
+            <div class="hero-chip">
+              <strong data-zh="户外设备" data-en="Outdoor Equipment">户外设备</strong>
+              <span data-zh="户外箱体铭牌 / 防水防晒标识 / LOGO 牌" data-en="Outdoor Labels / Weatherproof Signs / LOGO Plates">户外箱体铭牌 / 防水防晒标识 / LOGO 牌</span>
+            </div>
+            <div class="hero-chip">
+              <strong data-zh="机箱 & 按钮" data-en="Case & Buttons">机箱 & 按钮</strong>
+              <span data-zh="电脑机箱铭牌 / 工控按钮键帽 / 面贴" data-en="PC Case Labels / Industrial Buttons / Face Stickers">电脑机箱铭牌 / 工控按钮键帽 / 面贴</span>
+            </div>
           </div>
-          <div class="hero-chip">
-            <strong data-zh="户外设备" data-en="Outdoor Equipment">户外设备</strong>
-            <span data-zh="户外箱体铭牌 / 防水防晒标识 / LOGO 牌" data-en="Outdoor Labels / Weatherproof Signs / LOGO Plates">户外箱体铭牌 / 防水防晒标识 / LOGO 牌</span>
-          </div>
-          <div class="hero-chip">
-            <strong data-zh="机箱 & 按钮" data-en="Case & Buttons">机箱 & 按钮</strong>
-            <span data-zh="电脑机箱铭牌 / 工控按钮键帽 / 面贴" data-en="PC Case Labels / Industrial Buttons / Face Stickers">电脑机箱铭牌 / 工控按钮键帽 / 面贴</span>
-          </div>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <section id="products">
-    <div class="container">
-      <h2 class="section-title" data-zh="产品与工艺" data-en="Products & Craft">产品与工艺</h2>
-      <p class="section-sub" data-zh="覆盖铝材、不锈钢、镍片、PET、KT板及按钮键等多种材质的产品，可根据图纸或样品定制。" data-en="Aluminum, stainless steel, nickel, PET, KT board, buttons. Customization based on drawings or samples.">覆盖铝材、不锈钢、镍片、PET、KT板及按钮键等多种材质的产品，可根据图纸或样品定制。</p>
-      <div class="products-top-image"><img src="https://lijuan.ltd/images/dex7.jpg" alt="深圳铝标牌厂家拉丝氧化批花工艺" loading="lazy"></div>
-      <div class="grid-3">
-        <div class="card product-with-image">
-          <a href="product-aluminum.html" class="card-link">
-            <img src="https://lijuan.ltd/images/dex1.jpg" alt="铝标牌铭牌批花" class="product-img" loading="lazy">
-            <h3 data-zh="铝标牌 · 铭牌批花" data-en="Aluminum Labels · Nameplates">铝标牌 · 铭牌批花</h3>
-            <p data-zh="拉丝铝、氧化铝、喷砂等工艺，可丝印、腐蚀、激光打标，适用于机械、电气设备铭牌。" data-en="Hairline, anodized, sandblast. Silk screen, etching, laser marking. For mechanical & electrical equipment.">拉丝铝、氧化铝、喷砂等工艺，可丝印、腐蚀、激光打标，适用于机械、电气设备铭牌。</p>
-            <div class="pill-row">
-              <span class="pill" data-zh="拉丝工艺" data-en="Hairline">拉丝工艺</span>
-              <span class="pill" data-zh="丝印/腐蚀" data-en="Screen/Etch">丝印/腐蚀</span>
-              <span class="pill" data-zh="耐磨耐腐蚀" data-en="Wear & Corrosion Resistant">耐磨耐腐蚀</span>
-            </div>
-          </a>
-        </div>
-        <div class="card product-with-image">
-          <a href="product-stainless.html" class="card-link">
-            <img src="https://lijuan.ltd/images/dex2.jpg" alt="不锈钢铭牌深蚀刻填漆户外耐候" class="product-img" loading="lazy">
-            <h3 data-zh="不锈钢铭牌" data-en="Stainless Nameplates">不锈钢铭牌</h3>
-            <p data-zh="304 / 316 不锈钢，深蚀刻 + 填漆或印刷，高温耐腐蚀，适合户外及恶劣环境长期使用。" data-en="304/316 SUS, deep etch + paint or print. High temp & corrosion resistant for outdoor use.">304 / 316 不锈钢，深蚀刻 + 填漆或印刷，高温耐腐蚀，适合户外及恶劣环境长期使用。</p>
-            <div class="pill-row">
-              <span class="pill" data-zh="304/316不锈钢" data-en="304/316 SUS">304/316不锈钢</span>
-              <span class="pill" data-zh="深蚀刻" data-en="Deep Etch">深蚀刻</span>
-              <span class="pill" data-zh="户外耐候" data-en="Outdoor Resistant">户外耐候</span>
-            </div>
-          </a>
-        </div>
-        <div class="card product-with-image">
-          <a href="product-metal-landing.html" class="card-link">
-            <img src="https://lijuan.ltd/images/dex3.jpg" alt="标识高清彩印异形切割" class="product-img" loading="lazy">
-            <h3 data-zh="设备铭牌/标识牌" data-en="Equipment Nameplates">设备铭牌/标识牌</h3>
-            <p data-zh="适合车间现场管理、安全标识、展示架、流程看板等，画面清晰，安装方式灵活便捷。" data-en="For workshop management, safety signs, displays, process boards. Clear images, flexible installation.">适合车间现场管理、安全标识、展示架、流程看板等，画面清晰，安装方式灵活便捷。</p>
-            <div class="pill-row">
-              <span class="pill" data-zh="车间管理牌" data-en="Workshop Labels">车间管理牌</span>
-              <span class="pill" data-zh="安全警示" data-en="Safety Signs">安全警示</span>
-              <span class="pill" data-zh="轻质安装" data-en="Light Installation">轻质安装</span>
-            </div>
-          </a>
-        </div>
-        <div class="card product-with-image">
-          <a href="product-button.html" class="card-link">
-            <img src="https://lijuan.ltd/images/dex4.jpg" alt="电源按钮键CD纹片镭射拉丝背胶" class="product-img" loading="lazy">
-            <h3 data-zh="电源按钮键 / CD纹片" data-en="Power Buttons / CD Pattern">电源按钮键 / CD纹片</h3>
-            <p data-zh="适用于工控按钮、面板、家电按键等，可背胶粘贴，支持精细开孔、激光、丝印文字与图标。" data-en="For industrial buttons, panels, home appliance. Back tape, precise holes, laser, screen printing.">适用于工控按钮、面板、家电按键等，可背胶粘贴，支持精细开孔、激光、丝印文字与图标。</p>
-            <div class="pill-row">
-              <span class="pill" data-zh="精细开孔" data-en="Precise Holes">精细开孔</span>
-              <span class="pill" data-zh="背胶粘贴" data-en="Back Tape">背胶粘贴</span>
-              <span class="pill" data-zh="图文清晰" data-en="Clear Graphics">图文清晰</span>
-            </div>
-          </a>
-        </div>
-        <div class="card product-with-image">
-          <a href="product-case.html" class="card-link">
-            <img src="https://lijuan.ltd/images/dex5.jpg" alt="电脑机箱铭牌装饰件拉丝镜面电镀" class="product-img" loading="lazy">
-            <h3 data-zh="电脑机箱铭牌" data-en="PC Case Nameplates">电脑机箱铭牌</h3>
-            <p data-zh="LOGO 铭牌、型号牌、侧板装饰牌等，支持金属拉丝、镜面、电镀及多种装饰工艺效果。" data-en="LOGO labels, model plates, side panel decorations. Metal hairline, mirror, plating effects.">LOGO 铭牌、型号牌、侧板装饰牌等，支持金属拉丝、镜面、电镀及多种装饰工艺效果。</p>
-            <div class="pill-row">
-              <span class="pill" data-zh="品牌LOGO" data-en="Brand LOGO">品牌LOGO</span>
-              <span class="pill" data-zh="装饰效果" data-en="Decorative">装饰效果</span>
-              <span class="pill" data-zh="个性定制" data-en="Custom">个性定制</span>
-            </div>
-          </a>
-        </div>
-        <div class="card product-with-image">
-          <a href="product-other.html" class="card-link">
-            <img src="https://lijuan.ltd/images/dex6.jpg" alt="定制其他标牌条码二维码资产管理" class="product-img" loading="lazy">
-            <h3 data-zh="定制其他标牌" data-en="Custom Other Labels">定制其他标牌</h3>
-            <p data-zh="资产标签、条形码牌、二维码牌、设备编号牌等，支持小批量快速交付与大批量稳定供货。" data-en="Asset tags, barcode, QR code, equipment labels. Small batch & large volume production.">资产标签、条形码牌、二维码牌、设备编号牌等，支持小批量快速交付与大批量稳定供货。</p>
-            <div class="pill-row">
-              <span class="pill" data-zh="条码二维码" data-en="Barcode/QR">条码二维码</span>
-              <span class="pill" data-zh="资产管理" data-en="Asset Management">资产管理</span>
-              <span class="pill" data-zh="大小批量定制" data-en="Batch Custom">大小批量定制</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="process">
-    <div class="container">
-      <h2 class="section-title" data-zh="合作与下单流程" data-en="Order Process">合作与下单流程</h2>
-      <p class="section-sub" data-zh="支持打样、小批量、大批量生产，全程专人跟进。" data-en="Support samples, small & large batches. Dedicated follow-up.">支持打样、小批量、大批量生产，全程专人跟进。</p>
-      <div class="steps">
-        <div class="step">
-          <div class="step-index">1</div>
-          <h3 data-zh="沟通需求" data-en="Discuss Needs">沟通需求</h3>
-          <p data-zh="通过微信 / 电话 / 邮件，提供尺寸、材质、数量、用途等基本信息，可发送图纸或照片。" data-en="Via WeChat/phone/email. Provide size, material, quantity, usage. Send drawings/photos.">通过微信 / 电话 / 邮件，提供尺寸、材质、数量、用途等基本信息，可发送图纸或照片。</p>
-        </div>
-        <div class="step">
-          <div class="step-index">2</div>
-          <h3 data-zh="确认报价与工艺" data-en="Confirm Quote & Craft">确认报价与工艺</h3>
-          <p data-zh="根据工艺、材质和数量报价，确认工艺细节（表面效果、颜色、安装方式等）。" data-en="Quote based on craft, material, quantity. Confirm details (surface, color, installation).">根据工艺、材质和数量报价，确认工艺细节（表面效果、颜色、安装方式等）。</p>
-        </div>
-        <div class="step">
-          <div class="step-index">3</div>
-          <h3 data-zh="打样 / 生产" data-en="Sample / Production">打样 / 生产</h3>
-          <p data-zh="可先小批量打样确认效果，再安排批量生产，过程中可拍摄照片或视频确认。" data-en="Small batch samples first, then production. Photos/videos available during process.">可先小批量打样确认效果，再安排批量生产，过程中可拍摄照片或视频确认。</p>
-        </div>
-        <div class="step">
-          <div class="step-index">4</div>
-          <h3 data-zh="检验发货" data-en="Inspect & Ship">检验发货</h3>
-          <p data-zh="严格品检，包装后通过物流 / 快递全国发货，提供发票及相关资料。" data-en="Strict QC, packaging, nationwide shipping. Provide invoice & documents.">严格品检，包装后通过物流 / 快递全国发货，提供发票及相关资料。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="cases">
-    <div class="container">
-      <h2 class="section-title" data-zh="部分合作案例" data-en="Case Studies">部分合作案例</h2>
-      <p class="section-sub" data-zh="以下为部分客户案例展示，如需查看更多行业案例，欢迎联系索取。" data-en="Partial client cases. Contact for more industry examples.">以下为部分客户案例展示，如需查看更多行业案例，欢迎联系索取。</p>
-      <div class="cases-grid">
-        <div class="case">
-          <a href="case/case-auto.html">
-            <img src="https://lijuan.ltd/images/hp1.jpg" alt="深圳自动化设备铭牌案例" loading="lazy">
-            <h3 data-zh="自动化设备铭牌项目" data-en="Auto Equipment Nameplates">自动化设备铭牌项目</h3>
-            <p data-zh="批量生产设备参数铭牌，支持多型号混合发货，统一管理编号。" data-en="Batch production, multi-model mixed shipping, unified numbering.">批量生产设备参数铭牌，支持多型号混合发货，统一管理编号。</p>
-          </a>
-        </div>
-        <div class="case">
-          <a href="case/case-outdoor.html">
-            <img src="https://lijuan.ltd/images/hp2.jpg" alt="户外警示标识案例" loading="lazy">
-            <h3 data-zh="户外警示标识项目" data-en="Outdoor Warning Signs">户外警示标识项目</h3>
-            <p data-zh="不锈钢深蚀刻+填漆工艺，耐候性强，适合长期户外使用。" data-en="Stainless deep etch+paint, weather resistant for long-term outdoor use.">不锈钢深蚀刻+填漆工艺，耐候性强，适合长期户外使用。</p>
-          </a>
-        </div>
-        <div class="case">
-          <a href="case/case-chassis.html">
-            <img src="https://lijuan.ltd/images/hp3.jpg" alt="机箱铭牌及面贴案例" loading="lazy">
-            <h3 data-zh="机箱铭牌及面贴" data-en="Case Nameplates & Face Stickers">机箱铭牌及面贴</h3>
-            <p data-zh="LOGO 铭牌搭配功能面贴，提升整机品牌感与操作识别度。" data-en="LOGO labels + functional stickers, enhance brand & operation recognition.">LOGO 铭牌搭配功能面贴，提升整机品牌感与操作识别度。</p>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" style="background:#f9fafb;padding:10px 0">
-    <div class="container">
-      <h2 class="section-title" style="text-align:center">
-        <span data-zh="获取铝标牌 · 镐光铭牌报价" data-en="Get Aluminum / Hairline Nameplate Quote">获取铝标牌 · 镐光铭牌报价</span>
-      </h2>
-      <p class="section-sub" style="text-align:center">
-        <span data-zh="填写需求信息或直接添加微信，发送图纸/尺寸/数量，即可为您评估金属标牌价格与交期。" data-en="Fill form or add WeChat, send drawing/size/qty, get price & lead time.">填写需求信息或直接添加微信，发送图纸/尺寸/数量，即可为您评估金属标牌价格与交期。</span>
-      </p>
-      
-      <!-- 修改重点：移动端改为上下排列 -->
-      <div class="contact-layout">
-        <div class="contact-form">
-          <h3><span data-zh="在线提交需求" data-en="Submit Online">在线提交需求</span></h3>
-          <form id="quoteForm">
-            <input type="hidden" name="产品" value="金属标牌|设备铭牌|机械标识牌">
-            <div class="form-row">
-              <div class="form-group">
-                <label><span data-zh="您的称呼" data-en="Your Name">您的称呼</span></label>
-                <input type="text" name="name" placeholder="张工" required>
-              </div>
-              <div class="form-group">
-                <label><span data-zh="手机/微信" data-en="Mobile/WeChat">手机/微信</span></label>
-                <input type="text" name="contact" placeholder="手机或微信" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label><span data-zh="您的联系邮箱" data-en="Your Email">您的联系邮箱</span></label>
-              <input type="email" name="email" placeholder="方便我们回复报价" required>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label><span data-zh="尺寸（mm）" data-en="Size (mm)">尺寸（mm）</span></label>
-                <input type="text" name="size" placeholder="如：400×600" required>
-              </div>
-              <div class="form-group">
-                <label><span data-zh="数量" data-en="Quantity">数量</span></label>
-                <input type="text" name="qty" placeholder="如：200张" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label><span data-zh="材质" data-en="Material">材质</span></label>
-              <select name="material" required>
-                <option value="">请选择</option>
-                <option value="金属标牌">金属标牌</option>
-                <option value="设备铭牌">设备铭牌</option>
-                <option value="CD纹标牌">CD纹标牌</option>
-                <option value="镍标牌">镍标</option>
-                <option value="其他标牌">其他标牌</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label><span data-zh="上传图纸或参考图像（可选）" data-en="Upload drawing (opt.)">上传图纸或参考图像（可选）</span></label>
-              <input type="file" name="file" accept=".jpg,.jpeg,.png,.pdf,.ai,.cdr" multiple>
-            </div>
-            <div class="form-group">
-              <label><span data-zh="备注" data-en="Remarks">备注</span></label>
-              <textarea name="note" rows="4" placeholder="背胶/打孔/异形/防水等级等要求，如需加急请注明金属标牌价格"></textarea>
-            </div>
-            <button type="submit" class="btn-submit"><span data-zh="提交询价" data-en="Submit">提交询价</span></button>
-            <div id="errorTip" style="display:none;background:#fee;border:1px solid #fcc;color:#c33;border-radius:6px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.5">
-              <span data-zh="提交失败，请重试或直接扫码右侧微信，30 分钟内快速报价！" data-en="Submit failed, retry or scan WeChat for 30 min quote!">提交失败，请重试或直接扫码右侧微信，30 分钟内快速报价！</span>
-            </div>
-            <p id="sendOk" style="color:#16a34a;margin-top:8px;font-size:13px;display:none;">✅ <span data-zh="已提交成功！我们将尽快邮件回复您。" data-en="Submitted! We will reply by email soon.">已提交成功！我们将尽快邮件回复您。</span></p>
-            <p class="form-note">* <span data-zh="提交成功后、我们将在12小时内回复您。" data-en="We will reply within 12 h.">提交成功后、我们将在12小时内回复您。</span></p>
-          </form>
-        </div>
-        <aside id="contactSide" style="background:#ffffff;border-radius:12px;padding:32px;box-shadow:0 8px 24px rgba(15,23,42,.08);">
-          <h4 style="margin-bottom:20px;font-size:18px;color:var(--text-main);text-align:center">
-            <span data-zh="直接联系·极速响应" data-en="Direct Contact · Fast Reply">直接联系·极速响应</span>
-          </h4>
-          <div style="margin-bottom:20px;text-align:center">
-            <div style="font-size:13px;color:var(--text-sub)"><span data-zh="业务热线" data-en="Hotline">业务热线</span></div>
-            <a href="tel:132-6679-4685" style="font-size:22px;font-weight:700;color:var(--accent);line-height:1.2">132-6679-4685</a>
-            <div style="height:9px"></div>
-            <a href="tel:137-1499-2726" style="font-size:22px;font-weight:700;color:var(--accent);line-height:1.2">137-1499-2726</a>
-            <!-- 修复引号问题 -->
-            <div style="font-size:13px;color:var(--text-sub);margin-top:6px"><span data-zh="加微信备注'标牌询价'" data-en="Add WeChat &amp; note 'quote'">加微信备注"标牌询价"</span></div>
-          </div>
-          <div style="margin-bottom:27px;text-align:center">
-            <div style="font-size:13px;color:var(--text-sub)"><span data-zh="电子邮件询价" data-en="Email Inquiry">电子邮件询价</span></div>
-            <a href="mailto:szlijuan@126.com" style="font-size:15px;color:var(--primary)">szlijuan@126.com</a>
-          </div>
-          <div class="qrcode-box">
-            <div style="text-align:center">
-              <img src="https://lijuan.ltd/images/1p9.jpg" width="160" height="160" alt="微信二维码1" style="border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1)">
-              <div style="font-size:12px;color:var(--text-sub);margin-top:6px">4685</div>
-               </div>
-            <div style="text-align:center">
-              <img src="https://lijuan.ltd/images/2p9.jpg" width="160" height="160" alt="微信二维码2" style="border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1)">
-              <div style="font-size:12px;color:var(--text-sub);margin-top:6px">2726</div>
-            </div>
-             </div>
-          <ul style="margin-top:24px;padding-left:16px;font-size:13px;color:var(--text-sub);line-height:1.8">
-            <li><span data-zh="30 分钟内响应报价" data-en="Quote in 30 min">30 分钟内响应报价</span></li>
-            <li><span data-zh="免费设计排版" data-en="Free design">免费设计排版</span></li>
-            <li><span data-zh="支持 13% 增值税专票" data-en="13% VAT invoice">支持 13% 增值税专票</span></li>
-            <li><span data-zh="全国包邮" data-en="Free shipping">全国包邮</span></li>
-          </ul>
         </aside>
       </div>
-      
-      <div class="faq-full" style="margin-top:40px">
-        <h3 style="font-size:18px;margin-bottom:12px;color:var(--text-main)">
-          <span data-zh="金属标牌设备铭牌常见问题" data-en="FAQ – Metal Nameplate">金属标牌设备铭牌常见问题</span>
-        </h3>
-        <div class="faq-list">
-          <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6">
-            <strong><span data-zh="打样需要多久？" data-en="Sample lead time?">打样需要多久？</span></strong>
-            <p style="margin:4px 0 0;color:var(--text-sub)"><span data-zh="当日17:00前确认文件，急单当天发出。" data-en="Files before 17:00, urgent orders same day.">当日17:00前确认文件，急单当天发出。</span></p>
+    </section>
+
+    <section id="products" class="section">
+      <div class="container">
+        <h2 class="section-title" data-zh="产品与工艺" data-en="Products & Craft">产品与工艺</h2>
+        <p class="section-sub" data-zh="覆盖铝材、不锈钢、镍片、PET、KT板及按钮键等多种材质的产品，可根据图纸或样品定制。" data-en="Aluminum, stainless steel, nickel, PET, KT board, buttons. Customization based on drawings or samples.">覆盖铝材、不锈钢、镍片、PET、KT板及按钮键等多种材质的产品，可根据图纸或样品定制。</p>
+        <div class="products-top-image"><img src="https://lijuan.ltd/images/dex7.jpg" alt="深圳铝标牌厂家拉丝氧化批花工艺" loading="lazy"></div>
+        <div class="grid-3">
+          <div class="card">
+            <a href="product-aluminum.html" class="card-link">
+              <img src="https://lijuan.ltd/images/dex1.jpg" alt="铝标牌铭牌批花" loading="lazy">
+              <h3 data-zh="铝标牌 · 铭牌批花" data-en="Aluminum Labels · Nameplates">铝标牌 · 铭牌批花</h3>
+              <p data-zh="拉丝铝、氧化铝、喷砂等工艺，可丝印、腐蚀、激光打标，适用于机械、电气设备铭牌。" data-en="Hairline, anodized, sandblast. Silk screen, etching, laser marking. For mechanical & electrical equipment.">拉丝铝、氧化铝、喷砂等工艺，可丝印、腐蚀、激光打标，适用于机械、电气设备铭牌。</p>
+              <div class="pill-row">
+                <span class="pill" data-zh="拉丝工艺" data-en="Hairline">拉丝工艺</span>
+                <span class="pill" data-zh="丝印/腐蚀" data-en="Screen/Etch">丝印/腐蚀</span>
+                <span class="pill" data-zh="耐磨耐腐蚀" data-en="Wear & Corrosion Resistant">耐磨耐腐蚀</span>
+              </div>
+            </a>
           </div>
-          <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6">
-            <strong><span data-zh="能开发票吗？" data-en="VAT invoice?">能开发票吗？</span></strong>
-            <p style="margin:4px 0 0;color:var(--text-sub)"><span data-zh="可开13%增值税专票。" data-en="13% VAT available.">可开13%增值税专票。</span></p>
+          <div class="card">
+            <a href="product-stainless.html" class="card-link">
+              <img src="https://lijuan.ltd/images/dex2.jpg" alt="不锈钢铭牌深蚀刻填漆户外耐候" loading="lazy">
+              <h3 data-zh="不锈钢铭牌" data-en="Stainless Nameplates">不锈钢铭牌</h3>
+              <p data-zh="304 / 316 不锈钢，深蚀刻 + 填漆或印刷，高温耐腐蚀，适合户外及恶劣环境长期使用。" data-en="304/316 SUS, deep etch + paint or print. High temp & corrosion resistant for outdoor use.">304 / 316 不锈钢，深蚀刻 + 填漆或印刷，高温耐腐蚀，适合户外及恶劣环境长期使用。</p>
+              <div class="pill-row">
+                <span class="pill" data-zh="304/316不锈钢" data-en="304/316 SUS">304/316不锈钢</span>
+                <span class="pill" data-zh="深蚀刻" data-en="Deep Etch">深蚀刻</span>
+                <span class="pill" data-zh="户外耐候" data-en="Outdoor Resistant">户外耐候</span>
+              </div>
+            </a>
           </div>
-          <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6">
-            <strong><span data-zh="物流怎么发？" data-en="Shipping?">物流怎么发？</span></strong>
-            <p style="margin:4px 0 0;color:var(--text-sub)"><span data-zh="顺丰/德邦包邮，全国2-3天到。" data-en="SF/Deppon free, 2-3 days.">顺丰/德邦包邮，全国2-3天到。</span></p>
+          <div class="card">
+            <a href="product-metal-landing.html" class="card-link">
+              <img src="https://lijuan.ltd/images/dex3.jpg" alt="标识高清彩印异形切割" loading="lazy">
+              <h3 data-zh="设备铭牌/标识牌" data-en="Equipment Nameplates">设备铭牌/标识牌</h3>
+              <p data-zh="适合车间现场管理、安全标识、展示架、流程看板等，画面清晰，安装方式灵活便捷。" data-en="For workshop management, safety signs, displays, process boards. Clear images, flexible installation.">适合车间现场管理、安全标识、展示架、流程看板等，画面清晰，安装方式灵活便捷。</p>
+              <div class="pill-row">
+                <span class="pill" data-zh="车间管理牌" data-en="Workshop Labels">车间管理牌</span>
+                <span class="pill" data-zh="安全警示" data-en="Safety Signs">安全警示</span>
+                <span class="pill" data-zh="轻质安装" data-en="Light Installation">轻质安装</span>
+              </div>
+            </a>
           </div>
-          <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6">
-            <strong><span data-zh="达不到100张能订吗？" data-en="Less than 100 pcs?">达不到100张能订吗？</span></strong>
-            <p style="margin:4px 0 0;color:var(--text-sub)"><span data-zh="小批量可谈，单价略高。" data-en="Small batch OK, price higher.">小批量可谈，单价略高。</span></p>
+          <div class="card">
+            <a href="product-button.html" class="card-link">
+              <img src="https://lijuan.ltd/images/dex4.jpg" alt="电源按钮键CD纹片镭射拉丝背胶" loading="lazy">
+              <h3 data-zh="电源按钮键 / CD纹片" data-en="Power Buttons / CD Pattern">电源按钮键 / CD纹片</h3>
+              <p data-zh="适用于工控按钮、面板、家电按键等，可背胶粘贴，支持精细开孔、激光、丝印文字与图标。" data-en="For industrial buttons, panels, home appliance. Back tape, precise holes, laser, screen printing.">适用于工控按钮、面板、家电按键等，可背胶粘贴，支持精细开孔、激光、丝印文字与图标。</p>
+              <div class="pill-row">
+                <span class="pill" data-zh="精细开孔" data-en="Precise Holes">精细开孔</span>
+                <span class="pill" data-zh="背胶粘贴" data-en="Back Tape">背胶粘贴</span>
+                <span class="pill" data-zh="图文清晰" data-en="Clear Graphics">图文清晰</span>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="product-case.html" class="card-link">
+              <img src="https://lijuan.ltd/images/dex5.jpg" alt="电脑机箱铭牌装饰件拉丝镜面电镀" loading="lazy">
+              <h3 data-zh="电脑机箱铭牌" data-en="PC Case Nameplates">电脑机箱铭牌</h3>
+              <p data-zh="LOGO 铭牌、型号牌、侧板装饰牌等，支持金属拉丝、镜面、电镀及多种装饰工艺效果。" data-en="LOGO labels, model plates, side panel decorations. Metal hairline, mirror, plating effects.">LOGO 铭牌、型号牌、侧板装饰牌等，支持金属拉丝、镜面、电镀及多种装饰工艺效果。</p>
+              <div class="pill-row">
+                <span class="pill" data-zh="品牌LOGO" data-en="Brand LOGO">品牌LOGO</span>
+                <span class="pill" data-zh="装饰效果" data-en="Decorative">装饰效果</span>
+                <span class="pill" data-zh="个性定制" data-en="Custom">个性定制</span>
+              </div>
+            </a>
+          </div>
+          <div class="card">
+            <a href="product-other.html" class="card-link">
+              <img src="https://lijuan.ltd/images/dex6.jpg" alt="定制其他标牌条码二维码资产管理" loading="lazy">
+              <h3 data-zh="定制其他标牌" data-en="Custom Other Labels">定制其他标牌</h3>
+              <p data-zh="资产标签、条形码牌、二维码牌、设备编号牌等，支持小批量快速交付与大批量稳定供货。" data-en="Asset tags, barcode, QR code, equipment labels. Small batch & large volume production.">资产标签、条形码牌、二维码牌、设备编号牌等，支持小批量快速交付与大批量稳定供货。</p>
+              <div class="pill-row">
+                <span class="pill" data-zh="条码二维码" data-en="Barcode/QR">条码二维码</span>
+                <span class="pill" data-zh="资产管理" data-en="Asset Management">资产管理</span>
+                <span class="pill" data-zh="大小批量定制" data-en="Batch Custom">大小批量定制</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="factory-section">
-    <div class="container">
-      <h2 style="text-align:center; color:#e5e7eb; margin-bottom:20px; font-size:22px;" data-zh="实物实拍" data-en="Real Photos">实物实拍</h2>
-      <div class="factory-slider">
-        <div class="factory-slide active">
-          <img src="https://lijuan.ltd/images/pa1.jpg" alt="深圳标牌厂家激光切割车间实景" loading="lazy">
-        </div>
-        <div class="factory-slide">
-          <img src="https://lijuan.ltd/images/pa2.jpg" alt="标牌生产设备与数控冲床展示" loading="lazy">
-        </div>
-        <div class="factory-slide">
-          <img src="https://lijuan.ltd/images/pa3.jpg" alt="全自动铭牌生产线及质检工位" loading="lazy">
-        </div>
-        <div class="factory-slide">
-          <img src="https://lijuan.ltd/images/pa4.jpg" alt="铝标牌氧化拉丝成品区" loading="lazy">
-        </div>
-        <button class="factory-prev">&#10094;</button>
-        <button class="factory-next">&#10095;</button>
-        <div class="dots">
-          <span class="dot active" data-idx="0"></span>
-          <span class="dot" data-idx="1"></span>
-          <span class="dot" data-idx="2"></span>
-          <span class="dot" data-idx="3"></span>
+    <section id="process" class="section">
+      <div class="container">
+        <h2 class="section-title" data-zh="合作与下单流程" data-en="Order Process">合作与下单流程</h2>
+        <p class="section-sub" data-zh="支持打样、小批量、大批量生产，全程专人跟进。" data-en="Support samples, small & large batches. Dedicated follow-up.">支持打样、小批量、大批量生产，全程专人跟进。</p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-index">1</div>
+            <h3 data-zh="沟通需求" data-en="Discuss Needs">沟通需求</h3>
+            <p data-zh="通过微信 / 电话 / 邮件，提供尺寸、材质、数量、用途等基本信息，可发送图纸或照片。" data-en="Via WeChat/phone/email. Provide size, material, quantity, usage. Send drawings/photos.">通过微信 / 电话 / 邮件，提供尺寸、材质、数量、用途等基本信息，可发送图纸或照片。</p>
+          </div>
+          <div class="step">
+            <div class="step-index">2</div>
+            <h3 data-zh="确认报价与工艺" data-en="Confirm Quote & Craft">确认报价与工艺</h3>
+            <p data-zh="根据工艺、材质和数量报价，确认工艺细节（表面效果、颜色、安装方式等）。" data-en="Quote based on craft, material, quantity. Confirm details (surface, color, installation).">根据工艺、材质和数量报价，确认工艺细节（表面效果、颜色、安装方式等）。</p>
+          </div>
+          <div class="step">
+            <div class="step-index">3</div>
+            <h3 data-zh="打样 / 生产" data-en="Sample / Production">打样 / 生产</h3>
+            <p data-zh="可先小批量打样确认效果，再安排批量生产，过程中可拍摄照片或视频确认。" data-en="Small batch samples first, then production. Photos/videos available during process.">可先小批量打样确认效果，再安排批量生产，过程中可拍摄照片或视频确认。</p>
+          </div>
+          <div class="step">
+            <div class="step-index">4</div>
+            <h3 data-zh="检验发货" data-en="Inspect & Ship">检验发货</h3>
+            <p data-zh="严格品检，包装后通过物流 / 快递全国发货，提供发票及相关资料。" data-en="Strict QC, packaging, nationwide shipping. Provide invoice & documents.">严格品检，包装后通过物流 / 快递全国发货，提供发票及相关资料。</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <section id="cases" class="section">
+      <div class="container">
+        <h2 class="section-title" data-zh="部分合作案例" data-en="Case Studies">部分合作案例</h2>
+        <p class="section-sub" data-zh="以下为部分客户案例展示，如需查看更多行业案例，欢迎联系索取。" data-en="Partial client cases. Contact for more industry examples.">以下为部分客户案例展示，如需查看更多行业案例，欢迎联系索取。</p>
+        <div class="grid-3">
+          <div class="case">
+            <a href="case/case-auto.html">
+              <img src="https://lijuan.ltd/images/hp1.jpg" alt="深圳自动化设备铭牌案例" loading="lazy">
+              <h3 data-zh="自动化设备铭牌项目" data-en="Auto Equipment Nameplates">自动化设备铭牌项目</h3>
+              <p data-zh="批量生产设备参数铭牌，支持多型号混合发货，统一管理编号。" data-en="Batch production, multi-model mixed shipping, unified numbering.">批量生产设备参数铭牌，支持多型号混合发货，统一管理编号。</p>
+            </a>
+          </div>
+          <div class="case">
+            <a href="case/case-outdoor.html">
+              <img src="https://lijuan.ltd/images/hp2.jpg" alt="户外警示标识案例" loading="lazy">
+              <h3 data-zh="户外警示标识项目" data-en="Outdoor Warning Signs">户外警示标识项目</h3>
+              <p data-zh="不锈钢深蚀刻+填漆工艺，耐候性强，适合长期户外使用。" data-en="Stainless deep etch+paint, weather resistant for long-term outdoor use.">不锈钢深蚀刻+填漆工艺，耐候性强，适合长期户外使用。</p>
+            </a>
+          </div>
+          <div class="case">
+            <a href="case/case-chassis.html">
+              <img src="https://lijuan.ltd/images/hp3.jpg" alt="机箱铭牌及面贴案例" loading="lazy">
+              <h3 data-zh="机箱铭牌及面贴" data-en="Case Nameplates & Face Stickers">机箱铭牌及面贴</h3>
+              <p data-zh="LOGO 铭牌搭配功能面贴，提升整机品牌感与操作识别度。" data-en="LOGO labels + functional stickers, enhance brand & operation recognition.">LOGO 铭牌搭配功能面贴，提升整机品牌感与操作识别度。</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" style="background:#f9fafb;padding:10px 0">
+      <div class="container">
+        <h2 class="section-title" style="text-align:center">
+          <span data-zh="获取铝标牌 · 镐光铭牌报价" data-en="Get Aluminum / Hairline Nameplate Quote">获取铝标牌 · 镐光铭牌报价</span>
+        </h2>
+        <p class="section-sub" style="text-align:center">
+          <span data-zh="填写需求信息或直接添加微信，发送图纸/尺寸/数量，即可为您评估金属标牌价格与交期。" data-en="Fill form or add WeChat, send drawing/size/qty, get price & lead time.">填写需求信息或直接添加微信，发送图纸/尺寸/数量，即可为您评估金属标牌价格与交期。</span>
+        </p>
+        
+        <div class="contact-layout">
+          <div class="contact-form">
+            <h3><span data-zh="在线提交需求" data-en="Submit Online">在线提交需求</span></h3>
+            <form id="quoteForm">
+              <input type="hidden" name="产品" value="金属标牌|设备铭牌|机械标识牌">
+              <div class="form-row">
+                <div class="form-group">
+                  <label><span data-zh="您的称呼" data-en="Your Name">您的称呼</span></label>
+                  <input type="text" name="name" data-placeholder-zh="例如：张工" data-placeholder-en="e.g. Mr. Smith" required>
+                </div>
+                <div class="form-group">
+                  <label><span data-zh="手机/微信" data-en="Mobile/WeChat">手机/微信</span></label>
+                  <input type="text" name="contact" data-placeholder-zh="手机或微信" data-placeholder-en="Mobile or WeChat" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label><span data-zh="您的联系邮箱" data-en="Your Email">您的联系邮箱</span></label>
+                <input type="email" name="email" data-placeholder-zh="方便我们回复报价" data-placeholder-en="For quote reply" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label><span data-zh="尺寸（mm）" data-en="Size (mm)">尺寸（mm）</span></label>
+                  <input type="text" name="size" data-placeholder-zh="如：400×600" data-placeholder-en="e.g. 400×600" required>
+                </div>
+                <div class="form-group">
+                  <label><span data-zh="数量" data-en="Quantity">数量</span></label>
+                  <input type="text" name="qty" data-placeholder-zh="如：200张" data-placeholder-en="e.g. 200 pcs" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label><span data-zh="材质" data-en="Material">材质</span></label>
+                <select name="material" required>
+                  <option value="" data-zh="请选择" data-en="Please select">请选择</option>
+                  <option value="金属标牌" data-zh="金属标牌" data-en="Metal Label">金属标牌</option>
+                  <option value="设备铭牌" data-zh="设备铭牌" data-en="Equipment Nameplate">设备铭牌</option>
+                  <option value="CD纹标牌" data-zh="CD纹标牌" data-en="CD Pattern Label">CD纹标牌</option>
+                  <option value="镍标牌" data-zh="镍标" data-en="Nickel Sticker">镍标</option>
+                  <option value="其他标牌" data-zh="其他标牌" data-en="Other Label">其他标牌</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label><span data-zh="上传图纸或参考图像（可选）" data-en="Upload drawing (opt.)">上传图纸或参考图像（可选）</span></label>
+                <div class="file-upload-wrapper">
+                  <input type="file" name="file" id="fileInput" accept=".jpg,.jpeg,.png,.pdf,.ai,.cdr" multiple>
+                  <button type="button" class="file-upload-btn" data-zh="选择文件" data-en="Choose file">选择文件</button>
+                  <span class="file-name-display" data-zh="未选择文件" data-en="No file chosen">未选择文件</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label><span data-zh="备注" data-en="Remarks">备注</span></label>
+                <textarea name="note" rows="4" data-placeholder-zh="背胶/打孔/异形/防水等级等要求，如需加急请注明。" data-placeholder-en="Requirements like adhesive, holes, shape, waterproof. Mark if urgent."></textarea>
+              </div>
+              <button type="submit" class="btn-submit"><span data-zh="提交询价" data-en="Submit Inquiry">提交询价</span></button>
+              <div id="errorTip" style="display:none;background:#fee;border:1px solid #fcc;color:#c33;border-radius:6px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.5">
+                <span data-zh="提交失败，请重试或直接扫码右侧微信，30 分钟内快速报价！" data-en="Submit failed. Please retry or scan the WeChat QR code for a quote within 30 mins!">提交失败，请重试或直接扫码右侧微信，30 分钟内快速报价！</span>
+              </div>
+              <p id="sendOk" style="color:#16a34a;margin-top:8px;font-size:13px;display:none;">✅ <span data-zh="已提交成功！我们将尽快邮件回复您。" data-en="Submitted successfully! We will reply to your email soon.">已提交成功！我们将尽快邮件回复您。</span></p>
+              <p class="form-note">* <span data-zh="提交成功后、我们将在12小时内回复您。" data-en="We will reply within 12 hours after submission.">提交成功后、我们将在12小时内回复您。</span></p>
+            </form>
+          </div>
+          <aside id="contactSide" style="background:#ffffff;border-radius:12px;padding:32px;box-shadow:0 8px 24px rgba(15,23,42,.08);">
+            <h4 style="margin-bottom:20px;font-size:18px;color:var(--text-main);text-align:center">
+              <span data-zh="直接联系·极速响应" data-en="Direct Contact · Fast Reply">直接联系·极速响应</span>
+            </h4>
+            <div style="margin-bottom:20px;text-align:center">
+              <div style="font-size:13px;color:var(--text-sub)"><span data-zh="业务热线" data-en="Hotline">业务热线</span></div>
+              <a href="tel:132-6679-4685" style="font-size:22px;font-weight:700;color:var(--accent);line-height:1.2">132-6679-4685</a>
+              <div style="height:9px"></div>
+              <a href="tel:137-1499-2726" style="font-size:22px;font-weight:700;color:var(--accent);line-height:1.2">137-1499-2726</a>
+              <div style="font-size:13px;color:var(--text-sub);margin-top:6px"><span data-zh="加微信备注'标牌询价'" data-en="Add WeChat &amp; note 'quote'">加微信备注"标牌询价"</span></div>
+            </div>
+            <div style="margin-bottom:27px;text-align:center">
+              <div style="font-size:13px;color:var(--text-sub)"><span data-zh="电子邮件询价" data-en="Email Inquiry">电子邮件询价</span></div>
+              <a href="mailto:szlijuan@126.com" style="font-size:15px;color:var(--primary)">szlijuan@126.com</a>
+            </div>
+            <div class="qrcode-box">
+              <div style="text-align:center">
+                <img src="https://lijuan.ltd/images/1p9.jpg" width="160" height="160" alt="微信二维码1" style="border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1)">
+                <div style="font-size:12px;color:var(--text-sub);margin-top:6px">4685</div>
+                 </div>
+              <div style="text-align:center">
+                <img src="https://lijuan.ltd/images/2p9.jpg" width="160" height="160" alt="微信二维码2" style="border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1)">
+                <div style="font-size:12px;color:var(--text-sub);margin-top:6px">2726</div>
+              </div>
+            </div>
+            <ul style="margin-top:24px;padding-left:16px;font-size:13px;color:var(--text-sub);line-height:1.8;text-align:left;">
+              <li><span data-zh="30 分钟内响应报价" data-en="Quote in 30 min">30 分钟内响应报价</span></li>
+              <li><span data-zh="免费设计排版" data-en="Free design">免费设计排版</span></li>
+              <li><span data-zh="支持 13% 增值税专票" data-en="13% VAT invoice">支持 13% 增值税专票</span></li>
+              <li><span data-zh="全国包邮" data-en="Free shipping">全国包邮</span></li>
+            </ul>
+          </aside>
+        </div>
+        
+        <div class="faq-full" style="margin-top:40px">
+          <h3 style="font-size:18px;margin-bottom:12px;color:var(--text-main)">
+            <span data-zh="金属标牌设备铭牌常见问题" data-en="FAQ – Metal Nameplate">金属标牌设备铭牌常见问题</span>
+          </h3>
+          <div class="faq-list">
+            <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6">
+              <strong><span data-zh="打样需要多久？" data-en="Sample lead time?">打样需要多久？</span></strong>
+              <p style="margin:4px 0 0;color:var(--text-sub)"><span data-zh="当日17:00前确认文件，急单当天发出。" data-en="Files confirmed before 17:00, urgent orders can be shipped same day.">当日17:00前确认文件，急单当天发出。</span></p>
+            </div>
+            <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6">
+              <strong><span data-zh="能开发票吗？" data-en="VAT invoice?">能开发票吗？</span></strong>
+              <p style="margin:4px 0 0;color:var(--text-sub)"><span data-zh="可开13%增值税专票。" data-en="13% VAT special invoice is available.">可开13%增值税专票。</span></p>
+            </div>
+            <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6">
+              <strong><span data-zh="物流怎么发？" data-en="Shipping?">物流怎么发？</span></strong>
+              <p style="margin:4px 0 0;color:var(--text-sub)"><span data-zh="顺丰/德邦包邮，全国2-3天到。" data-en="Free shipping via SF Express/Deppon, arrives in 2-3 days nationwide.">顺丰/德邦包邮，全国2-3天到。</span></p>
+            </div>
+            <div style="background:#fff;border-radius:8px;padding:12px 16px;margin-bottom:10px;font-size:14px;line-height:1.6">
+              <strong><span data-zh="达不到100张能订吗？" data-en="Less than 100 pcs?">达不到100张能订吗？</span></strong>
+              <p style="margin:4px 0 0;color:var(--text-sub)"><span data-zh="小批量可谈，单价略高。" data-en="Small batches are negotiable, unit price will be slightly higher.">小批量可谈，单价略高。</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="factory-section">
+      <div class="container">
+        <h2 style="text-align:center; color:#e5e7eb; margin-bottom:20px; font-size:22px;" data-zh="实物实拍" data-en="Real Photos">实物实拍</h2>
+        <div class="factory-slider">
+          <div class="factory-slide active">
+            <img src="https://lijuan.ltd/images/pa1.jpg" alt="深圳标牌厂家激光切割车间实景" loading="lazy">
+          </div>
+          <div class="factory-slide">
+            <img src="https://lijuan.ltd/images/pa2.jpg" alt="标牌生产设备与数控冲床展示" loading="lazy">
+          </div>
+          <div class="factory-slide">
+            <img src="https://lijuan.ltd/images/pa3.jpg" alt="全自动铭牌生产线及质检工位" loading="lazy">
+          </div>
+          <div class="factory-slide">
+            <img src="https://lijuan.ltd/images/pa4.jpg" alt="铝标牌氧化拉丝成品区" loading="lazy">
+          </div>
+          <button class="factory-prev">&#10094;</button>
+          <button class="factory-next">&#10095;</button>
+          <div class="dots"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
   <footer>
     <span data-zh="深圳市利娟标牌有限公司 · 金属标牌 / 铭牌 / 设备标识牌定制 · 电话：132-6679-4685 / 137-1499-2726" data-en="Shenzhen Lijuan Nameplate Co., Ltd. · Metal Labels / Nameplates / Equipment Signs · Tel: +86-132-6679-4685 / +86-137-1499-2726">深圳市利娟标牌有限公司 · 金属标牌 / 铭牌 / 设备标识牌定制 · 电话：132-6679-4685 / 137-1499-2726</span>
   </footer>
@@ -568,90 +593,210 @@
   </div>
 
   <script>
-    /* ===== 语言切换功能 ===== */
-    const LANG_KEY = 'lj_lang';
-    let currentLang = localStorage.getItem(LANG_KEY) || (navigator.language.startsWith('zh') ? 'zh' : 'en');
-    
-    function applyLang() {
-      document.querySelectorAll('[data-zh][data-en]').forEach(el => {
-        el.innerHTML = currentLang === 'zh' ? el.dataset.zh : el.dataset.en;
-      });
-      document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
-    }
-    
-    function toggleLang() {
-      currentLang = currentLang === 'zh' ? 'en' : 'zh';
-      localStorage.setItem(LANG_KEY, currentLang);
-      applyLang();
-    }
-    
-    // 页面加载时应用语言
-    applyLang();
+    document.addEventListener('DOMContentLoaded', function() {
+      const LANG_KEY = 'lj_lang';
+      const BILINGUAL_SELECTOR = '[data-zh][data-en]';
+      const PLACEHOLDER_SELECTOR = '[data-placeholder-zh][data-placeholder-en]';
+      
+      const langConfig = {
+        zh: {
+          title: '深圳利娟标牌厂家直供：铝标牌、不锈钢铭牌、机械铭牌当日打样，48h 报价全国包邮',
+          description: '深圳利娟标牌专业定制设备铭牌、金属标牌，深蚀刻填漆工艺，48小时快速打样，50片起订。免费设计，全国包邮。',
+          lang: 'zh-CN',
+        },
+        en: {
+          title: 'Shenzhen Lijuan Nameplate: Custom Aluminum/Stainless Steel Labels, Fast Samples, Nationwide Shipping',
+          description: 'Lijuan Nameplate specializes in custom equipment nameplates and metal labels with deep etching. Fast 48h sampling, starting from 50 pcs. Free design & shipping.',
+          lang: 'en',
+        }
+      };
 
-    /* ===== 移动端菜单 ===== */
-    document.getElementById('menuToggle').onclick = () => {
-      document.getElementById('navLinks').classList.toggle('show');
-    };
+      let currentLang = localStorage.getItem(LANG_KEY) || (navigator.language.startsWith('zh') ? 'zh' : 'en');
+      const langZhEl = document.getElementById('langZh');
+      const langEnEl = document.getElementById('langEn');
 
-    /* ===== 图片轮播 ===== */
-    (function () {
-      const slides = document.querySelectorAll('.factory-slide');
-      const prevBtn = document.querySelector('.factory-prev');
-      const nextBtn = document.querySelector('.factory-next');
-      if (!slides.length) return;
-      let index = 0;
-      let timer = null;
-      function showSlide(i) {
-        slides.forEach((s, idx) => { s.classList.toggle('active', idx === i); });
-      }
-      function next() {
-        index = (index + 1) % slides.length;
-        showSlide(index);
-      }
-      function prev() {
-        index = (index - 1 + slides.length) % slides.length;
-        showSlide(index);
-      }
-      function startTimer() {
-        timer = setInterval(next, 4000);
-      }
-      function resetTimer() {
-        clearInterval(timer);
-        startTimer();
-      }
-      nextBtn.addEventListener('click', () => { next(); resetTimer(); });
-      prevBtn.addEventListener('click', () => { prev(); resetTimer(); });
-      showSlide(index);
-      startTimer();
-    })();
+      function applyLang(lang) {
+        // 更新HTML标签和元数据
+        document.documentElement.lang = langConfig[lang].lang;
+        document.title = langConfig[lang].title;
+        const descMeta = document.querySelector('meta[name="description"]');
+        if (descMeta) {
+          descMeta.setAttribute('content', langConfig[lang].description);
+        }
+        
+        // 更新高亮状态
+        if (langZhEl && langEnEl) {
+            langZhEl.classList.toggle('active', lang === 'zh');
+            langEnEl.classList.toggle('active', lang === 'en');
+        }
 
-    /* ===== 表单提交 ===== */
-    document.getElementById('quoteForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const sendOk = document.getElementById('sendOk');
-      const errorTip = document.getElementById('errorTip');
-      const side = document.getElementById('contactSide');
-      sendOk.style.display = 'none';
-      errorTip.style.display = 'none';
-      side.style.boxShadow = '0 8px 24px rgba(15,23,42,.08)';
-      const params = new URLSearchParams(new FormData(e.target)).toString();
-      try {
-        const res = await fetch('https://1312059476-52lt9ny7df.in.ap-hongkong.scf.tencentcs.com', {
-          method: 'POST',
-          body: params,
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        // 更新普通元素内容 (除了语言切换器本身)
+        document.querySelectorAll(BILINGUAL_SELECTOR).forEach(el => {
+            if (el.id === 'langZh' || el.id === 'langEn') return; // 跳过语言切换器
+
+            if (['OPTION', 'BUTTON', 'SPAN'].includes(el.tagName)) {
+                el.textContent = el.dataset[lang];
+            } else {
+                el.innerHTML = el.dataset[lang];
+            }
         });
-        if (!res.ok) throw new Error('network error');
-        sendOk.style.display = 'block';
-        e.target.reset();
-      } catch {
-        errorTip.style.display = 'block';
-        side.style.boxShadow = '0 0 0 3px #f97316,0 12px 32px rgba(249,115,22,.35)';
-        side.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        setTimeout(() => {
-          errorTip.style.display = 'none';
-          side.style.boxShadow = '0 8px 24px rgba(15,23,42,.08)';
-        }, 50000);
+
+        // 更新输入框的 placeholder
+        document.querySelectorAll(PLACEHOLDER_SELECTOR).forEach(el => {
+          el.placeholder = el.dataset['placeholder' + lang.charAt(0).toUpperCase() + lang.slice(1)];
+        });
+        
+        // 更新文件上传显示文本
+        const fileInput = document.getElementById('fileInput');
+        const fileNameDisplay = document.querySelector('.file-name-display');
+        if (fileInput && fileNameDisplay && fileInput.files.length === 0) {
+            fileNameDisplay.textContent = fileNameDisplay.dataset[lang];
+        }
+      }
+
+      window.toggleLang = function() {
+        currentLang = currentLang === 'zh' ? 'en' : 'zh';
+        localStorage.setItem(LANG_KEY, currentLang);
+        applyLang(currentLang);
+      }
+
+      // ===== 自定义文件上传按钮逻辑 =====
+      const fileInput = document.getElementById('fileInput');
+      const fileUploadBtn = document.querySelector('.file-upload-btn');
+      const fileNameDisplay = document.querySelector('.file-name-display');
+
+      if (fileInput && fileUploadBtn && fileNameDisplay) {
+        fileUploadBtn.addEventListener('click', () => {
+          fileInput.click();
+        });
+
+        fileInput.addEventListener('change', () => {
+          if (fileInput.files.length > 0) {
+            if (fileInput.files.length === 1) {
+              fileNameDisplay.textContent = fileInput.files[0].name;
+            } else {
+              const langTexts = {
+                zh: `已选择 ${fileInput.files.length} 个文件`,
+                en: `${fileInput.files.length} files selected`
+              };
+              fileNameDisplay.textContent = langTexts[currentLang];
+            }
+          } else {
+            fileNameDisplay.textContent = fileNameDisplay.dataset[currentLang];
+          }
+        });
+      }
+
+      // 页面加载时应用语言
+      applyLang(currentLang);
+
+      /* ===== 移动端菜单 ===== */
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      if (menuToggle && navLinks) {
+        menuToggle.onclick = () => navLinks.classList.toggle('show');
+      }
+
+      /* ===== 图片轮播 ===== */
+      (function () {
+        const slider = document.querySelector('.factory-slider');
+        if (!slider) return;
+
+        const slides = slider.querySelectorAll('.factory-slide');
+        const prevBtn = slider.querySelector('.factory-prev');
+        const nextBtn = slider.querySelector('.factory-next');
+        const dotsContainer = slider.querySelector('.dots');
+        
+        if (slides.length <= 1) {
+            if(prevBtn) prevBtn.style.display = 'none';
+            if(nextBtn) nextBtn.style.display = 'none';
+            if(dotsContainer) dotsContainer.style.display = 'none';
+            return;
+        }
+
+        let index = 0;
+        let timer = null;
+
+        if (dotsContainer) {
+            slides.forEach((_, i) => {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                dot.dataset.idx = i;
+                dotsContainer.appendChild(dot);
+            });
+        }
+        const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot') : [];
+
+        function showSlide(i) {
+          index = (i + slides.length) % slides.length;
+          slides.forEach((s, idx) => s.classList.toggle('active', idx === index));
+          if (dots.length > 0) {
+            dots.forEach((d, idx) => d.classList.toggle('active', idx === index));
+          }
+        }
+        
+        function next() { showSlide(index + 1); }
+        function prev() { showSlide(index - 1); }
+        
+        function startTimer() {
+          clearInterval(timer);
+          timer = setInterval(next, 4000);
+        }
+
+        function resetTimer() { startTimer(); }
+
+        if(nextBtn) nextBtn.addEventListener('click', () => { next(); resetTimer(); });
+        if(prevBtn) prevBtn.addEventListener('click', () => { prev(); resetTimer(); });
+        
+        if (dots.length > 0) {
+            dots.forEach(dot => {
+                dot.addEventListener('click', (e) => {
+                    showSlide(parseInt(e.target.dataset.idx));
+                    resetTimer();
+                });
+            });
+        }
+
+        showSlide(index);
+        startTimer();
+      })();
+
+      /* ===== 表单提交 ===== */
+      const quoteForm = document.getElementById('quoteForm');
+      if (quoteForm) {
+        quoteForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const sendOk = document.getElementById('sendOk');
+          const errorTip = document.getElementById('errorTip');
+          const side = document.getElementById('contactSide');
+          
+          if(sendOk) sendOk.style.display = 'none';
+          if(errorTip) errorTip.style.display = 'none';
+          if(side) side.style.boxShadow = '0 8px 24px rgba(15,23,42,.08)';
+
+          const formData = new FormData(e.target);
+          
+          try {
+            const res = await fetch('https://1312059476-52lt9ny7df.in.ap-hongkong.scf.tencentcs.com', {
+              method: 'POST',
+              body: formData
+            });
+            if (!res.ok) throw new Error('network error');
+            if (sendOk) sendOk.style.display = 'block';
+            e.target.reset();
+            applyLang(currentLang);
+          } catch {
+            if (errorTip) errorTip.style.display = 'block';
+            if (side) {
+                side.style.boxShadow = '0 0 0 3px #f97316,0 12px 32px rgba(249,115,22,.35)';
+                side.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                setTimeout(() => {
+                  if(errorTip) errorTip.style.display = 'none';
+                  side.style.boxShadow = '0 8px 24px rgba(15,23,42,.08)';
+                }, 5000);
+            }
+          }
+        });
       }
     });
   </script>
