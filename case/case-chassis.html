@@ -2,89 +2,174 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>机箱铭牌面贴案例：LOGO+功能面贴，提升品牌感，深圳厂家直销</title>
+  <title>机箱铭牌及面贴项目案例 - 深圳利娟标牌</title>
   <meta name="description" content="电脑机箱 LOGO 铭牌 + 功能面贴一体方案：金属拉丝 + 背胶 + 精准开刀模，提升整机品牌感与操作识别度。">
+  <meta name="keywords" content="机箱铭牌, 金属LOGO, PET面贴, 电脑标牌定制">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* 样式同 case-auto.html，省略重复代码 */
-    :root {
-      --primary: #0ea5e9; --text-main: #0f172a; --text-sub: #64748b;
-      --max-w: 1160px;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif; color: var(--text-main); background: #fff; line-height: 1.6; }
-    img { max-width: 100%; display: block; }
-    a { text-decoration: none; color: inherit; }
-    .container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 16px; }
-    header { position: sticky; top: 0; backdrop-filter: blur(16px); background: rgba(2,6,23,.9); border-bottom: 1px solid rgba(148,163,184,.2); }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; }
-    .logo { font-size: 18px; font-weight: 700; color: #e5e7eb; letter-spacing: 2px; }
-    .logo span { color: var(--primary); }
-    .nav-links { display: flex; gap: 20px; font-size: 14px; color: #cbd5f5; }
-    .nav-links a:hover { color: #f9fafb; border-bottom: 2px solid var(--primary); }
-    .breadcrumb { font-size: 14px; color: var(--text-sub); margin: 20px 0; }
-    .breadcrumb a { color: var(--primary); }
-    h1 { font-size: 28px; margin-bottom: 12px; }
-    .case-meta { display: flex; gap: 40px; flex-wrap: wrap; margin-bottom: 30px; }
-    .case-meta li { list-style: none; font-size: 14px; color: var(--text-sub); }
-    .case-meta strong { color: var(--text-main); }
-    .content img { border-radius: 12px; margin: 20px 0; box-shadow: 0 10px 30px rgba(15,23,42,.12); }
-    .back { display: inline-flex; align-items: center; gap: 6px; margin-top: 40px; background: var(--primary); color: #fff; padding: 8px 18px; border-radius: 999px; font-size: 14px; }
-    .back:hover { opacity: .9; }
-    footer { text-align: center; font-size: 13px; color: #9ca3af; padding: 30px 0; }
-  /* 让返回按钮居中 */
-.back {
-  display: block;          /* 让<a>占整行 */
-  width: max-content;      /* 宽度=文字实际宽 */
-  margin: 40px auto 0;     /* 上40px 左右auto=居中 下0 */
-  text-align: center;
-}
+  <base target="_blank">
 
-</style>
+  <style>
+    :root{--primary:#0ea5e9;--accent:#f97316;--text-main:#0f172a;--text-sub:#64748b;--shadow:0 10px 30px rgba(15,23,42,.12);--max-w:1160px;}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif;color:var(--text-main);background:#fff; line-height: 1.7;}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .container{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 16px}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:rgba(2,6,23,.9);border-bottom:1px solid rgba(148,163,184,.2)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .logo{font-size:18px;font-weight:700;color:#e5e7eb;letter-spacing:2px}
+    .logo span{color:var(--primary)}
+    .nav-links{display:flex;align-items:center;gap:20px;font-size:14px;color:#cbd5f5}
+    .nav-links a:hover{color:#f9fafb;border-bottom:2px solid var(--primary)}
+    #langSwitch {
+      display: flex; align-items: center; gap: 6px; margin-left: 12px; font-size: 13px; font-weight: 600;
+      color: #94a3b8; border: 1px solid rgba(148, 163, 184, .25); background: rgba(15, 23, 42, .5);
+      padding: 4px 10px; border-radius: 8px; cursor: pointer; white-space: nowrap;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, .1), 0 1px 3px rgba(2, 6, 23, .5);
+      transition: all 0.2s ease-in-out;
+    }
+    #langSwitch:hover { background: rgba(30, 41, 59, .7); transform: translateY(-1px); }
+    #langSwitch span { color: #64748b; transition: all 0.2s ease-in-out; }
+    #langSwitch span.active { color: #38bdf8; text-shadow: 0 0 6px rgba(56, 189, 248, .7); }
+    #menuToggle{display:none;font-size:20px;color:#cbd5f5;cursor:pointer}
+    @media(max-width:900px){
+      #menuToggle{display:block}
+      .nav-links{position:absolute;top:100%;right:16px;background:#020617;flex-direction:column;align-items:flex-start;padding:10px 14px;border-radius:6px;display:none}
+      .nav-links.show{display:flex}
+    }
+    .logo-text { letter-spacing: 6px; }
+    .nav-home{margin-left:13px;font-size:14px;color:#38bdf4;text-shadow:0 0 4px rgba(56,189,248,.45);border-left:1px solid rgba(148,163,184,.3);padding-left:12px;transition:color .25s,text-shadow .25s;}
+    .nav-home:hover{color:#fff;text-shadow:0 0 8px rgba(255,255,255,.7);}
+    main { padding: 24px 0 60px; }
+    .breadcrumb { font-size: 13px; color: var(--text-sub); margin-bottom: 24px; }
+    .breadcrumb a { color: var(--primary); }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .case-detail h1 { font-size: 26px; margin-bottom: 16px; color: #1e293b;}
+    .case-meta { padding: 0; margin: 0 0 30px 0; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; padding: 16px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px 24px;}
+    .case-meta li { list-style: none; font-size: 14px; color: var(--text-sub); }
+    .case-meta strong { color: var(--text-main); font-weight: 500; min-width: 70px; display: inline-block; }
+    .content { max-width: 800px; margin: 0 auto; }
+    .content p { margin-bottom: 1.2em; color: #334155;}
+    .content img { border-radius: 12px; margin: 24px 0; box-shadow: 0 10px 30px rgba(15,23,42,.12); }
+    .back-link { display: block; width: max-content; margin: 40px auto 0; text-align: center; background: var(--primary); color: #fff; padding: 10px 24px; border-radius: 999px; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; transition: all .2s;}
+    .back-link:hover { opacity: .9; box-shadow: 0 4px 12px rgba(14,165,233,.3); transform: translateY(-2px);}
+    footer { text-align: center; font-size: 13px; color: #9ca3af; padding: 30px 0; border-top: 1px solid #e5e7eb; margin-top: 60px; }
+  </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <div class="logo">深圳市利娟标牌有限公司<span></span></div>
-      <nav class="nav-links">
-        <a href="index.html#products">产品与工艺</a>
-        <a href="index.html#process">下单流程</a>
-        <a href="index.html#cases">客户案例</a>
-        <a href="index.html#contact">获取报价</a>
+      <div class="logo">
+        <span class="logo-text" data-zh="利娟标牌" data-en="Lijuan Plate">利娟标牌</span>
+        <a href="../index.html" class="nav-home"><span data-zh="返回首页" data-en="Home">返回首页</span></a>
+      </div>
+      <div id="menuToggle">☰</div>
+      <nav class="nav-links" id="navLinks">
+        <a href="../index.html#products"><span data-zh="产品与工艺" data-en="Products & Craft">产品与工艺</span></a>
+        <a href="../index.html#process"><span data-zh="下单流程" data-en="Order Process">下单流程</span></a>
+        <a href="../index.html#cases"><span data-zh="客户案例" data-en="Case Studies">客户案例</span></a>
+        <a href="../index.html#contact"><span data-zh="获取报价" data-en="Get Quote">获取报价</span></a>
+        <div id="langSwitch" onclick="toggleLang()">
+          <span id="langZh" data-zh="中" data-en="中">中</span> / <span id="langEn" data-zh="EN" data-en="EN">EN</span>
+        </div>
       </nav>
     </div>
   </header>
 
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="index.html">首页</a> &gt; <a href="index.html#cases">客户案例</a> &gt; 机箱铭牌及面贴项目
+  <main>
+    <div class="container case-detail">
+      <div class="breadcrumb">
+        <a href="../index.html"><span data-zh="首页" data-en="Home">首页</span></a> &gt; 
+        <a href="../index.html#cases"><span data-zh="客户案例" data-en="Case Studies">客户案例</span></a> &gt; 
+        <span data-zh="机箱铭牌及面贴项目" data-en="PC Case Nameplate & Sticker Project">机箱铭牌及面贴项目</span>
+      </div>
+
+      <h1 data-zh="机箱铭牌及面贴项目" data-en="PC Case Nameplate & Sticker Project">机箱铭牌及面贴项目</h1>
+      <ul class="case-meta">
+        <li><strong data-zh="客户行业：" data-en="Industry:">客户行业：</strong><span data-zh="高端电竞机箱品牌" data-en="High-end E-sports PC Case Brand">高端电竞机箱品牌</span></li>
+        <li><strong data-zh="应用材质：" data-en="Material:">应用材质：</strong><span data-zh="拉丝铝牌 + PET 面贴" data-en="Brushed Aluminum + PET Faceplate">拉丝铝牌 + PET 面贴</span></li>
+        <li><strong data-zh="工艺组合：" data-en="Crafts:">工艺组合：</strong><span data-zh="金属拉丝 + 激光切割 + 背胶 + 开刀模" data-en="Brushing + Laser Cut + Adhesive + Die Cut">金属拉丝 + 激光切割 + 背胶 + 开刀模</span></li>
+        <li><strong data-zh="订单数量：" data-en="Quantity:">订单数量：</strong><span data-zh="首批 5,000 套（3 款型号）" data-en="First batch 5,000 sets (3 models)">首批 5,000 套（3 款型号）</span></li>
+        <li><strong data-zh="交付周期：" data-en="Lead Time:">交付周期：</strong><span data-zh="打样 2 天，批量 8 天" data-en="Sample 2 days, Mass Production 8 days">打样 2 天，批量 8 天</span></li>
+      </ul>
+
+      <div class="content">
+        <p data-zh="客户为新晋电竞机箱品牌，要求 LOGO 铭牌具备金属质感，同时配套 Power / Reset 功能面贴，整体提升整机档次与操作识别度。" data-en="The client, an emerging e-sports PC case brand, required a metal-textured LOGO nameplate and a matching Power/Reset functional faceplate to enhance the product's premium feel and operational clarity.">客户为新晋电竞机箱品牌，要求 LOGO 铭牌具备金属质感，同时配套 Power / Reset 功能面贴，整体提升整机档次与操作识别度。</p>
+        <img src="../images/yh1.jpg" alt="机箱金属铭牌" loading="lazy">
+        <p data-zh="LOGO 铭牌采用 0.8 mm 拉丝氧化铝板，激光切割异形，背面覆 3M 9448A 背胶，装机时一撕即贴；面贴选用 0.15 mm 磨砂 PET，局部开窗透明，图标与文字采用 UV 白墨 + 四色印刷，背胶同样为 3M 9448A，开刀模精准落位。" data-en="The LOGO nameplate is made of 0.8mm brushed anodized aluminum, custom-shaped by laser cutting, and backed with 3M 9448A adhesive for peel-and-stick assembly. The faceplate uses 0.15mm matte PET with transparent windows, printed with UV white ink and four-color process for icons and text, also backed with 3M 9448A and precisely die-cut.">LOGO 铭牌采用 0.8 mm 拉丝氧化铝板，激光切割异形，背面覆 3M 9448A 背胶，装机时一撕即贴；面贴选用 0.15 mm 磨砂 PET，局部开窗透明，图标与文字采用 UV 白墨 + 四色印刷，背胶同样为 3M 9448A，开刀模精准落位。</p>
+        <img src="../images/yh2.jpg" alt="面贴刀模示意图" loading="lazy">
+        <p data-zh="整批铭牌与面贴套袋包装，按机箱型号分箱贴标，客户产线直接上机，无需再次分拣，大幅提升装配效率。" data-en="The entire batch of nameplates and faceplates are packaged in sets, boxed and labeled by PC case model. This allows for direct use on the client's production line without re-sorting, greatly improving assembly efficiency.">整批铭牌与面贴套袋包装，按机箱型号分箱贴标，客户产线直接上机，无需再次分拣，大幅提升装配效率。</p>
+      </div>
+
+      <a class="back-link" href="../index.html#cases">
+        <span data-zh="← 返回案例列表" data-en="← Back to Case List">← 返回案例列表</span>
+      </a>
     </div>
-
-    <h1>机箱铭牌及面贴项目案例</h1>
-    <ul class="case-meta">
-      <li><strong>客户行业：</strong>高端电竞机箱品牌</li>
-      <li><strong>应用材质：</strong>拉丝铝牌 + PET 面贴</li>
-      <li><strong>工艺组合：</strong>金属拉丝 + 激光切割 + 背胶 + 开刀模</li>
-      <li><strong>订单数量：</strong>首批 5 000 套（3 款型号）</li>
-      <li><strong>交付周期：</strong>打样 2 天，批量 8 天</li>
-    </ul>
-
-    <div class="content">
-  <h2>机箱铭牌设计特点</h2>
-  <p>客户为新晋电竞机箱品牌，要求 LOGO 铭牌具备金属质感，同时配套 Power / Reset 功能面贴，整体提升整机档次与操作识别度。</p>
-  <img src="../images/yh1.jpg" alt="机箱金属铭牌" loading="lazy">
-  
-  <h2>面贴功能优势</h2>
-  <p>LOGO 铭牌采用 0.8 mm 拉丝氧化铝板，激光切割异形，背面覆 3M 9448A 背胶，装机时一撕即贴；面贴选用 0.15 mm 磨砂 PET，局部开窗透明，图标与文字采用 UV 白墨 + 四色印刷，背胶同样为 3M 9448A，开刀模精准落位。</p>
-  <img src="../images/yh2.jpg" alt="面贴刀模示意图" loading="lazy">
-  <p>整批铭牌与面贴套袋包装，按机箱型号分箱贴标，客户产线直接上机，无需再次分拣，大幅提升装配效率。</p>
-</div>
-
-    <a class="back" href="../index.html#cases">← 返回案例列表</a>
-  </div>
+  </main>
 
   <footer>
-    深圳市利娟标牌有限公司 · 工业标牌 / 铭牌定制 · 电话：132-6679-4685 / 137-1499-2726
+    <span data-zh="深圳市利娟标牌有限公司 · 工业标牌 / 铭牌定制 · 电话：132-6679-4685 / 137-1499-2726" data-en="Shenzhen Lijuan Nameplate Co., Ltd. · Industrial Labels / Nameplates · Tel: +86-132-6679-4685 / +86-137-1499-2726">深圳市利娟标牌有限公司 · 工业标牌 / 铭牌定制 · 电话：132-6679-4685 / 137-1499-2726</span>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const LANG_KEY = 'lj_lang';
+      const BILINGUAL_SELECTOR = '[data-zh][data-en]';
+      
+      const langConfig = {
+        zh: {
+          title: '机箱铭牌及面贴项目案例 - 深圳利娟标牌',
+          description: '电脑机箱 LOGO 铭牌 + 功能面贴一体方案：金属拉丝 + 背胶 + 精准开刀模，提升整机品牌感与操作识别度。',
+          lang: 'zh-CN',
+        },
+        en: {
+          title: 'Case Study: PC Case Nameplate & Sticker - Shenzhen Lijuan Plate',
+          description: 'An integrated solution for PC case LOGO nameplates and functional stickers, featuring metal brushing, adhesive backing, and precision die-cutting to enhance brand presence and usability.',
+          lang: 'en',
+        }
+      };
+
+      let currentLang = localStorage.getItem(LANG_KEY) || (navigator.language.startsWith('zh') ? 'zh' : 'en');
+      const langZhEl = document.getElementById('langZh');
+      const langEnEl = document.getElementById('langEn');
+
+      function applyLang(lang) {
+        document.documentElement.lang = langConfig[lang].lang;
+        document.title = langConfig[lang].title;
+        const descMeta = document.querySelector('meta[name="description"]');
+        if (descMeta) {
+          descMeta.setAttribute('content', langConfig[lang].description);
+        }
+        
+        if (langZhEl && langEnEl) {
+            langZhEl.classList.toggle('active', lang === 'zh');
+            langEnEl.classList.toggle('active', lang === 'en');
+        }
+
+        document.querySelectorAll(BILINGUAL_SELECTOR).forEach(el => {
+            const targetText = el.dataset[lang];
+            if (el.closest('#langSwitch')) {
+                if (el.textContent !== targetText) el.textContent = targetText;
+            } else {
+                if (el.innerHTML !== targetText) el.innerHTML = targetText;
+            }
+        });
+      }
+
+      window.toggleLang = function() {
+        currentLang = currentLang === 'zh' ? 'en' : 'zh';
+        localStorage.setItem(LANG_KEY, currentLang);
+        applyLang(currentLang);
+      }
+
+      applyLang(currentLang);
+
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      if (menuToggle && navLinks) {
+        menuToggle.onclick = () => navLinks.classList.toggle('show');
+      }
+    });
+  </script>
 </body>
 </html>
