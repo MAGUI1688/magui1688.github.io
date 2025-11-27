@@ -7,6 +7,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <base target="_blank">
 
+  <!-- ===== SEO 优化 1: 添加 Hreflang 标签 ===== -->
+  <link rel="alternate" hreflang="zh-CN" href="https://lijuan.ltd/product-stainless.html" >
+  <link rel="alternate" hreflang="en" href="https://lijuan.ltd/product-stainless-en.html" > <!-- 假设的英文版页面路径 -->
+  <link rel="alternate" hreflang="x-default" href="https://lijuan.ltd/product-stainless.html" >
+  <!-- ============================================= -->
+
   <!-- 结构化数据 -->
   <script type="application/ld+json">
   {
@@ -146,14 +152,16 @@
   <div class="container nav">
     <div class="logo">
       <span data-zh="深圳市利娟标牌有限公司" data-en="Shenzhen Lijuan Nameplate Co., Ltd.">深圳市利娟标牌有限公司</span>
-      <a href="./index.html" class="nav-home"><span data-zh="返回首页" data-en="Home">返回首页</span></a>
+      <!-- ===== SEO 优化 2: 规范化链接路径 ===== -->
+      <a href="/index.html" class="nav-home"><span data-zh="返回首页" data-en="Home">返回首页</span></a>
     </div>
     <div id="menuToggle">☰</div>
     <nav class="nav-links" id="navLinks">
-      <a href="./index.html#products"><span data-zh="产品与工艺" data-en="Products & Craft">产品与工艺</span></a>
-      <a href="./index.html#process"><span data-zh="下单流程" data-en="Order Process">下单流程</span></a>
-      <a href="./index.html#cases"><span data-zh="客户案例" data-en="Case Studies">客户案例</span></a>
-      <a href="./index.html#contact"><span data-zh="获取报价" data-en="Get Quote">获取报价</span></a>
+      <a href="/index.html#products"><span data-zh="产品与工艺" data-en="Products & Craft">产品与工艺</span></a>
+      <a href="/index.html#process"><span data-zh="下单流程" data-en="Order Process">下单流程</span></a>
+      <a href="/index.html#cases"><span data-zh="客户案例" data-en="Case Studies">客户案例</span></a>
+      <a href="/index.html#contact"><span data-zh="获取报价" data-en="Get Quote">获取报价</span></a>
+      <!-- ======================================= -->
       <div id="langSwitch" onclick="toggleLang()">
         <span id="langZh" data-zh="中" data-en="中">中</span> / <span id="langEn" data-zh="EN" data-en="EN">EN</span>
       </div>
@@ -193,7 +201,8 @@
       </span>
     </div>
     <div class="hero-cta qr-center">
-      <div class="qr-single"><img src="./images/wechat-qr-sales1.jpg" alt="利娟标牌销售微信1 - 13266794685" class="qr-img"></div>
+      <!-- ===== SEO 优化 2: 规范化图片路径 ===== -->
+      <div class="qr-single"><img src="/images/wechat-qr-sales1.jpg" alt="利娟标牌销售微信1 - 13266794685" class="qr-img"></div>
       <div class="btn-box">
         <button class="btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
           <span data-zh="立即询价" data-en="Inquire Now">立即询价</span>
@@ -203,20 +212,21 @@
           <span class="phone-second"><span data-zh="加微信发图纸，30分钟出报价" data-en="Add WeChat for a quote in 30 mins">加微信发图纸，30分钟出报价</span></span>
         </div>
       </div>
-      <div class="qr-single"><img src="./images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726" class="qr-img"></div>
+      <div class="qr-single"><img src="/images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726" class="qr-img"></div>
     </div>
     <div class="hero-two-img">
-      <img src="./images/stainless-steel-nameplate-1.jpg" width="500" height="300" alt="不锈钢铭牌深蚀刻工艺样品展示" class="two-img">
-      <img src="./images/stainless-steel-nameplate-2.jpg" width="500" height="300" alt="不锈钢设备标牌拉丝表面处理" class="two-img">
+      <img src="/images/stainless-steel-nameplate-1.jpg" width="500" height="300" alt="不锈钢铭牌深蚀刻工艺样品展示" class="two-img">
+      <img src="/images/stainless-steel-nameplate-2.jpg" width="500" height="300" alt="不锈钢设备标牌拉丝表面处理" class="two-img">
     </div>
     <div class="hero-two-img">
-      <img src="./images/stainless-steel-nameplate-3.jpg" width="500" height="300" alt="不锈钢铭牌喷砂工艺效果展示" class="two-img">
-      <img src="./images/stainless-steel-nameplate-4.jpg" width="500" height="300" alt="镜面不锈钢电镀铭牌特写" class="two-img">
+      <img src="/images/stainless-steel-nameplate-3.jpg" width="500" height="300" alt="不锈钢铭牌喷砂工艺效果展示" class="two-img">
+      <img src="/images/stainless-steel-nameplate-4.jpg" width="500" height="300" alt="镜面不锈钢电镀铭牌特写" class="two-img">
     </div>
     <div class="hero-two-img">
-      <img src="./images/stainless-steel-nameplate-5.jpg" width="500" height="300" alt="不锈钢铭牌户外应用实例" class="two-img">
-      <img src="./images/stainless-steel-nameplate-6.jpg" width="500" height="300" alt="多种不锈钢铭牌工艺对比展示" class="two-img">
+      <img src="/images/stainless-steel-nameplate-5.jpg" width="500" height="300" alt="不锈钢铭牌户外应用实例" class="two-img">
+      <img src="/images/stainless-steel-nameplate-6.jpg" width="500" height="300" alt="多种不锈钢铭牌工艺对比展示" class="two-img">
     </div>
+    <!-- ======================================= -->
   </div>
 </section>
 
@@ -225,6 +235,7 @@
     <h2 class="section-title">
       <span data-zh="不锈钢铭牌适用场景" data-en="Stainless Nameplate Applications">不锈钢铭牌适用场景</span>
     </h2>
+    <!-- ===== SEO 优化 3: 优化表格内容可读性 ===== -->
     <table class="compare-table">
       <thead><tr>
         <th><span data-zh="性能" data-en="Feature">性能</span></th>
@@ -234,26 +245,27 @@
       <tbody>
         <tr>
           <td><span data-zh="盐雾测试" data-en="Salt Spray">盐雾测试</span></td>
-          <td class="good"><span data-zh="★★★★★" data-en="720h No rust">★★★★★</span></td>
-          <td class="bad"><span data-zh="★★★★★" data-en="24h White spots">★★★★★</span></td>
+          <td class="good"><span data-zh="优秀 (720h不锈蚀)" data-en="Excellent (720h No rust)">优秀 (720h不锈蚀)</span></td>
+          <td class="bad"><span data-zh="一般 (24h现白斑)" data-en="Poor (24h White spots)">一般 (24h现白斑)</span></td>
         </tr>
         <tr>
           <td><span data-zh="户外耐候" data-en="Outdoor Life">户外耐候</span></td>
-          <td class="good"><span data-zh="★★★★★" data-en="10y No fade">★★★★★</span></td>
-          <td class="bad"><span data-zh="★★★☆☆" data-en="2-3y Fades">★★★☆☆</span></td>
+          <td class="good"><span data-zh="优秀 (10年不褪色)" data-en="Excellent (10y No fade)">优秀 (10年不褪色)</span></td>
+          <td class="bad"><span data-zh="一般 (2-3年褪色)" data-en="Fair (2-3y Fades)">一般 (2-3年褪色)</span></td>
         </tr>
         <tr>
           <td><span data-zh="耐高温" data-en="Heat Resist">耐高温</span></td>
-          <td class="good"><span data-zh="★★★★★" data-en="800℃ No deformation">★★★★★</span></td>
-          <td class="bad"><span data-zh="★★★☆☆" data-en="200℃ Softens">★★★☆☆</span></td>
+          <td class="good"><span data-zh="优秀 (800℃不变形)" data-en="Excellent (800℃ No deformation)">优秀 (800℃不变形)</span></td>
+          <td class="bad"><span data-zh="一般 (200℃软化)" data-en="Fair (200℃ Softens)">一般 (200℃软化)</span></td>
         </tr>
         <tr>
           <td><span data-zh="单价" data-en="Unit Price">单价</span></td>
           <td><span data-zh="略高" data-en="Slightly higher">略高</span></td>
-          <td class="good"><span data-zh="一般" data-en="Cheaper">一般</span></td>
+          <td class="good"><span data-zh="经济" data-en="Economical">经济</span></td>
         </tr>
       </tbody>
     </table>
+    <!-- ============================================= -->
   </div>
 </section>
 
@@ -378,11 +390,13 @@
         </div>
         <div style="display:flex;justify-content:center;gap:70px;flex-wrap:wrap">
           <div class="qr-box">
-            <img src="./images/wechat-qr-sales1.jpg" alt="利娟标牌销售微信1 - 13266794685">
+             <!-- ===== SEO 优化 2: 规范化图片路径 ===== -->
+            <img src="/images/wechat-qr-sales1.jpg" alt="利娟标牌销售微信1 - 13266794685">
             <div style="font-size:12px;color:var(--text-sub);margin-top:6px">4685</div>
           </div>
           <div class="qr-box">
-            <img src="./images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726">
+            <img src="/images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726">
+             <!-- ======================================= -->
             <div style="font-size:12px;color:var(--text-sub);margin-top:6px">2726</div>
           </div>
         </div>
@@ -424,10 +438,12 @@
 <div style="background:#f3f4f6;padding:30px 0;font-size:14px">
   <div class="container" style="text-align:center">
     <span style="color:var(--text-sub)"><span data-zh="相关推荐：" data-en="Related:">相关推荐：</span></span>
-    <a href="./product-aluminum.html" style="margin:0 6px"><span data-zh="铝标牌" data-en="Aluminum Plate">铝标牌</span></a> |
-    <a href="./product-button.html" style="margin:0 6px"><span data-zh="按钮键" data-en="Buttons">按钮键</span></a> |
-    <a href="./case/case-outdoor.html" style="margin:0 6px"><span data-zh="户外标识案例" data-en="Outdoor Sign Case">户外标识案例</span></a> |
-    <a href="./index.html#products" style="margin:0 6px"><span data-zh="全部产品" data-en="All Products">全部产品</span></a>
+    <!-- ===== SEO 优化 2: 规范化链接路径 ===== -->
+    <a href="/product-aluminum.html" style="margin:0 6px"><span data-zh="铝标牌" data-en="Aluminum Plate">铝标牌</span></a> |
+    <a href="/product-button.html" style="margin:0 6px"><span data-zh="按钮键" data-en="Buttons">按钮键</span></a> |
+    <a href="/case/case-outdoor.html" style="margin:0 6px"><span data-zh="户外标识案例" data-en="Outdoor Sign Case">户外标识案例</span></a> |
+    <a href="/index.html#products" style="margin:0 6px"><span data-zh="全部产品" data-en="All Products">全部产品</span></a>
+    <!-- ======================================= -->
   </div>
 </div>
 </main>
