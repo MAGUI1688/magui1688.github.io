@@ -4,141 +4,285 @@
   <meta charset="UTF-8">
   <title>产品中心 - 铝、不锈钢、镍标定制及工艺流程 - 利娟标牌</title>
   <meta name="description" content="全面了解利娟标牌的所有产品系列，包括铝标牌、不锈钢铭牌、镍标、金属按键及各种标牌制作工艺，满足您的不同需求。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base target="_blank">
 
-  <!-- 首页 #products 相关样式（复制你原来的，这里给最小可用版） -->
+  <!-- ===== SEO: Hreflang Tags ===== -->
+  <link rel="alternate" hreflang="zh-CN" href="https://lijuan.ltd/products.html">
+  <link rel="alternate" hreflang="en" href="https://lijuan.ltd/products-en.html"> <!-- 假设的英文版页面路径 -->
+  <link rel="alternate" hreflang="x-default" href="https://lijuan.ltd/products.html">
+
+  <!-- ===== SEO: ItemList Schema.org Structured Data ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "产品中心 | 深圳利娟标牌",
+    "description": "利娟标牌产品系列总览，包括铝、不锈钢、金属按键等多种定制标牌。",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "item": { "@type": "Product", "name": "铝标牌 · 铭牌批花", "url": "https://lijuan.ltd/product-aluminum.html", "image": "https://lijuan.ltd/images/dex1.jpg" } },
+      { "@type": "ListItem", "position": 2, "item": { "@type": "Product", "name": "不锈钢铭牌", "url": "https://lijuan.ltd/product-stainless.html", "image": "https://lijuan.ltd/images/dex2.jpg" } },
+      { "@type": "ListItem", "position": 3, "item": { "@type": "Product", "name": "设备铭牌/标识牌", "url": "https://lijuan.ltd/product-metal-landing.html", "image": "https://lijuan.ltd/images/dex3.jpg" } },
+      { "@type": "ListItem", "position": 4, "item": { "@type": "Product", "name": "电源按钮键 / CD纹片", "url": "https://lijuan.ltd/product-button.html", "image": "https://lijuan.ltd/images/dex4.jpg" } },
+      { "@type": "ListItem", "position": 5, "item": { "@type": "Product", "name": "电脑机箱铭牌", "url": "https://lijuan.ltd/product-case.html", "image": "https://lijuan.ltd/images/dex5.jpg" } },
+      { "@type": "ListItem", "position": 6, "item": { "@type": "Product", "name": "定制其他标牌", "url": "https://lijuan.ltd/product-other.html", "image": "https://lijuan.ltd/images/dex6.jpg" } }
+    ]
+  }
+  </script>
+
   <style>
-    :root{--primary:#0ea5e9;--accent:#f97316;--text-main:#0f172a;--text-sub:#64748b;--max-w:1160px}
+    :root{--primary:#0ea5e9;--accent:#f97316;--text-main:#0f172a;--text-sub:#64748b;--max-w:1160px; --shadow:0 10px 30px rgba(15,23,42,.12);}
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--text-main);background:#f3f4f6}
-    .container{width:90%;max-width:var(--max-w);margin:0 auto;padding:50px 0}
-    h2.section-title{font-size:26px;font-weight:700;text-align:center;margin-bottom:10px;color:#111827}
-    p.section-sub{font-size:14px;text-align:center;color:var(--text-sub);margin-bottom:26px}
-    .products-top-image{display:flex;justify-content:center;margin:10px 0 26px}
-    .products-top-image img{width:100%;max-width:1200px;height:auto;border-radius:18px;box-shadow:0 10px 30px rgba(15,23,42,.12);object-fit:cover}
+    a{color:#0369a1;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 16px}
+    
+    html { height: 100%; }
+    body { display: flex; flex-direction: column; min-height: 100vh; }
+    main { flex-grow: 1; }
+
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:rgba(2,6,23,.9);border-bottom:1px solid rgba(148,163,184,.2)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .logo{font-size:18px;font-weight:700;color:#e5e7eb;letter-spacing:2px}
+    .nav-links{display:flex;align-items:center;gap:20px;font-size:14px;color:#cbd5f5}
+    .nav-links a{color:inherit;text-decoration:none;}
+    .nav-links a:hover{color:#f9fafb;text-decoration:none;border-bottom:2px solid var(--primary)}
+    .nav-home{margin-left:13px;font-size:14px;color:#38bdf4;text-shadow:0 0 4px rgba(56,189,248,.45);border-left:1px solid rgba(148,163,184,.3);padding-left:12px;transition:color .25s,text-shadow .25s;}
+    .nav-home:hover{color:#fff;text-shadow:0 0 8px rgba(255,255,255,.7); border-bottom: none;}
+    
+    #langSwitch { display: flex; align-items: center; gap: 6px; margin-left: 12px; font-size: 13px; font-weight: 600; color: #94a3b8; border: 1px solid rgba(148, 163, 184, .25); background: rgba(15, 23, 42, .5); padding: 4px 10px; border-radius: 8px; cursor: pointer; white-space: nowrap; box-shadow: inset 0 1px 1px rgba(255, 255, 255, .1), 0 1px 3px rgba(2, 6, 23, .5); transition: all 0.2s ease-in-out; }
+    #langSwitch:hover { background: rgba(30, 41, 59, .7); transform: translateY(-1px); }
+    #langSwitch span { color: #64748b; transition: all 0.2s ease-in-out; }
+    #langSwitch span.active { color: #38bdf8; text-shadow: 0 0 6px rgba(56, 189, 248, .7); }
+    
+    #menuToggle{display:none;font-size:20px;color:#cbd5f5;cursor:pointer}
+    @media(max-width:900px){
+      #menuToggle{display:block}
+      .nav-links{position:absolute;top:100%;right:16px;background:#020617;flex-direction:column;align-items:flex-start;padding:10px 14px;border-radius:6px;display:none}
+      .nav-links.show{display:flex}
+    }
+
+    .products-section {padding: 60px 0;}
+    .section-title{font-size:28px;font-weight:700;text-align:center;margin-bottom:10px;color:#111827}
+    .section-sub{font-size:15px;text-align:center;color:var(--text-sub);margin:0 auto 40px; max-width: 720px;}
+    .products-top-image{display:flex;justify-content:center;margin:10px 0 40px}
+    .products-top-image img{width:100%;max-width:1200px;height:auto;border-radius:18px;box-shadow:var(--shadow);object-fit:cover}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
     @media (max-width:960px){.grid-3{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:640px){.grid-3{grid-template-columns:1fr}}
-    .card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(15,23,42,.12);border:1px solid #e5e7eb}
-    .card img{aspect-ratio:1/1;object-fit:cover;border-radius:18px}
-    .card h3{font-size:18px;font-weight:700;margin:18px 20px 8px;text-align:center}
-    .card p{font-size:14px;color:var(--text-sub);line-height:1.6;margin:0 20px 14px}
-    .pill-row{display:flex;flex-wrap:wrap;gap:6px;margin:0 20px 20px;justify-content:center}
+    .card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid #e5e7eb; display: flex; flex-direction: column;}
+    .card a.card-link { color: inherit; text-decoration: none; display: flex; flex-direction: column; height: 100%;}
+    .card a.card-link:hover { text-decoration: none; }
+    .card img{width:100%;height:350px;object-fit:cover;}
+    .card-content { padding: 18px 20px 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; }
+    .card h3{font-size:18px;font-weight:700;margin-bottom:8px;}
+    .card p{font-size:14px;color:var(--text-sub);line-height:1.6;margin-bottom:14px; flex-grow: 1;}
+    .pill-row{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
     .pill{padding:5px 12px;border-radius:999px;background:rgba(59,130,246,.08);color:#2563eb;font-size:12px;font-weight:500}
-    a{color:#0369a1;text-decoration:none}
-    a:hover{text-decoration:underline}
-    .back-home{display:inline-block;margin:40px auto;padding:10px 20px;background:#0369a1;color:#fff;border-radius:999px;font-size:14px}
+
+    footer{background:#020617;color:#9ca3af;font-size:12px;text-align:center;padding:18px 0;border-top:1px solid rgba(148,163,184,.3); padding-bottom: 75px;}
+    .float-bar{position:fixed;bottom:0;left:0;right:0;background:#020617;display:flex;justify-content:center;align-items:center;gap:12px;padding:10px 16px;box-shadow:0 -2px 8px rgba(0,0,0,.3);z-index:100;}
+    .float-bar-btn{background:var(--accent);color:#fff;border:none;padding:8px 18px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 10px 24px rgba(249,115,22,.45);transition:.2s;}
+    .float-bar-btn:hover{transform:translateY(-1px);box-shadow:0 14px 28px rgba(249,115,22,.55);}
   </style>
 </head>
 
 <body>
-  <!-- 整块复制首页 #products -->
-  <section id="products">
+<header>
+  <div class="container nav">
+    <div class="logo">
+      <span data-zh="深圳市利娟标牌有限公司" data-en="Shenzhen Lijuan Nameplate Co., Ltd.">深圳市利娟标牌有限公司</span>
+    </div>
+    <div id="menuToggle">☰</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html"><span data-zh="首页" data-en="Home">首页</span></a>
+      <a href="/index.html#process"><span data-zh="下单流程" data-en="Order Process">下单流程</span></a>
+      <a href="/cases.html"><span data-zh="客户案例" data-en="Case Studies">客户案例</span></a>
+      <a href="/contact.html"><span data-zh="获取报价" data-en="Get Quote">获取报价</span></a>
+      <a href="/about.html"><span data-zh="关于我们" data-en="About Us">关于我们</span></a>
+      <div id="langSwitch" onclick="toggleLang()">
+        <span id="langZh" data-zh="中" data-en="中">中</span> / <span id="langEn" data-zh="EN" data-en="EN">EN</span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="products" class="products-section">
     <div class="container">
-   <h1 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 20px; color: #111827;">产品中心：铝、不锈钢、镍标定制</h1>
+      <h1 class="section-title" data-zh="产品中心" data-en="Product Center">产品中心</h1>
+      <p class="section-sub" data-zh="覆盖铝材、不锈钢、镍片、PET等多种材质的产品，可根据图纸或样品定制。" data-en="We offer products in various materials including aluminum, stainless steel, nickel, and PET, customizable based on your drawings or samples.">覆盖铝材、不锈钢、镍片、PET、KT板及按钮键等多种材质的产品，可根据图纸或样品定制。</p>
       
-      <h2 class="section-title">产品系列展示</h2>
-      <p class="section-sub">覆盖铝材、不锈钢、镍片、PET、KT板及按钮键等多种材质的产品，可根据图纸或样品定制。</p>
       <div class="products-top-image">
-        <img src="https://lijuan.ltd/images/dex7.jpg" alt="深圳铝标牌厂家拉丝氧化批花工艺" loading="lazy">
+        <img src="images/dex7.jpg" alt="深圳铝标牌厂家拉丝氧化批花工艺" loading="lazy">
       </div>
 
       <div class="grid-3">
-        <!-- ① 铝标牌 -->
-        <div class="card product-with-image">
-          <a href="product-aluminum.html" class="card-link">
-            
-<img src="https://lijuan.ltd/images/dex1.jpg" alt="铝标牌铭牌批花" style="width:100%;height:350px;object-fit:cover;border-radius:18px;" loading="lazy">
-            <h3>铝标牌 · 铭牌批花</h3>
-            <p>拉丝铝、氧化铝、喷砂等工艺，可丝印、腐蚀、激光打标，适用于机械、电气设备铭牌。</p>
-            <div class="pill-row">
-              <span class="pill">拉丝工艺</span>
-              <span class="pill">丝印/腐蚀</span>
-              <span class="pill">耐磨耐腐蚀</span>
+        <div class="card">
+          <a href="/product-aluminum.html" class="card-link">
+            <img src="images/dex1.jpg" alt="铝标牌铭牌批花" loading="lazy">
+            <div class="card-content">
+              <h3 data-zh="铝标牌 · 铭牌批花" data-en="Aluminum Plates & Engraving">铝标牌 · 铭牌批花</h3>
+              <p data-zh="拉丝铝、氧化铝、喷砂等工艺，可丝印、腐蚀、激光打标，适用于机械、电气设备铭牌。" data-en="Brushed, anodized, and sandblasted aluminum. Suitable for silk-screening, etching, and laser marking on equipment nameplates.">拉丝铝、氧化铝、喷砂等工艺，可丝印、腐蚀、激光打标，适用于机械、电气设备铭牌。</p>
+              <div class="pill-row">
+                <span class="pill" data-zh="拉丝工艺" data-en="Brushed Finish">拉丝工艺</span>
+                <span class="pill" data-zh="丝印/腐蚀" data-en="Silk-screen/Etching">丝印/腐蚀</span>
+                <span class="pill" data-zh="耐磨耐腐蚀" data-en="Durable & Corrosion-Resistant">耐磨耐腐蚀</span>
+              </div>
             </div>
           </a>
         </div>
 
-        <!-- ② 不锈钢铭牌 -->
-        <div class="card product-with-image">
-          <a href="product-stainless.html" class="card-link">
-            
-<img src="https://lijuan.ltd/images/dex2.jpg" alt="不锈钢铭牌深蚀刻填漆户外耐候" style="width:100%;height:350px;object-fit:cover;border-radius:18px;" loading="lazy">
-            <h3>不锈钢铭牌</h3>
-            <p>304 / 316 不锈钢，深蚀刻 + 填漆或印刷，高温耐腐蚀，适合户外及恶劣环境长期使用。</p>
-            <div class="pill-row">
-              <span class="pill">304/316不锈钢</span>
-              <span class="pill">深蚀刻</span>
-              <span class="pill">户外耐候</span>
+        <div class="card">
+          <a href="/product-stainless.html" class="card-link">
+            <img src="images/dex2.jpg" alt="不锈钢铭牌深蚀刻填漆户外耐候" loading="lazy">
+            <div class="card-content">
+              <h3 data-zh="不锈钢铭牌" data-en="Stainless Steel Nameplates">不锈钢铭牌</h3>
+              <p data-zh="304 / 316 不锈钢，深蚀刻 + 填漆或印刷，高温耐腐蚀，适合户外及恶劣环境长期使用。" data-en="304/316 stainless steel with deep etching and paint filling. High-temperature and corrosion-resistant for outdoor use.">304 / 316 不锈钢，深蚀刻 + 填漆或印刷，高温耐腐蚀，适合户外及恶劣环境长期使用。</p>
+              <div class="pill-row">
+                <span class="pill" data-zh="304/316不锈钢" data-en="304/316 Stainless">304/316不锈钢</span>
+                <span class="pill" data-zh="深蚀刻" data-en="Deep Etching">深蚀刻</span>
+                <span class="pill" data-zh="户外耐候" data-en="Outdoor Weatherproof">户外耐候</span>
+              </div>
             </div>
           </a>
         </div>
 
-        <!-- ③ 设备铭牌/标识牌 -->
-        <div class="card product-with-image">
-          <a href="product-metal-landing.html" class="card-link">
-            
-<img src="https://lijuan.ltd/images/dex3.jpg" alt="标识高清彩印异形切割" style="width:100%;height:350px;object-fit:cover;border-radius:18px;" loading="lazy">
-            <h3>设备铭牌/标识牌</h3>
-            <p>适合车间现场管理、安全标识、展示架、流程看板等，画面清晰，安装方式灵活便捷。</p>
-            <div class="pill-row">
-              <span class="pill">车间管理牌</span>
-              <span class="pill">安全警示</span>
-              <span class="pill">轻质安装</span>
+        <div class="card">
+          <a href="/product-metal-landing.html" class="card-link">
+            <img src="images/dex3.jpg" alt="标识高清彩印异形切割" loading="lazy">
+            <div class="card-content">
+              <h3 data-zh="设备铭牌/标识牌" data-en="Equipment / Identification Plates">设备铭牌/标识牌</h3>
+              <p data-zh="适合车间现场管理、安全标识、展示架、流程看板等，画面清晰，安装方式灵活便捷。" data-en="Ideal for workshop management, safety signs, display stands, and process boards. Clear graphics and flexible installation.">适合车间现场管理、安全标识、展示架、流程看板等，画面清晰，安装方式灵活便捷。</p>
+              <div class="pill-row">
+                <span class="pill" data-zh="车间管理牌" data-en="Workshop Signs">车间管理牌</span>
+                <span class="pill" data-zh="安全警示" data-en="Safety Warning">安全警示</span>
+                <span class="pill" data-zh="轻质安装" data-en="Lightweight Install">轻质安装</span>
+              </div>
             </div>
           </a>
         </div>
 
-        <!-- ④ 电源按钮键 / CD纹片 -->
-        <div class="card product-with-image">
-          <a href="product-button.html" class="card-link">
-            
-<img src="https://lijuan.ltd/images/dex4.jpg" alt="电源按钮键CD纹片镭射拉丝背胶" style="width:100%;height:350px;object-fit:cover;border-radius:18px;" loading="lazy">
-            <h3>电源按钮键 / CD纹片</h3>
-            <p>适用于工控按钮、面板、家电按键等，可背胶粘贴，支持精细开孔、激光、丝印文字与图标。</p>
-            <div class="pill-row">
-              <span class="pill">精细开孔</span>
-              <span class="pill">背胶粘贴</span>
-              <span class="pill">图文清晰</span>
+        <div class="card">
+          <a href="/product-button.html" class="card-link">
+            <img src="images/dex4.jpg" alt="电源按钮键CD纹片镭射拉丝背胶" loading="lazy">
+            <div class="card-content">
+              <h3 data-zh="电源按钮键 / CD纹片" data-en="Power Buttons / CD Pattern Plates">电源按钮键 / CD纹片</h3>
+              <p data-zh="适用于工控按钮、面板、家电按键等，可背胶粘贴，支持精细开孔、激光、丝印文字与图标。" data-en="For control buttons, panels, and appliance keys. Adhesive backing available. Supports precise hole-punching, laser, and silk-screening.">适用于工控按钮、面板、家电按键等，可背胶粘贴，支持精细开孔、激光、丝印文字与图标。</p>
+              <div class="pill-row">
+                <span class="pill" data-zh="精细开孔" data-en="Precise Cutouts">精细开孔</span>
+                <span class="pill" data-zh="背胶粘贴" data-en="Adhesive Backing">背胶粘贴</span>
+                <span class="pill" data-zh="图文清晰" data-en="Clear Graphics">图文清晰</span>
+              </div>
             </div>
           </a>
         </div>
 
-        <!-- ⑤ 电脑机箱铭牌 -->
-        <div class="card product-with-image">
-          <a href="product-case.html" class="card-link">
-            
-<img src="https://lijuan.ltd/images/dex5.jpg" alt="电脑机箱铭牌装饰件拉丝镜面电镀" style="width:100%;height:350px;object-fit:cover;border-radius:18px;" loading="lazy">
-            <h3>电脑机箱铭牌</h3>
-            <p>LOGO 铭牌、型号牌、侧板装饰牌等，支持金属拉丝、镜面、电镀及多种装饰工艺效果。</p>
-            <div class="pill-row">
-              <span class="pill">品牌LOGO</span>
-              <span class="pill">装饰效果</span>
-              <span class="pill">个性定制</span>
+        <div class="card">
+          <a href="/product-case.html" class="card-link">
+            <img src="images/dex5.jpg" alt="电脑机箱铭牌装饰件拉丝镜面电镀" loading="lazy">
+            <div class="card-content">
+              <h3 data-zh="电脑机箱铭牌" data-en="PC Case Nameplates">电脑机箱铭牌</h3>
+              <p data-zh="LOGO 铭牌、型号牌、侧板装饰牌等，支持金属拉丝、镜面、电镀及多种装饰工艺效果。" data-en="Includes LOGO plates, model tags, and decorative side panels. Supports brushed metal, mirror, electroplating, and various finishes.">LOGO 铭牌、型号牌、侧板装饰牌等，支持金属拉丝、镜面、电镀及多种装饰工艺效果。</p>
+              <div class="pill-row">
+                <span class="pill" data-zh="品牌LOGO" data-en="Brand LOGO">品牌LOGO</span>
+                <span class="pill" data-zh="装饰效果" data-en="Decorative Effects">装饰效果</span>
+                <span class="pill" data-zh="个性定制" data-en="Custom Design">个性定制</span>
+              </div>
             </div>
           </a>
         </div>
 
-        <!-- ⑥ 定制其他标牌 -->
-        <div class="card product-with-image">
-          <a href="product-other.html" class="card-link">
-            
-<img src="https://lijuan.ltd/images/dex6.jpg" alt="定制其他标牌条码二维码资产管理" style="width:100%;height:350px;object-fit:cover;border-radius:18px;" loading="lazy">
-            <h3>定制其他标牌</h3>
-            <p>资产标签、条形码牌、二维码牌、设备编号牌等，支持小批量快速交付与大批量稳定供货。</p>
-            <div class="pill-row">
-              <span class="pill">条码二维码</span>
-              <span class="pill">资产管理</span>
-              <span class="pill">大小批量定制</span>
+        <div class="card">
+          <a href="/product-other.html" class="card-link">
+            <img src="images/dex6.jpg" alt="定制其他标牌条码二维码资产管理" loading="lazy">
+            <div class="card-content">
+              <h3 data-zh="定制其他标牌" data-en="Other Custom Labels">定制其他标牌</h3>
+              <p data-zh="资产标签、条形码牌、二维码牌、设备编号牌等，支持小批量快速交付与大批量稳定供货。" data-en="Asset tags, barcode labels, QR code plates, and serial number tags. We support both rapid small-batch delivery and stable large-volume supply.">资产标签、条形码牌、二维码牌、设备编号牌等，支持小批量快速交付与大批量稳定供货。</p>
+              <div class="pill-row">
+                <span class="pill" data-zh="条码二维码" data-en="Barcode & QR Code">条码二维码</span>
+                <span class="pill" data-zh="资产管理" data-en="Asset Management">资产管理</span>
+                <span class="pill" data-zh="大小批量定制" data-en="All Batch Sizes">大小批量定制</span>
+              </div>
             </div>
           </a>
         </div>
       </div>
     </div>
   </section>
+</main>
 
-  <!-- 返回首页 -->
-  <div style="text-align:center;margin:40px 0">
-    <a href="/" class="back-home">返回首页</a>
-  </div>
+<footer>
+  <span data-zh="深圳市利娟标牌有限公司 · 标牌 / 铭牌 / 镍标 / 标识定制 · 电话：132-6679-4685 / 137-1499-2726" 
+        data-en="Shenzhen Lijuan Nameplate Co., Ltd. · Nameplate / Label / Nickel Sticker / Custom Signs · Tel: +86-132-6679-4685 / +86-137-1499-2726">深圳市利娟标牌有限公司 · 标牌 / 铭牌 / 镍标 / 标识定制 · 电话：132-6679-4685 / 137-1499-2726</span>
+</footer>
+
+<div class="float-bar">
+  <button class="float-bar-btn" onclick="window.open('/contact.html', '_self');">
+    <span data-zh="立即询价" data-en="Inquire Now">立即询价</span>
+  </button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const LANG_KEY = 'lj_lang';
+  const BILINGUAL_SELECTOR = '[data-zh][data-en]';
+  
+  const langConfig = {
+    zh: {
+      title: '产品中心 - 铝、不锈钢、镍标定制及工艺流程 - 利娟标牌',
+      description: '全面了解利娟标牌的所有产品系列，包括铝标牌、不锈钢铭牌、镍标、金属按键及各种标牌制作工艺，满足您的不同需求。',
+      lang: 'zh-CN',
+    },
+    en: {
+      title: 'Product Center - Custom Aluminum, Stainless Steel, Nickel Labels - Lijuan Plate',
+      description: 'Explore the full product range from Lijuan Plate, including aluminum plates, stainless steel nameplates, nickel stickers, metal buttons, and various manufacturing processes to meet your needs.',
+      lang: 'en',
+    }
+  };
+
+  let currentLang = localStorage.getItem(LANG_KEY) || (navigator.language.startsWith('zh') ? 'zh' : 'en');
+  const langZhEl = document.getElementById('langZh');
+  const langEnEl = document.getElementById('langEn');
+
+  function applyLang(lang) {
+    document.documentElement.lang = langConfig[lang].lang;
+    document.title = langConfig[lang].title;
+    const descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta) descMeta.setAttribute('content', langConfig[lang].description);
+    
+    if (langZhEl && langEnEl) {
+        langZhEl.classList.toggle('active', lang === 'zh');
+        langEnEl.classList.toggle('active', lang === 'en');
+    }
+
+    document.querySelectorAll(BILINGUAL_SELECTOR).forEach(el => {
+      const targetText = el.dataset[lang];
+      // This simple replacement is safe for this page's structure
+      if (el.children.length === 0 || el.classList.contains('pill')) {
+        el.textContent = targetText;
+      } else {
+        el.innerHTML = targetText;
+      }
+    });
+  }
+
+  window.toggleLang = function() {
+    currentLang = currentLang === 'zh' ? 'en' : 'zh';
+    localStorage.setItem(LANG_KEY, currentLang);
+    applyLang(currentLang);
+  }
+
+  applyLang(currentLang);
+
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (menuToggle && navLinks) {
+    menuToggle.onclick = () => navLinks.classList.toggle('show');
+  }
+});
+</script>
+
 </body>
 </html>

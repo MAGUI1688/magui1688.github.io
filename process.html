@@ -2,50 +2,219 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>下单流程 - 深圳利娟标牌</title>
-  <meta name="description" content="金属标牌下单流程：沟通需求→确认报价→打样生产→检验发货">
+  <title>下单流程 - 深圳利娟标牌 | 4步完成铭牌定制</title>
+  <meta name="description" content="了解在深圳利娟标牌定制金属铭牌的简单4步流程：沟通需求 → 确认报价与工艺 → 打样/生产 → 检验发货。快速、专业、高效。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base target="_blank">
+
+  <link rel="alternate" hreflang="zh-CN" href="https://lijuan.ltd/process.html">
+  <link rel="alternate" hreflang="en" href="https://lijuan.ltd/process-en.html">
+  <link rel="alternate" hreflang="x-default" href="https://lijuan.ltd/process.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "如何在利娟标牌定制金属铭牌",
+    "description": "一个简单的4步指南，教您如何快速高效地完成金属标牌的定制流程。",
+    "step": [
+      { "@type": "HowToStep", "name": "沟通需求", "text": "通过微信、电话或邮件联系我们，提供您需要的标牌尺寸、材质、数量、用途等基本信息。您可以发送图纸或参考照片以便我们更好地理解您的需求。", "url": "https://lijuan.ltd/contact.html#step1" },
+      { "@type": "HowToStep", "name": "确认报价与工艺", "text": "我们的团队将根据您提供的工艺、材质和数量进行报价，并与您确认所有工艺细节，包括表面效果、颜色、安装方式（如背胶或打孔）等。", "url": "https://lijuan.ltd/contact.html#step2" },
+      { "@type": "HowToStep", "name": "打样 / 生产", "text": "在批量生产前，我们可以先进行小批量打样，供您确认最终效果。样品确认无误后，我们将安排大货生产。在生产过程中，我们可以拍摄照片或视频供您确认进度。", "url": "https://lijuan.ltd/contact.html#step3" },
+      { "@type": "HowToStep", "name": "检验发货", "text": "所有产品在出货前都会经过严格的品质检验。检验合格后，我们会进行安全包装，并通过顺丰或德邦等可靠物流/快递公司发往全国各地。同时提供发票及相关文件。", "url": "https://lijuan.ltd/contact.html#step4" }
+    ]
+  }
+  </script>
+  
   <style>
-    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif;margin:0;background:#fff;color:#111827}
-    .container{width:90%;max-width:1200px;margin:0 auto;padding:40px 0}
-    h1{text-align:center;margin-bottom:20px;font-size:28px;color:#0f172a}
+    :root{--primary:#0ea5e9;--accent:#f97316;--text-main:#0f172a;--text-sub:#64748b;--shadow:0 10px 30px rgba(15,23,42,.12);--max-w:1160px;}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft Yahei",sans-serif;color:var(--text-main);background:#f8f9fa}
+    a{text-decoration:none;color:inherit}
+    .container{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 16px}
+    
+    html { height: 100%; }
+    body { 
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      /* ===== 关键修复 1: 移除 body 的 padding-bottom ===== */
+    }
+    main {
+      flex-grow: 1;
+    }
+
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:rgba(2,6,23,.9);border-bottom:1px solid rgba(148,163,184,.2)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .logo{font-size:18px;font-weight:700;color:#e5e7eb;letter-spacing:2px}
+    .logo span{color:var(--primary)}
+    .nav-links{display:flex;align-items:center;gap:20px;font-size:14px;color:#cbd5f5}
+    .nav-links a:hover{color:#f9fafb;border-bottom:2px solid var(--primary)}
+    .nav-home{margin-left:13px;font-size:14px;color:#38bdf4;text-shadow:0 0 4px rgba(56,189,248,.45);border-left:1px solid rgba(148,163,184,.3);padding-left:12px;transition:color .25s,text-shadow .25s;}
+    .nav-home:hover{color:#fff;text-shadow:0 0 8px rgba(255,255,255,.7);}
+    
+    #langSwitch { display: flex; align-items: center; gap: 6px; margin-left: 12px; font-size: 13px; font-weight: 600; color: #94a3b8; border: 1px solid rgba(148, 163, 184, .25); background: rgba(15, 23, 42, .5); padding: 4px 10px; border-radius: 8px; cursor: pointer; white-space: nowrap; box-shadow: inset 0 1px 1px rgba(255, 255, 255, .1), 0 1px 3px rgba(2, 6, 23, .5); transition: all 0.2s ease-in-out; }
+    #langSwitch:hover { background: rgba(30, 41, 59, .7); transform: translateY(-1px); }
+    #langSwitch span { color: #64748b; transition: all 0.2s ease-in-out; }
+    #langSwitch span.active { color: #38bdf8; text-shadow: 0 0 6px rgba(56, 189, 248, .7); }
+    
+    #menuToggle{display:none;font-size:20px;color:#cbd5f5;cursor:pointer}
+    @media(max-width:900px){
+      #menuToggle{display:block}
+      .nav-links{position:absolute;top:100%;right:16px;background:#020617;flex-direction:column;align-items:flex-start;padding:10px 14px;border-radius:6px;display:none}
+      .nav-links.show{display:flex}
+    }
+
+    .process-section { padding: 60px 0; }
+    .process-section h1 { text-align:center; margin-bottom:40px; font-size:28px; color:#0f172a; }
     .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:10px}
     @media(max-width:960px){.steps{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:640px){.steps{grid-template-columns:1fr}}
-    .step{background:#f9fafb;border-radius:20px;padding:20px 18px;box-shadow:0 10px 30px rgba(15,23,42,.12);border:1px solid #e5e7eb;text-align:center}
-    .step-index{width:32px;height:32px;border-radius:50%;background:#dbeafe;color:#0369a1;display:flex;align-items:center;justify-content:center;font-weight:600;margin:0 auto 10px}
-    .step h3{font-size:16px;margin-bottom:8px}
-    .step p{font-size:14px;color:#64748b;line-height:1.6}
-    a{color:#0369a1;text-decoration:none}
-    a:hover{text-decoration:underline}
-    .back-home{display:inline-block;margin-top:30px;padding:10px 20px;background:#0369a1;color:#fff;border-radius:999px;font-size:14px}
+    .step{background:#fff;border-radius:20px;padding:24px 20px;box-shadow:var(--shadow);border:1px solid #e5e7eb;text-align:center;transition: transform 0.2s ease, box-shadow 0.2s ease;}
+    .step:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(15,23,42,.15); }
+    .step-index{width:36px;height:36px;border-radius:50%;background:#dbeafe;color:#1e40af;display:flex;align-items:center;justify-content:center;font-weight:700;margin:0 auto 15px;font-size:16px;}
+    .step h3{font-size:18px;margin-bottom:10px;color:var(--text-main);}
+    .step p{font-size:14px;color:var(--text-sub);line-height:1.7}
+    
+    footer{
+      background:#020617;
+      color:#9ca3af;
+      font-size:12px;
+      text-align:center;
+      padding: 18px 0; /* 调整上下 padding */
+      border-top:1px solid rgba(148,163,184,.3);
+      /* ===== 关键修复 2: 将空间加到 footer 内部 ===== */
+      padding-bottom: 75px; 
+    }
+    .float-bar{position:fixed;bottom:0;left:0;right:0;background:#020617;display:flex;justify-content:center;align-items:center;gap:12px;padding:10px 16px;box-shadow:0 -2px 8px rgba(0,0,0,.3);z-index:100;}
+    .float-bar-btn{background:var(--accent);color:#fff;border:none;padding:8px 18px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 10px 24px rgba(249,115,22,.45);transition:.2s;}
+    .float-bar-btn:hover{transform:translateY(-1px);box-shadow:0 14px 28px rgba(249,115,22,.55);}
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>合作与下单流程</h1>
-    <div class="steps">
-      <div class="step">
-        <div class="step-index">1</div>
-        <h3>沟通需求</h3>
-        <p>通过微信 / 电话 / 邮件，提供尺寸、材质、数量、用途等基本信息，可发送图纸或照片。</p>
+
+<header>
+  <div class="container nav">
+    <div class="logo">
+      <span data-zh="深圳市利娟标牌有限公司" data-en="Shenzhen Lijuan Nameplate Co., Ltd.">深圳市利娟标牌有限公司</span>
+      <a href="/index.html" class="nav-home"><span data-zh="返回首页" data-en="Home">返回首页</span></a>
+    </div>
+    <div id="menuToggle">☰</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html#products"><span data-zh="产品与工艺" data-en="Products & Craft">产品与工艺</span></a>
+      <a href="/index.html#cases"><span data-zh="客户案例" data-en="Case Studies">客户案例</span></a>
+      <a href="/contact.html"><span data-zh="获取报价" data-en="Get Quote">获取报价</span></a>
+      <a href="/about.html"><span data-zh="关于我们" data-en="About Us">关于我们</span></a>
+      <div id="langSwitch" onclick="toggleLang()">
+        <span id="langZh" data-zh="中" data-en="中">中</span> / <span id="langEn" data-zh="EN" data-en="EN">EN</span>
       </div>
-      <div class="step">
-        <div class="step-index">2</div>
-        <h3>确认报价与工艺</h3>
-        <p>根据工艺、材质和数量报价，确认工艺细节（表面效果、颜色、安装方式等）。</p>
-      </div>
-      <div class="step">
-        <div class="step-index">3</div>
-        <h3>打样 / 生产</h3>
-        <p>可先小批量打样确认效果，再安排批量生产，过程中可拍摄照片或视频确认。</p>
-      </div>
-      <div class="step">
-        <div class="step-index">4</div>
-        <h3>检验发货</h3>
-        <p>严格品检，包装后通过物流 / 快递全国发货，提供发票及相关资料。</p>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="process-section">
+    <div class="container">
+      <h1 data-zh="合作与下单流程" data-en="Cooperation and Order Process">合作与下单流程</h1>
+      <div class="steps">
+        <div class="step">
+          <div class="step-index">1</div>
+          <h3 data-zh="沟通需求" data-en="Discuss Needs">沟通需求</h3>
+          <p data-zh="通过微信 / 电话 / 邮件，提供尺寸、材质、数量、用途等基本信息，可发送图纸或照片。" 
+             data-en="Provide basic info like size, material, quantity, and usage via WeChat, phone, or email. You can send drawings or photos.">通过微信 / 电话 / 邮件，提供尺寸、材质、数量、用途等基本信息，可发送图纸或照片。</p>
+        </div>
+        <div class="step">
+          <div class="step-index">2</div>
+          <h3 data-zh="确认报价与工艺" data-en="Confirm Quote & Craft">确认报价与工艺</h3>
+          <p data-zh="根据工艺、材质和数量报价，确认工艺细节（表面效果、颜色、安装方式等）。" 
+             data-en="We quote based on craft, material, and quantity, and confirm details like surface finish, color, and installation method.">根据工艺、材质和数量报价，确认工艺细节（表面效果、颜色、安装方式等）。</p>
+        </div>
+        <div class="step">
+          <div class="step-index">3</div>
+          <h3 data-zh="打样 / 生产" data-en="Sample / Production">打样 / 生产</h3>
+          <p data-zh="可先小批量打样确认效果，再安排批量生产，过程中可拍摄照片或视频确认。" 
+             data-en="We can start with a small sample batch for your approval before proceeding with mass production. Photos or videos can be provided for confirmation.">可先小批量打样确认效果，再安排批量生产，过程中可拍摄照片或视频确认。</p>
+        </div>
+        <div class="step">
+          <div class="step-index">4</div>
+          <h3 data-zh="检验发货" data-en="Inspect & Ship">检验发货</h3>
+          <p data-zh="严格品检，包装后通过物流 / 快递全国发货，提供发票及相关资料。" 
+             data-en="Products undergo strict quality inspection, are securely packaged, and shipped nationwide via logistics/courier. Invoices are provided.">严格品检，包装后通过物流 / 快递全国发货，提供发票及相关资料。</p>
+        </div>
       </div>
     </div>
-    <a href="/" class="back-home">返回首页</a>
-  </div>
+  </section>
+</main>
+
+<footer>
+  <span data-zh="深圳市利娟标牌有限公司 · 标牌 / 铭牌 / 镍标 / 标识定制 · 电话：132-6679-4685 / 137-1499-2726" 
+        data-en="Shenzhen Lijuan Nameplate Co., Ltd. · Nameplate / Label / Nickel Sticker / Custom Signs · Tel: +86-132-6679-4685 / +86-137-1499-2726">深圳市利娟标牌有限公司 · 标牌 / 铭牌 / 镍标 / 标识定制 · 电话：132-6679-4685 / 137-1499-2726</span>
+</footer>
+
+<div class="float-bar">
+  <button class="float-bar-btn" onclick="window.open('/contact.html', '_self');">
+    <span data-zh="立即询价" data-en="Inquire Now">立即询价</span>
+  </button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const LANG_KEY = 'lj_lang';
+  const BILINGUAL_SELECTOR = '[data-zh][data-en]';
+  
+  const langConfig = {
+    zh: {
+      title: '下单流程 - 深圳利娟标牌 | 4步完成铭牌定制',
+      description: '了解在深圳利娟标牌定制金属铭牌的简单4步流程：沟通需求 → 确认报价与工艺 → 打样/生产 → 检验发货。快速、专业、高效。',
+      lang: 'zh-CN',
+    },
+    en: {
+      title: 'Order Process - Shenzhen Lijuan Nameplate | 4 Steps to Custom Nameplates',
+      description: 'Learn the simple 4-step process for customizing metal nameplates at Lijuan Nameplate: Discuss Needs → Confirm Quote & Craft → Sample/Production → Inspect & Ship. Fast, professional, and efficient.',
+      lang: 'en',
+    }
+  };
+
+  let currentLang = localStorage.getItem(LANG_KEY) || (navigator.language.startsWith('zh') ? 'zh' : 'en');
+  const langZhEl = document.getElementById('langZh');
+  const langEnEl = document.getElementById('langEn');
+
+  function applyLang(lang) {
+    document.documentElement.lang = langConfig[lang].lang;
+    document.title = langConfig[lang].title;
+    const descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta) descMeta.setAttribute('content', langConfig[lang].description);
+    
+    if (langZhEl && langEnEl) {
+        langZhEl.classList.toggle('active', lang === 'zh');
+        langEnEl.classList.toggle('active', lang === 'en');
+    }
+
+    document.querySelectorAll(BILINGUAL_SELECTOR).forEach(el => {
+      const targetText = el.dataset[lang];
+      if (el.children.length === 0 || el.tagName === 'P') {
+        el.textContent = targetText;
+      } else {
+        el.innerHTML = targetText;
+      }
+    });
+  }
+
+  window.toggleLang = function() {
+    currentLang = currentLang === 'zh' ? 'en' : 'zh';
+    localStorage.setItem(LANG_KEY, currentLang);
+    applyLang(currentLang);
+  }
+
+  applyLang(currentLang);
+
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (menuToggle && navLinks) {
+    menuToggle.onclick = () => navLinks.classList.toggle('show');
+  }
+});
+</script>
+
 </body>
 </html>
