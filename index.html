@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -7,6 +8,13 @@
   <meta name="keywords" content="深圳标牌定制,铝标牌厂家,不锈钢铭牌,免费打样,48h报价">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <base target="_blank">
+
+  <!-- ===== SEO 优化 1: 添加 Hreflang 标签，指明多语言版本关系 ===== -->
+  <!-- 注意：请将 href 中的 lijuan.ltd 替换为您的最终域名。index-en.html 是英文版页面的示例路径，请根据实际情况修改。 -->
+  <link rel="alternate" hreflang="zh-CN" href="https://lijuan.ltd/index.html" />
+  <link rel="alternate" hreflang="en" href="https://lijuan.ltd/index-en.html" />
+  <link rel="alternate" hreflang="x-default" href="https://lijuan.ltd/index.html" />
+  <!-- ================================================================= -->
 
   <!-- 结构化数据 -->
   <script type="application/ld+json">
@@ -60,7 +68,6 @@
     .nav-links{display:flex;gap:20px;font-size:14px;color:#cbd5f5}
     .nav-links a:hover{color:#f9fafb;border-bottom:2px solid var(--primary)}
     
-    /* === 语言切换按钮新样式 (蓝色高亮) === */
     #langSwitch {
       display: flex;
       align-items: center;
@@ -68,7 +75,7 @@
       margin-left: 12px;
       font-size: 13px;
       font-weight: 600;
-      color: #94a3b8; /* 分隔符颜色 */
+      color: #94a3b8;
       border: 1px solid rgba(148, 163, 184, .25);
       background: rgba(15, 23, 42, .5);
       padding: 4px 10px;
@@ -83,12 +90,12 @@
       transform: translateY(-1px);
     }
     #langSwitch span {
-      color: #64748b; /* 未选中状态颜色 */
+      color: #64748b;
       transition: all 0.2s ease-in-out;
     }
     #langSwitch span.active {
-      color: #38bdf8; /* 选中状态颜色 - 改为蓝色 */
-      text-shadow: 0 0 6px rgba(56, 189, 248, .7); /* 发光效果 - 改为蓝色光晕 */
+      color: #38bdf8;
+      text-shadow: 0 0 6px rgba(56, 189, 248, .7);
     }
     
     #menuToggle{display:none;font-size:20px;color:#cbd5f5;cursor:pointer}
@@ -168,20 +175,30 @@
     input,textarea,select{width:100%;border:1px solid #d1d5db;border-radius:10px;padding:8px 10px;font-size:13px;outline:none; background-color: #fff;}
     textarea{min-height:120px;resize:vertical}
     input:focus,textarea:focus,select:focus{border-color:var(--primary);box-shadow:0 0 0 1px rgba(56,189,248,0.4)}
-    /* Custom file input styles */
     .file-upload-wrapper { position: relative; display: flex; align-items: center; border: 1px solid #d1d5db; border-radius: 10px; background-color: #fff; padding: 4px; }
     .file-upload-wrapper input[type="file"] { position: absolute; left: 0; top: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer; }
     .file-upload-btn { border: none; padding: 4px 10px; border-radius: 6px; background-color: #e5e7eb; color: #374151; font-size: 13px; cursor: pointer; white-space: nowrap; }
     .file-upload-btn:hover { background-color: #d1d5db; }
     .file-name-display { margin-left: 10px; font-size: 13px; color: #6b7280; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .contact-form input[type="file"] { display: none; } /* Hide original but keep it for JS */
-
+    .contact-form input[type="file"] { display: none; }
     .btn-submit{margin-top:10px;border:none;padding:10px 22px;border-radius:999px;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;font-size:14px;font-weight:600;cursor:pointer;display:block;margin-left:auto;margin-right:auto;box-shadow:0 10px 24px rgba(22,163,74,0.45)}
     .btn-submit:hover{transform:translateY(-1px)}
     .form-note{margin-top:6px;font-size:11px;color:#9ca3af}
     .contact-side{background:#f9fafb;border-radius:20px;padding:20px 18px;box-shadow:var(--shadow);border:1px solid #e5e7eb;text-align:center}
-    .qrcode-box{display:flex;justify-content:center;gap:100px;margin-top:12px;flex-wrap:wrap}
-    @media (max-width:640px){.qrcode-box{gap:40px}}
+    .qrcode-box{
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 480px) {
+      .qrcode-box {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+    }
     .qrcode-box img{width:160px;height:160px;object-fit:cover;border-radius:12px;padding:8px;background:#fff;box-shadow:0 6px 16px rgba(0,0,0,.15)}
     @media (max-width:640px){.qrcode-box img{width:140px;height:140px}}
     .factory-section{background:#020617;color:#e5e7eb;padding:44px 0 64px}
@@ -238,11 +255,12 @@
   </header>
 
   <main>
-    <!-- ... (此处省略中间的大量 HTML，与上一版相同) ... -->
     <section class="hero">
       <div class="container hero-inner">
         <div>
-          <h1 class="hero-title" data-zh="深圳/利娟标牌/铭牌/定制厂家" data-en="Shenzhen Lijuan Nameplate Factory">深圳/利娟标牌/铭牌/定制厂家</h1>
+          <!-- ===== SEO 优化 2: 修改 H1 标题为更自然的语句 ===== -->
+          <h1 class="hero-title" data-zh="深圳利娟标牌：专业定制铝标牌与不锈钢铭牌" data-en="Shenzhen Lijuan: Custom Aluminum & Stainless Steel Nameplates">深圳利娟标牌：专业定制铝标牌与不锈钢铭牌</h1>
+          <!-- =============================================== -->
           <span class="hero-title-main" data-zh="铝标牌·铭牌 / 不锈钢激光·腐蚀牌 / 金属薄标·镍标 / 机械铭牌标识 / PET / KT板" data-en="Aluminum Labels · Stainless Steel · Metal Thin Labels · Mechanical Nameplates · PET · KT Board">铝标牌·铭牌 / 不锈钢激光·腐蚀牌 / 金属薄标·镍标 / 机械铭牌标识 / PET / KT板</span><br>
           <span class="hero-title-second" data-zh="专业生产铭牌 · 标牌的工厂" data-en="Professional Nameplate & Label Manufacturer">专业生产铭牌 · 标牌的工厂</span>
           <p class="hero-subtitle" data-zh="专注机械、电气、设备、电脑机箱、按钮键CD纹件等行业铭牌定制。支持打样、小批量及大批量出货，全国发货。" data-en="Specialized in mechanical, electrical, equipment, PC case, button CD pattern nameplate customization. Support samples, small & large batch orders, nationwide shipping.">专注机械、电气、设备、电脑机箱、按钮键CD纹件等行业铭牌定制。支持打样、小批量及大批量出货，全国发货。</p>
@@ -291,7 +309,13 @@
     <section id="products" class="section">
       <div class="container">
         <h2 class="section-title" data-zh="产品与工艺" data-en="Products & Craft">产品与工艺</h2>
-        <p class="section-sub" data-zh="覆盖铝材、不锈钢、镍片、PET、KT板及按钮键等多种材质的产品，可根据图纸或样品定制。" data-en="Aluminum, stainless steel, nickel, PET, KT board, buttons. Customization based on drawings or samples.">覆盖铝材、不锈钢、镍片、PET、KT板及按钮键等多种材质的产品，可根据图纸或样品定制。</p>
+        <!-- ===== 本次修改点: 为“镍标”添加了链接 ===== -->
+        <p class="section-sub"
+           data-zh="覆盖<a href='product-aluminum.html' style='color:var(--primary); text-decoration: underline;'>铝标牌</a>、<a href='product-stainless.html' style='color:var(--primary); text-decoration: underline;'>不锈钢铭牌</a>、<a href='product-other.html' style='color:var(--primary); text-decoration: underline;'>镍标</a>、(<a href='product-metal-landing.html' style='color:var(--primary); text-decoration: underline;'>设备铭牌</a>、<a href='product-button.html' style='color:var(--primary); text-decoration: underline;'>金属按钮按键</a>、<a href='product-case.html' style='color:var(--primary); text-decoration: underline;'>机箱装饰CD纹铝片</a>)、PET、KT板等多种材质的产品，可根据图纸或样品定制。"
+           data-en="We produce <a href='product-aluminum.html' style='color:var(--primary); text-decoration: underline;'>aluminum labels</a>, <a href='product-stainless.html' style='color:var(--primary); text-decoration: underline;'>stainless steel nameplates</a>, <a href='product-other.html' style='color:var(--primary); text-decoration: underline;'>nickel stickers</a>, (<a href='product-metal-landing.html' style='color:var(--primary); text-decoration: underline;'>equipment nameplates</a>, <a href='product-button.html' style='color:var(--primary); text-decoration: underline;'>metal buttons</a>, <a href='product-case.html' style='color:var(--primary); text-decoration: underline;'>case decoration CD pattern sheets</a>), PET, KT board, and more. Customization based on drawings or samples.">
+           覆盖<a href='product-aluminum.html' style='color:var(--primary); text-decoration: underline;'>铝标牌</a>、<a href='product-stainless.html' style='color:var(--primary); text-decoration: underline;'>不锈钢铭牌</a>、<a href='product-other.html' style='color:var(--primary); text-decoration: underline;'>镍标</a>、(<a href='product-metal-landing.html' style='color:var(--primary); text-decoration: underline;'>设备铭牌</a>、<a href='product-button.html' style='color:var(--primary); text-decoration: underline;'>金属按钮按键</a>、<a href='product-case.html' style='color:var(--primary); text-decoration: underline;'>机箱装饰CD纹铝片</a>)、PET、KT板等多种材质的产品，可根据图纸或样品定制。
+        </p>
+        <!-- ============================================= -->
         <div class="products-top-image"><img src="https://lijuan.ltd/images/dex7.jpg" alt="深圳铝标牌厂家拉丝氧化批花工艺" loading="lazy"></div>
         <div class="grid-3">
           <div class="card">
@@ -523,7 +547,7 @@
                 <div style="font-size:12px;color:var(--text-sub);margin-top:6px">2726</div>
               </div>
             </div>
-            <ul style="margin-top:24px;padding-left:16px;font-size:13px;color:var(--text-sub);line-height:1.8;text-align:left;">
+            <ul style="margin-top:16px;padding-left:16px;font-size:13px;color:var(--text-sub);line-height:1.8;text-align:left;">
               <li><span data-zh="30 分钟内响应报价" data-en="Quote in 30 min">30 分钟内响应报价</span></li>
               <li><span data-zh="免费设计排版" data-en="Free design">免费设计排版</span></li>
               <li><span data-zh="支持 13% 增值税专票" data-en="13% VAT invoice">支持 13% 增值税专票</span></li>
@@ -616,7 +640,6 @@
       const langEnEl = document.getElementById('langEn');
 
       function applyLang(lang) {
-        // 更新HTML标签和元数据
         document.documentElement.lang = langConfig[lang].lang;
         document.title = langConfig[lang].title;
         const descMeta = document.querySelector('meta[name="description"]');
@@ -624,15 +647,13 @@
           descMeta.setAttribute('content', langConfig[lang].description);
         }
         
-        // 更新高亮状态
         if (langZhEl && langEnEl) {
             langZhEl.classList.toggle('active', lang === 'zh');
             langEnEl.classList.toggle('active', lang === 'en');
         }
 
-        // 更新普通元素内容 (除了语言切换器本身)
         document.querySelectorAll(BILINGUAL_SELECTOR).forEach(el => {
-            if (el.id === 'langZh' || el.id === 'langEn') return; // 跳过语言切换器
+            if (el.id === 'langZh' || el.id === 'langEn') return;
 
             if (['OPTION', 'BUTTON', 'SPAN'].includes(el.tagName)) {
                 el.textContent = el.dataset[lang];
@@ -641,12 +662,10 @@
             }
         });
 
-        // 更新输入框的 placeholder
         document.querySelectorAll(PLACEHOLDER_SELECTOR).forEach(el => {
           el.placeholder = el.dataset['placeholder' + lang.charAt(0).toUpperCase() + lang.slice(1)];
         });
         
-        // 更新文件上传显示文本
         const fileInput = document.getElementById('fileInput');
         const fileNameDisplay = document.querySelector('.file-name-display');
         if (fileInput && fileNameDisplay && fileInput.files.length === 0) {
@@ -660,7 +679,6 @@
         applyLang(currentLang);
       }
 
-      // ===== 自定义文件上传按钮逻辑 =====
       const fileInput = document.getElementById('fileInput');
       const fileUploadBtn = document.querySelector('.file-upload-btn');
       const fileNameDisplay = document.querySelector('.file-name-display');
@@ -687,17 +705,14 @@
         });
       }
 
-      // 页面加载时应用语言
       applyLang(currentLang);
 
-      /* ===== 移动端菜单 ===== */
       const menuToggle = document.getElementById('menuToggle');
       const navLinks = document.getElementById('navLinks');
       if (menuToggle && navLinks) {
         menuToggle.onclick = () => navLinks.classList.toggle('show');
       }
 
-      /* ===== 图片轮播 ===== */
       (function () {
         const slider = document.querySelector('.factory-slider');
         if (!slider) return;
@@ -761,7 +776,6 @@
         startTimer();
       })();
 
-      /* ===== 表单提交 ===== */
       const quoteForm = document.getElementById('quoteForm');
       if (quoteForm) {
         quoteForm.addEventListener('submit', async (e) => {
