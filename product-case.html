@@ -147,6 +147,7 @@
 </head>
 <body>
 
+    <!-- ==================== NEW STANDARD HEADER (REPLACE THIS) ==================== -->
   <header>
     <div class="container nav">
       <div class="logo-area">
@@ -188,6 +189,8 @@
         <a href="/index.html#contact" onclick="closeMenu()"><span data-zh="获取报价" data-en="Get Quote">获取报价</span></a>
     </nav>
   </header>
+  <!-- ==================== END OF HEADER ==================== -->
+
 
 <main>
     <section class="hero">
@@ -222,8 +225,10 @@
             <div class="btn-box">
               <button class="btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})"><span data-zh="立即询价" data-en="Inquire Now">立即询价</span></button>
               <div class="hero-contact">
-                <span data-zh="电话/微信：" data-en="Tel / WeChat:">电话/微信：</span><br><strong>132-6679-4685</strong><br><strong>137-1499-2726</strong><br>
-                <span class="phone-second"><span data-zh="加微信发图纸，30分钟出报价" data-en="Add WeChat, quote in 30 min">加微信发图纸，30分钟出报价</span></span>
+                <span data-zh="电话/微信：" data-en="Tel / WeChat:">电话/微信：</span><br>
+                <strong data-phone="132-6679-4685">132-6679-4685</strong><br>
+                <strong data-phone="137-1499-2726">137-1499-2726</strong><br>
+                <span class="phone-second"><span data-zh="加微信发图纸，30分钟出报价" data-en="Email:szlijuan@126.com">Email : szlijuan@126.com</span></span>
               </div>
             </div>
             <div class="qr-single"><img src="/images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726" class="qr-img"></div>
@@ -280,7 +285,7 @@
           <p class="section-sub"><span data-zh="拉丝镜面+镭射雕刻全过程，真实拍摄无加速" data-en="Brushed mirror + laser engraving, real-time footage">拉丝镜面+镭射雕刻全过程，真实拍摄无加速</span></p>
           <button id="playVideoBtn" class="video-btn"><span data-zh="▶ 播放视频" data-en="▶ Play Video">▶ 播放视频</span></button>
           <div id="video" style="margin-top:20px;display:none">
-            <div id="videoTips" style="padding:60px 20px;text-align:center;border:2px dashed #cbd5f5;border-radius:12px">
+            <div id="videoTips" style="padding:60px 20px;text-align:center;border:2px dashed #cbd5f5;border-radius:12px; display:none;">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="#cbd5f5"><path d="M8 5v14l11-7z"/></svg>
               <p style="margin-top:12px;color:var(--text-sub)"><span data-zh="视频素材准备中，您可以联系客服索取样片。" data-en="Video is being prepared. Contact us for a sample clip.">视频素材准备中，您可以联系客服索取样片。</span></p>
             </div>
@@ -315,7 +320,7 @@
               <form id="quoteForm">
                 <input type="hidden" name="product" value="PC Case Nameplate">
                 <div class="form-row"><div class="form-group"><label><span data-zh="您的称呼" data-en="Your Name">您的称呼</span></label><input type="text" name="name" data-placeholder-zh="例如：张工" data-placeholder-en="e.g., Mr. Smith" required></div><div class="form-group"><label><span data-zh="手机/微信" data-en="Mobile/WeChat">手机/微信</span></label><input type="text" name="contact" data-placeholder-zh="您的联系方式" data-placeholder-en="Your contact info" required></div></div>
-                <div class="form-group"><label>Email</label><input type="email" name="email" data-placeholder-zh="方便我们回复报价" data-placeholder-en="For quote reply" required></div>
+                <div class="form-group"><label><span data-zh="您的联系邮箱" data-en="Your Email">您的联系邮箱</span></label><input type="email" name="email" data-placeholder-zh="方便我们回复报价" data-placeholder-en="For quote reply" required></div>
                 <div class="form-row"><div class="form-group"><label><span data-zh="尺寸（mm）" data-en="Size (mm)">尺寸（mm）</span></label><input type="text" name="size" data-placeholder-zh="如：50x20" data-placeholder-en="e.g., 50x20" required></div><div class="form-group"><label><span data-zh="数量" data-en="Quantity">数量</span></label><input type="text" name="qty" data-placeholder-zh="如：200件" data-placeholder-en="e.g., 200 pcs" required></div></div>
                 <div class="form-group"><label><span data-zh="材质" data-en="Material">材质</span></label><select name="material" required><option value="" data-zh="请选择" data-en="Please select">请选择</option><option value="aluminum" data-zh="铝" data-en="Aluminum">铝</option><option value="stainless_steel" data-zh="不锈钢" data-en="Stainless Steel">不锈钢</option><option value="nickel" data-zh="镍" data-en="Nickel">镍</option><option value="other" data-zh="其他" data-en="Other">其他</option></select></div>
                 <div class="form-group"><label><span data-zh="上传图纸（可选）" data-en="Upload drawing (opt.)">上传图纸（可选）</span></label><div class="file-upload-wrapper"><input type="file" name="file" id="fileInput" accept=".jpg,.jpeg,.png,.pdf,.ai,.cdr" multiple><button type="button" class="file-upload-btn" data-zh="选择文件" data-en="Choose file">选择文件</button><span class="file-name-display" data-zh="未选择文件" data-en="No file chosen">未选择文件</span></div></div>
@@ -328,10 +333,10 @@
             </div>
             <aside id="contactSide" style="background:#ffffff;border-radius:12px;padding:32px;box-shadow:0 8px 24px rgba(15,23,42,.08);">
               <h4 style="margin-bottom:20px;font-size:18px;color:var(--text-main);text-align:center"><span data-zh="直接联系·极速响应" data-en="Direct Contact · Fast Reply">直接联系·极速响应</span></h4>
-              <div style="margin-bottom:20px;text-align:center"><div style="font-size:13px;color:var(--text-sub)"><span data-zh="业务热线" data-en="Hotline">业务热线</span></div><a href="tel:132-6679-4685" style="font-size:22px;font-weight:700;color:var(--accent);line-height:1.2">132-6679-4685</a><div style="height:9px"></div><a href="tel:137-1499-2726" style="font-size:22px;font-weight:700;color:var(--accent);line-height:1.2">137-1499-2726</a><div style="font-size:13px;color:var(--text-sub);margin-top:6px"><span data-zh="加微信备注/标牌询价" data-en="Add WeChat & note 'quote'">加微信备注/标牌询价</span></div></div>
-              <div style="margin-bottom:27px;text-align:center"><div style="font-size:13px;color:var(--text-sub)">Email</div><a href="mailto:szlijuan@126.com" style="font-size:15px;color:var(--primary)">szlijuan@126.com</a></div>
-              <div style="display:flex;justify-content:center;gap:50px"><div class="qr-box"><img src="/images/wechat-qr-sales1.jpg" alt="利娟标牌销售微信1 - 13266794685"><div style="font-size:12px;color:var(--text-sub);margin-top:6px">4685</div></div><div class="qr-box"><img src="/images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726"><div style="font-size:12px;color:var(--text-sub);margin-top:6px">2726</div></div></div>
-              <ul style="margin-top:24px;padding-left:16px;font-size:13px;color:var(--text-sub);line-height:1.8">
+              <div style="margin-bottom:20px;text-align:center"><div style="font-size:13px;color:var(--text-sub)"><span data-zh="业务热线" data-en="Hotline">业务热线</span></div><a href="tel:132-6679-4685" style="font-size:22px;font-weight:700;color:var(--accent);line-height:1.2" data-phone="132-6679-4685">132-6679-4685</a><div style="height:9px"></div><a href="tel:137-1499-2726" style="font-size:22px;font-weight:700;color:var(--accent);line-height:1.2" data-phone="137-1499-2726">137-1499-2726</a><div style="font-size:13px;color:var(--text-sub);margin-top:6px"><span data-zh="加微信备注/标牌询价" data-en="Add WeChat & note 'quote'">加微信备注/标牌询价</span></div></div>
+              <div style="margin-bottom:27px;text-align:center"><div style="font-size:13px;color:var(--text-sub)"><span data-zh="电子邮件询价" data-en="Email Inquiry">电子邮件询价</span></div><a href="mailto:szlijuan@126.com" style="font-size:15px;color:var(--primary)">szlijuan@126.com</a></div>
+              <div style="display:flex;justify-content:center;gap:70px;flex-wrap:wrap"><div class="qr-box"><img src="/images/wechat-qr-sales1.jpg" alt="利娟标牌销售微信1 - 13266794685"><div style="font-size:12px;color:var(--text-sub);margin-top:6px">4685</div></div><div class="qr-box"><img src="/images/wechat-qr-sales2.jpg" alt="利娟标牌销售微信2 - 13714992726"><div style="font-size:12px;color:var(--text-sub);margin-top:6px">2726</div></div></div>
+              <ul style="margin-top:24px;padding-left:16px;font-size:13px;color:var(--text-sub);line-height:1.8;text-align:left">
                 <li><span data-zh="30 分钟内响应报价" data-en="Quote in 30 min">30 分钟内响应报价</span></li>
                 <li><span data-zh="免费设计排版" data-en="Free design">免费设计排版</span></li>
                 <li><span data-zh="支持 13% 增值税专票" data-en="13% VAT invoice">支持 13% 增值税专票</span></li>
@@ -361,9 +366,15 @@
       </div>
   </main>
   
+    <!-- =========== NEW STANDARD FOOTER (REPLACE THIS) ============= -->
   <footer>
-    <span data-zh="深圳市利娟标牌有限公司 · 金属标牌 / 铭牌 / 设备标识牌定制 · 电话：132-6679-4685 / 137-1499-2726" data-en="Shenzhen Lijuan Nameplate Co., Ltd. · Metal Labels / Nameplates / Equipment Signs · Tel: +86-132-6679-4685 / +86-137-1499-2726">深圳市利娟标牌有限公司 · 金属标牌 / 铭牌 / 设备标识牌定制 · 电话：132-6679-4685 / 137-1499-2726</span>
+    <span data-phone-wrapper>
+        <span data-zh="深圳市利娟标牌有限公司 · 金属标牌 / 铭牌 / 设备标识牌定制 · 电话：" data-en="Shenzhen Lijuan Nameplate Co., Ltd. · Metal Labels / Nameplates / Equipment Signs · Tel: ">深圳市利娟标牌有限公司 · 金属标牌 / 铭牌 / 设备标识牌定制 · 电话：</span>
+        <span data-phone="132-6679-4685">132-6679-4685</span> / <span data-phone="137-1499-2726">137-1499-2726</span>
+    </span>
   </footer>
+  <!-- ==================== END OF FOOTER ==================== -->
+
   <div class="float-bar">
     <button class="float-bar-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
       <span data-zh="立即询价" data-en="Inquire Now">立即询价</span>
@@ -372,7 +383,7 @@
   
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const LANG_KEY = 'lj_page_lang'; // Use a specific key
+      const LANG_KEY = 'lj_page_lang';
       
       const langConfig = {
         zh: {
@@ -397,7 +408,6 @@
         document.querySelectorAll('#langZh, #langZhMobile').forEach(el => el.classList.toggle('active', lang === 'zh'));
         document.querySelectorAll('#langEn, #langEnMobile').forEach(el => el.classList.toggle('active', lang === 'en'));
 
-        // *** THE DUAL-COMPATIBILITY FIX ***
         document.querySelectorAll('.zh-name').forEach(el => el.style.display = (lang === 'zh' ? '' : 'none'));
         document.querySelectorAll('.en-name').forEach(el => el.style.display = (lang === 'en' ? '' : 'none'));
 
@@ -411,6 +421,18 @@
         
         document.querySelectorAll('[data-placeholder-zh]').forEach(el => {
           el.placeholder = el.dataset['placeholder' + lang.charAt(0).toUpperCase() + lang.slice(1)];
+        });
+
+        // Special handling for phone numbers with +86 prefix
+        document.querySelectorAll('[data-phone]').forEach(el => {
+            const phone = el.dataset.phone;
+            if (lang === 'en') {
+                el.textContent = `+86-${phone}`;
+                if(el.tagName === 'A') el.href = `tel:+86-${phone}`;
+            } else {
+                el.textContent = phone;
+                if(el.tagName === 'A') el.href = `tel:${phone}`;
+            }
         });
         
         const fileNameDisplay = document.querySelector('.file-name-display');
@@ -431,12 +453,14 @@
       if (menuToggle && mobileNavLinks) { menuToggle.onclick = () => mobileNavLinks.classList.toggle('show'); }
       window.closeMenu = () => { if(mobileNavLinks) mobileNavLinks.classList.remove('show'); }
 
-      const initFileUpload = () => { const fileInput = document.getElementById('fileInput'); const fileUploadBtn = document.querySelector('.file-upload-btn'); const fileNameDisplay = document.querySelector('.file-name-display'); if (fileInput && fileUploadBtn && fileNameDisplay) { fileUploadBtn.addEventListener('click', () => fileInput.click()); fileInput.addEventListener('change', () => { if (fileInput.files.length > 0) { const fileText = fileInput.files.length === 1 ? fileInput.files[0].name : (currentLang === 'zh' ? `${fileInput.files.length} 个文件` : `${fileInput.files.length} files`); fileNameDisplay.textContent = fileText; } else { applyLang(currentLang); } }); } };
+      const initFileUpload = () => { const fileInput = document.getElementById('fileInput'); if(!fileInput) return; const fileUploadBtn = fileInput.closest('.file-upload-wrapper').querySelector('.file-upload-btn'); const fileNameDisplay = fileInput.closest('.file-upload-wrapper').querySelector('.file-name-display'); if (fileInput && fileUploadBtn && fileNameDisplay) { fileUploadBtn.addEventListener('click', () => fileInput.click()); fileInput.addEventListener('change', () => { if (fileInput.files.length > 0) { const fileText = fileInput.files.length === 1 ? fileInput.files[0].name : (currentLang === 'zh' ? `${fileInput.files.length} 个文件` : `${fileInput.files.length} files`); fileNameDisplay.textContent = fileText; } else { applyLang(currentLang); } }); } };
       const initForm = () => { const quoteForm = document.getElementById('quoteForm'); if (quoteForm) { quoteForm.addEventListener('submit', async (e) => { e.preventDefault(); const sendOk = document.getElementById('sendOk'); const errorTip = document.getElementById('errorTip'); const side = document.getElementById('contactSide'); if(sendOk) sendOk.style.display = 'none'; if(errorTip) errorTip.style.display = 'none'; if(side) side.style.boxShadow = '0 8px 24px rgba(15,23,42,.08)'; const formData = new FormData(e.target); try { const res = await fetch('https://1312059476-52lt9ny7df.in.ap-hongkong.scf.tencentcs.com', { method: 'POST', body: formData }); if (!res.ok) throw new Error('network error'); if (sendOk) sendOk.style.display = 'block'; e.target.reset(); applyLang(currentLang); } catch { if (errorTip) errorTip.style.display = 'block'; if (side) { side.style.boxShadow = '0 0 0 3px #f97316,0 12px 32px rgba(249,115,22,.35)'; side.scrollIntoView({ behavior: 'smooth', block: 'center' }); setTimeout(() => { if(errorTip) errorTip.style.display = 'none'; side.style.boxShadow = '0 8px 24px rgba(15,23,42,.08)'; }, 5000); } } }); } };
+      const initVideo = () => { const playBtn = document.getElementById('playVideoBtn'); if(playBtn) { playBtn.addEventListener('click', function(e) { e.preventDefault(); const box = document.getElementById('video'); const tips = document.getElementById('videoTips'); const video = document.getElementById('realVideo'); if(!box || !video) return; box.style.display = 'block'; box.scrollIntoView({ behavior: 'smooth', block: 'center' }); const source = video.querySelector('source'); if (source && source.src && source.src.includes('mp4')) { if(tips) tips.style.display = 'none'; video.style.display = 'block'; video.play(); } else { if(tips) tips.style.display = 'block'; video.style.display = 'none'; } }); } };
       
       applyLang(currentLang);
       initFileUpload();
       initForm();
+      initVideo();
     });
   </script>
 </body>
